@@ -1,0 +1,17 @@
+C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD_Vacio\SGD\SGD_Entidades\bin\Debug\SGD_Entidades.dll
+C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD_Vacio\SGD\SGD_Entidades\bin\Debug\SGD_Entidades.pdb
+C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD_Vacio\SGD\SGD_Entidades\bin\Debug\SGD_Entidades.xml
+C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD_Vacio\SGD\SGD_Entidades\obj\Debug\SGD_Entidades.Resources.resources
+C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD_Vacio\SGD\SGD_Entidades\obj\Debug\SGD_Entidades.vbproj.GenerateResource.Cache
+C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD_Vacio\SGD\SGD_Entidades\obj\Debug\SGD_Entidades.dll
+C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD_Vacio\SGD\SGD_Entidades\obj\Debug\SGD_Entidades.xml
+C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD_Vacio\SGD\SGD_Entidades\obj\Debug\SGD_Entidades.pdb
+C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD\SGD\SGD_Entidades\bin\Debug\SGD_Entidades.dll
+C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD\SGD\SGD_Entidades\bin\Debug\SGD_Entidades.pdb
+C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD\SGD\SGD_Entidades\bin\Debug\SGD_Entidades.xml
+C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD\SGD\SGD_Entidades\obj\Debug\SGD_Entidades.vbprojResolveAssemblyReference.cache
+C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD\SGD\SGD_Entidades\obj\Debug\SGD_Entidades.Resources.resources
+C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD\SGD\SGD_Entidades\obj\Debug\SGD_Entidades.vbproj.GenerateResource.Cache
+C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD\SGD\SGD_Entidades\obj\Debug\SGD_Entidades.dll
+C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD\SGD\SGD_Entidades\obj\Debug\SGD_Entidades.xml
+C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD\SGD\SGD_Entidades\obj\Debug\SGD_Entidades.pdb

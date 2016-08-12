@@ -1,0 +1,41 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="frmMenu.master.vb" Inherits="SGD.frmMenu" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta charset="utf-8"/>
+<title>Robin</title>
+</head>
+<body>
+    <form id="frmMenu" runat="server">
+    <div>
+        <asp:ContentPlaceHolder ID="head" runat="server">
+            <div>
+                <asp:Menu ID="mnu" runat="server" Orientation="Horizontal">
+                    <Items>
+                        <asp:MenuItem Text="Tablas" Value="mnuTablas">
+                            <asp:MenuItem Text="ABM Campañas" Value="mnuCampanias" NavigateUrl="~/frmCampaniasListado.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="ABM Tarjetas" Value="mnuTarjetas"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Archivo" Value="mnuArchivo">
+                            <asp:MenuItem Text="Donantes" Value="mnuDonantes"></asp:MenuItem>
+                            <asp:MenuItem Text="Donaciones" Value="mnuDonaciones"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/frmLogin.aspx" Text="Cerrar Sesión" Value="Cerrar Sesión"></asp:MenuItem>
+                    </Items>
+                </asp:Menu>
+            </div>
+        </asp:ContentPlaceHolder>
+    </div>
+        
+    <div>
+        <asp:ContentPlaceHolder ID="body" runat="server">
+        
+
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
