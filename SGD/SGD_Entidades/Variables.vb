@@ -1,9 +1,6 @@
 Namespace Entidades
     Public Class Variables
         '--------------- Variables de logeo ---------------
-        Public Shared sDataSource As String
-        Public Shared sInitialCatalog As String
-        Public Shared sPersistSecurityInfo As String
         Public Shared sCadConn As String
 
         Public Shared sUserName As String
