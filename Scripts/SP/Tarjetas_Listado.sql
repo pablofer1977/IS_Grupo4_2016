@@ -14,11 +14,11 @@ CREATE PROCEDURE Tarjetas_Listado (
 AS
 
 BEGIN
-	SELECT 	t.Id AS Tarjeta,
-			t.Tarjeta AS Nombre,
-			tp.TipoPresentacion AS [Tipo Presentación],
-			t.NombreArchivo AS [Nombre Archivo],
-			t.NroComercio AS [Nro. Comercio]
+	SELECT 	UPPER(t.Id) AS Id,
+			t.Tarjeta,
+			tp.TipoPresentacion,
+			t.NombreArchivo,
+			t.NroComercio
 	FROM 	tblTarjetas t INNER JOIN
 			tblTiposPresentaciones tp ON t.Id_TipoPresentacion = tp.Id
 	WHERE	(t.Id = @pId OR @pId IS NULL)

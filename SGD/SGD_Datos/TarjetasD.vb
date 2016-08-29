@@ -119,9 +119,8 @@ Namespace Datos
 
                 com.Parameters.Add("@pId", SqlDbType.Char, 3).Value = TarjetasE.sId
 				com.Parameters.Add("@pTarjeta", SqlDbType.VarChar, 30).Value = IIf(Not IsNothing(TarjetasE.sTarjeta), TarjetasE.sTarjeta, DBNull.Value)
-				com.Parameters.Add("@pId_TipoPresentacion", SqlDbType.Int).Value = IIf(TarjetasE.nId_TipoPresentacion <> 0, TarjetasE.nId_TipoPresentacion, DBNull.Value)
-				com.Parameters.Add("@pNombreArchivo", SqlDbType.VarChar, 100).Value = IIf(Not IsNothing(TarjetasE.sNombreArchivo), TarjetasE.sNombreArchivo, DBNull.Value)
-				com.Parameters.Add("@pNroComercio", SqlDbType.VarChar, 15).Value = IIf(Not IsNothing(TarjetasE.sNroComercio), TarjetasE.sNroComercio, DBNull.Value)
+                com.Parameters.Add("@pNombreArchivo", SqlDbType.VarChar, 100).Value = IIf(Not IsNothing(TarjetasE.sNombreArchivo), TarjetasE.sNombreArchivo, DBNull.Value)
+                com.Parameters.Add("@pNroComercio", SqlDbType.VarChar, 15).Value = IIf(Not IsNothing(TarjetasE.sNroComercio), TarjetasE.sNroComercio, DBNull.Value)
 
                 com.ExecuteNonQuery()
                 com.Parameters.Clear()

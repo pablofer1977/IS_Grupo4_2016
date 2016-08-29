@@ -2,7 +2,6 @@ USE [dbsSGD]
 GO
 
 CREATE TABLE [dbo].[tblUsuarios](
-	[Id] [int] IDENTITY(1,1) NOT NULL,
 	[Usuario] [varchar](20) NOT NULL,
 	[Password] [varchar](50) NOT NULL,
 	[Nombre] [varchar](100) NOT NULL,
@@ -12,7 +11,7 @@ CREATE TABLE [dbo].[tblUsuarios](
 	[FechaBaja] [smalldatetime] NULL,
  CONSTRAINT [PK_tblUsuarios] PRIMARY KEY CLUSTERED 
 (
-	[Id]
+	[Usuario]
 )
 ) ON [PRIMARY]
 GO

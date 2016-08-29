@@ -7,7 +7,7 @@ GO
 
 CREATE PROCEDURE Usuarios_Agregar (
 	@pUsuario		VARCHAR(20) = NULL,
-	@pPassword		VARCHAR(500) = NULL,
+	@pPassword		VARCHAR(50) = NULL,
 	@pNombre		VARCHAR(100) = NULL,
 	@pId_TipoPerfil	INT = NULL)
 AS

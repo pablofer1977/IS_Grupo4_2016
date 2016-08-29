@@ -11,16 +11,21 @@ CREATE PROCEDURE TarjetasRechazos_Listado (
 AS
 
 BEGIN
-	SELECT	t.CodBanco AS [Código Banco],
-			t.CausaRechazo AS [Causa Rechazo],
-			t.CausaOK AS [Causa OK],
-			t.Estado,
-			t.FechaAlta AS [Fecha Alta],
-			t.FechaBaja AS [Fecha Baja]
-	FROM 	tblTarjetasRechazos t
-	WHERE	(t.Id = @pId OR @pId IS NULL)
-	AND		(t.Id_Tarjeta = @pId_Tarjeta OR @pId_Tarjeta IS NULL)
-	ORDER BY t.CodBanco
+	SELECT	r.Id,
+			UPPER(r.Id_Tarjeta) AS Id_Tarjeta,
+			t.Tarjeta,
+			UPPER(r.CodBanco) AS CodBanco,
+			r.CausaRechazo,
+			CASE WHEN r.CausaOK = 1 THEN 'SI' ELSE '' END AS CausaOK,
+			r.Estado AS Id_Estado,
+			CASE WHEN r.Estado = 'A' THEN 'Activo' WHEN r.Estado = 'B' THEN 'Baja' ELSE '' END AS Estado,
+			r.FechaAlta,
+			r.FechaBaja
+	FROM 	tblTarjetasRechazos r INNER JOIN
+			tblTarjetas t ON r.Id_Tarjeta = t.Id 
+	WHERE	(r.Id = @pId OR @pId IS NULL)
+	AND		r.Id_Tarjeta = @pId_Tarjeta
+	ORDER BY r.CodBanco
 END
 GO
 GRANT EXECUTE

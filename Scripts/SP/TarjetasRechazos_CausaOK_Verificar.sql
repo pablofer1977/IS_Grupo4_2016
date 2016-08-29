@@ -23,7 +23,7 @@ BEGIN
 		WHERE	CausaOK = 1
 		AND		Id_Tarjeta = @pId_Tarjeta
 		AND		Id <> @pId
-	ELSE IF (@pAccion = 4) --baja
+	ELSE IF (@pAccion = 3) --Actualizar Estado
 		SELECT	COUNT(*) AS Cantidad
 		FROM	tblTarjetasRechazos
 		WHERE	CausaOK = 1

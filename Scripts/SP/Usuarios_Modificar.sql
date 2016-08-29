@@ -6,7 +6,7 @@ drop procedure [dbo].[Usuarios_Modificar]
 GO
 
 CREATE PROCEDURE Usuarios_Modificar (
-	@pId			INT = NULL,
+	@pUsuario		VARCHAR(20) = NULL,
 	@pNombre		VARCHAR(100) = NULL,
 	@pId_TipoPerfil	INT = NULL)
 AS
@@ -15,7 +15,7 @@ BEGIN
 	UPDATE	tblUsuarios
 	SET		Nombre = @pNombre,
 			Id_TipoPerfil = @pId_TipoPerfil
-	WHERE	Id = @pId
+	WHERE	Usuario = @pUsuario
 END
 GO
 GRANT EXECUTE

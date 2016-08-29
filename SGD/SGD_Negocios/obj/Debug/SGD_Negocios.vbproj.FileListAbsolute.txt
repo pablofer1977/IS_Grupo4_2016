@@ -28,3 +28,18 @@ C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD\SGD\SGD_Negocios\obj\Debug\SG
 C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD\SGD\SGD_Negocios\obj\Debug\SGD_Negocios.dll
 C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD\SGD\SGD_Negocios\obj\Debug\SGD_Negocios.xml
 C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD\SGD\SGD_Negocios\obj\Debug\SGD_Negocios.pdb
+E:\Proyecto SGD\SGD\SGD_Negocios\bin\Debug\SGD_Negocios.dll
+E:\Proyecto SGD\SGD\SGD_Negocios\bin\Debug\SGD_Negocios.pdb
+E:\Proyecto SGD\SGD\SGD_Negocios\bin\Debug\SGD_Negocios.xml
+E:\Proyecto SGD\SGD\SGD_Negocios\bin\Debug\SGD_Datos.dll
+E:\Proyecto SGD\SGD\SGD_Negocios\bin\Debug\SGD_Entidades.dll
+E:\Proyecto SGD\SGD\SGD_Negocios\bin\Debug\SGD_Datos.pdb
+E:\Proyecto SGD\SGD\SGD_Negocios\bin\Debug\SGD_Datos.xml
+E:\Proyecto SGD\SGD\SGD_Negocios\bin\Debug\SGD_Entidades.pdb
+E:\Proyecto SGD\SGD\SGD_Negocios\bin\Debug\SGD_Entidades.xml
+E:\Proyecto SGD\SGD\SGD_Negocios\obj\Debug\SGD_Negocios.vbprojResolveAssemblyReference.cache
+E:\Proyecto SGD\SGD\SGD_Negocios\obj\Debug\SGD_Negocios.Resources.resources
+E:\Proyecto SGD\SGD\SGD_Negocios\obj\Debug\SGD_Negocios.vbproj.GenerateResource.Cache
+E:\Proyecto SGD\SGD\SGD_Negocios\obj\Debug\SGD_Negocios.dll
+E:\Proyecto SGD\SGD\SGD_Negocios\obj\Debug\SGD_Negocios.xml
+E:\Proyecto SGD\SGD\SGD_Negocios\obj\Debug\SGD_Negocios.pdb

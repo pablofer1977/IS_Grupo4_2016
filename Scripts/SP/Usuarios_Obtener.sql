@@ -6,20 +6,20 @@ drop procedure [dbo].[Usuarios_Obtener]
 GO
 
 CREATE PROCEDURE Usuarios_Obtener (
-	@pId	INT = NULL)
+	@pUsuario	VARCHAR(20) = NULL)
 AS
 
 BEGIN
-	SELECT 	u.Id,
-			u.Usuario,
+	SELECT 	u.Usuario,
 			u.Password,
 			u.Nombre,
 			u.Id_TipoPerfil,
-			u.Estado,
+			u.Estado AS Id_Estado,
+			CASE WHEN u.Estado = 'A' THEN 'Activo' WHEN u.Estado = 'B' THEN 'Baja' ELSE '' END AS Estado,
 			u.FechaAlta,
 			u.FechaBaja
 	FROM 	tblUsuarios u
-	WHERE	u.Id = @pId
+	WHERE	u.Usuario = @pUsuario
 END
 GO
 GRANT EXECUTE

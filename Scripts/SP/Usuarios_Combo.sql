@@ -11,30 +11,30 @@ CREATE PROCEDURE Usuarios_Combo (
 	@pBlanco	BIT = NULL)
 AS
 	CREATE TABLE #Combo (
-		[Id] 	[int] NOT NULL ,
+		[Id] 	[varchar] (20) NOT NULL ,
 		[Campo] [varchar] (150) NOT NULL 
 	)
 
 BEGIN 
 
 	INSERT INTO #Combo
-	SELECT 	u.Id, 
+	SELECT 	u.Usuario, 
 			u.Usuario + ' - ' + u.Nombre
 	FROM 	tblUsuarios u
 	WHERE 	(u.Estado = @pEstado OR @pEstado IS NULL)
 
 	IF (@pTodos = 1)
 		INSERT INTO	#Combo
-		VALUES 		(-1, '[Todos]')
+		VALUES 		('-1', '[Todos]')
 
 	IF (@pBlanco = 1)
 		INSERT INTO	#Combo
-		VALUES 		(0, '')
+		VALUES 		('0', '')
 
 	SELECT	Id,
 			Campo
 	FROM	#Combo
-	ORDER BY Campo
+	ORDER BY Id
 
 	DROP TABLE #Combo
 END

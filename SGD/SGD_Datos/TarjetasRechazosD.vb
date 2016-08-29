@@ -149,7 +149,7 @@ Namespace Datos
 				com.Parameters.Add("@pId_Tarjeta", SqlDbType.Char, 3).Value = IIf(Not IsNothing(TarjetasRechazosE.sId_Tarjeta), TarjetasRechazosE.sId_Tarjeta, DBNull.Value)
 				com.Parameters.Add("@pCodBanco", SqlDbType.VarChar, 5).Value = IIf(Not IsNothing(TarjetasRechazosE.sCodBanco), TarjetasRechazosE.sCodBanco, DBNull.Value)
 				com.Parameters.Add("@pCausaRechazo", SqlDbType.VarChar, 150).Value = IIf(Not IsNothing(TarjetasRechazosE.sCausaRechazo), TarjetasRechazosE.sCausaRechazo, DBNull.Value)
-				com.Parameters.Add("@pCausaOK", SqlDbType.Bit).Value = IIf(TarjetasRechazosE.bCausaOK, 1, DBNull.Value)
+                com.Parameters.Add("@pCausaOK", SqlDbType.Bit).Value = IIf(TarjetasRechazosE.bCausaOK, 1, 0)
 
                 com.ExecuteNonQuery()
                 com.Parameters.Clear()
@@ -235,11 +235,11 @@ Namespace Datos
                 com.CommandType = CommandType.StoredProcedure
 
                 com.CommandText = "TarjetasRechazos_Verificar"
-				
+
                 com.Parameters.Add("@pAccion", SqlDbType.Int).Value = nAccion
-				com.Parameters.Add("@pId_Tarjeta", SqlDbType.Char, 3).Value = IIf(Not IsNothing(TarjetasRechazosE.sId_Tarjeta), TarjetasRechazosE.sId_Tarjeta, DBNull.Value)
-				com.Parameters.Add("@pCodBanco", SqlDbType.VarChar, 5).Value = IIf(Not IsNothing(TarjetasRechazosE.sCodBanco), TarjetasRechazosE.sCodBanco, DBNull.Value)
-				com.Parameters.Add("@pCausaRechazo", SqlDbType.VarChar, 150).Value = IIf(Not IsNothing(TarjetasRechazosE.sCausaRechazo), TarjetasRechazosE.sCausaRechazo, DBNull.Value)
+                com.Parameters.Add("@pId", SqlDbType.Int).Value = IIf(TarjetasRechazosE.nId <> 0, TarjetasRechazosE.nId, DBNull.Value)
+                com.Parameters.Add("@pId_Tarjeta", SqlDbType.Char, 3).Value = IIf(Not IsNothing(TarjetasRechazosE.sId_Tarjeta), TarjetasRechazosE.sId_Tarjeta, DBNull.Value)
+                com.Parameters.Add("@pCodBanco", SqlDbType.VarChar, 5).Value = IIf(Not IsNothing(TarjetasRechazosE.sCodBanco), TarjetasRechazosE.sCodBanco, DBNull.Value)
 
                 nCantidad = com.ExecuteScalar
 

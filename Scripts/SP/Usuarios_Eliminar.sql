@@ -6,13 +6,13 @@ drop procedure [dbo].[Usuarios_Eliminar]
 GO
 
 CREATE PROCEDURE Usuarios_Eliminar (
-	@pId	INT = NULL)
+	@pUsuario	VARCHAR(20) = NULL)
 AS
 
 BEGIN
 	DELETE
 	FROM	tblUsuarios
-	WHERE	Id = @pId
+	WHERE	Usuario = @pUsuario
 END
 GO
 GRANT EXECUTE

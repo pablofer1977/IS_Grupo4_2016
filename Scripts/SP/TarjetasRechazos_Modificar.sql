@@ -14,9 +14,15 @@ CREATE PROCEDURE TarjetasRechazos_Modificar (
 AS
 
 BEGIN
+	IF @pCausaOK = 1
+		UPDATE	tblTarjetasRechazos
+		SET		CausaOK = 0
+		WHERE	Id_Tarjeta = @pId_Tarjeta
+		AND		CausaOK = 1
+
 	UPDATE	tblTarjetasRechazos
-	SET		Id_Tarjeta = @pId_Tarjeta,
-			CodBanco = @pCodBanco,
+	SET		Id_Tarjeta = UPPER(@pId_Tarjeta),
+			CodBanco = UPPER(@pCodBanco),
 			CausaRechazo = @pCausaRechazo,
 			CausaOK = @pCausaOK
 	WHERE	Id = @pId

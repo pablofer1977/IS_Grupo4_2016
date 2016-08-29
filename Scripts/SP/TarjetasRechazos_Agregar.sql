@@ -14,7 +14,7 @@ AS
 
 BEGIN
 	INSERT INTO tblTarjetasRechazos (Id_Tarjeta, CodBanco, CausaRechazo, CausaOK, Estado, FechaAlta, FechaBaja)
-	VALUES (@pId_Tarjeta, @pCodBanco, @pCausaRechazo, @pCausaOK, 'A', GETDATE(), NULL)
+	VALUES (UPPER(@pId_Tarjeta), UPPER(@pCodBanco), @pCausaRechazo, @pCausaOK, 'A', GETDATE(), NULL)
 END
 GO
 GRANT EXECUTE

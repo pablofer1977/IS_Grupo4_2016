@@ -6,7 +6,7 @@ drop procedure [dbo].[Usuarios_Estado]
 GO
 
 CREATE PROCEDURE Usuarios_Estado (
-	@pId		INT = NULL,
+	@pUsuario	VARCHAR(20) = NULL,
 	@pEstado	CHAR(1) = NULL)
 AS
 
@@ -16,13 +16,13 @@ BEGIN
 		SET		Estado = @pEstado,
 				FechaAlta = GETDATE(),
 				FechaBaja = NULL
-		WHERE	Id = @pId		
+		WHERE	Usuario = @pUsuario
 
 	ELSE IF (@pEstado = 'B')
 		UPDATE	tblUsuarios
 		SET		Estado = @pEstado,
 				FechaBaja = GETDATE()
-		WHERE	Id = @pId
+		WHERE	Usuario = @pUsuario
 END
 GO
 GRANT EXECUTE

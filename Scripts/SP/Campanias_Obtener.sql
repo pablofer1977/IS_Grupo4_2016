@@ -13,7 +13,8 @@ BEGIN
 	SELECT 	c.Id,
 			c.Campania,
 			c.Descripcion,
-			c.Estado,
+			c.Estado AS Id_Estado,
+			CASE WHEN c.Estado = 'A' THEN 'Activo' WHEN c.Estado = 'B' THEN 'Baja' ELSE '' END AS Estado,
 			c.FechaAlta,
 			c.FechaBaja
 	FROM 	tblCampanias c

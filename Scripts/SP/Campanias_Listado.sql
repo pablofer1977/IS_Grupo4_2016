@@ -13,18 +13,19 @@ CREATE PROCEDURE Campanias_Listado (
 AS
 
 BEGIN
-	SELECT 	c.Id AS [Nro.],
-			c.Campania AS [Campaña],
-			c.Descripcion AS [Descripción],
+	SELECT 	c.Id,
+			c.Campania,
+			c.Descripcion,
+			c.Estado AS Id_Estado,
 			CASE WHEN c.Estado = 'A' THEN 'Activo' WHEN c.Estado = 'B' THEN 'Baja' ELSE '' END AS Estado,
-			c.FechaAlta AS [Fecha Alta],
-			c.FechaBaja AS [Fecha Baja]
+			c.FechaAlta,
+			c.FechaBaja
 	FROM 	tblCampanias c
 	WHERE	(c.Id = @pId OR @pId IS NULL)
-	AND		(c.Campania LIKE '%' + @pCampania  + '%' OR @pCampania IS NULL)
-	AND		(c.Descripcion LIKE '%' + @pDescripcion  + '%' OR @pDescripcion IS NULL)
+	AND		(c.Campania LIKE @pCampania  + '%' OR @pCampania IS NULL)
+	AND		(c.Descripcion LIKE @pDescripcion  + '%' OR @pDescripcion IS NULL)
 	AND		(c.Estado = @pEstado OR @pEstado IS NULL)
-	ORDER BY c.Id
+	ORDER BY c.Campania
 END
 GO
 GRANT EXECUTE

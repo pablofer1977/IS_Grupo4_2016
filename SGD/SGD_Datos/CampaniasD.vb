@@ -19,27 +19,27 @@ Namespace Datos
             Dim cn As New SqlConnection(sCadConn)
             Dim da As SqlDataAdapter
             Dim dt As DataTable
- 
+
             Try
                 dt = New DataTable
- 
+
                 cn.Open()
- 
-				da = New SqlDataAdapter("Campanias_Combo", cn)
- 
+
+                da = New SqlDataAdapter("Campanias_Combo", cn)
+
                 da.SelectCommand.CommandType = CommandType.StoredProcedure
- 
+
                 da.SelectCommand.Parameters.Add("@pEstado", SqlDbType.Char, 1).Value = IIf(Trim(sEstado) <> "", sEstado, DBNull.Value)
                 da.SelectCommand.Parameters.Add("@pTodos", SqlDbType.Bit).Value = IIf(bTodos, 1, DBNull.Value)
                 da.SelectCommand.Parameters.Add("@pBlanco", SqlDbType.Bit).Value = IIf(bBlanco, 1, DBNull.Value)
- 
+
                 da.Fill(dt)
- 
+
                 cn.Close()
                 da = Nothing
- 
+
                 Return dt
- 
+
             Catch ex As Exception
                 MsgBox(ex.Message, MsgBoxStyle.Critical, "Robin")
                 Return Nothing

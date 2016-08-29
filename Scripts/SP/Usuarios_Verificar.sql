@@ -7,7 +7,6 @@ GO
 
 CREATE PROCEDURE Usuarios_Verificar (
 	@pAccion	INT,
-	@pId		INT = NULL,
 	@pUsuario	VARCHAR(20) = NULL)
 AS
 
@@ -21,7 +20,6 @@ BEGIN
 		SELECT	COUNT(*) AS Cantidad
 		FROM	tblUsuarios
 		WHERE	Usuario = @pUsuario
-		AND		Id <> @pId
 END
 GO
 GRANT EXECUTE

@@ -1,16 +1,6 @@
 ﻿Namespace Entidades
     Public Class UsuariosE
 
-        Private _nId As Integer
-        Public Property nId() As Integer
-            Get
-                Return _nId
-            End Get
-            Set(ByVal value As Integer)
-                _nId = value
-            End Set
-        End Property
-
         Private _sUsuario As String
         Public Property sUsuario() As String
             Get
@@ -28,6 +18,16 @@
             End Get
             Set(ByVal value As String)
                 _sPassword = value
+            End Set
+        End Property
+
+        Private _sPassword2 As String
+        Public Property sPassword2() As String
+            Get
+                Return _sPassword2
+            End Get
+            Set(ByVal value As String)
+                _sPassword2 = value
             End Set
         End Property
 
@@ -52,7 +52,7 @@
         End Property
 
         Private _sEstado As String
-        Public Property sbEstado() As String
+        Public Property sEstado() As String
             Get
                 Return _sEstado
             End Get

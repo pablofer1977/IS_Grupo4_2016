@@ -12,14 +12,14 @@ AS
 
 BEGIN 
 	IF (@pEstado = 'A')
-		UPDATE	tblAcciones
+		UPDATE	tblCampanias
 		SET		Estado = @pEstado,
 				FechaAlta = GETDATE(),
 				FechaBaja = NULL
 		WHERE	Id = @pId		
 
 	ELSE IF (@pEstado = 'B')
-		UPDATE	tblAcciones
+		UPDATE	tblCampanias
 		SET		Estado = @pEstado,
 				FechaBaja = GETDATE()
 		WHERE	Id = @pId

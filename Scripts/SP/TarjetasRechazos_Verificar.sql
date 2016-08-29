@@ -9,24 +9,21 @@ CREATE PROCEDURE TarjetasRechazos_Verificar (
 	@pAccion		INT,
 	@pId			INT = NULL,
 	@pId_Tarjeta	CHAR(3) = NULL,
-	@pCodBanco		VARCHAR(5) = NULL,
-	@pCausaRechazo	VARCHAR(150) = NULL)
+	@pCodBanco		VARCHAR(5) = NULL)
 AS
 
 BEGIN 
 	IF (@pAccion = 1) --alta
 		SELECT	COUNT(*) AS Cantidad
 		FROM	tblTarjetasRechazos
-		WHERE	(Id_Tarjeta = @pId_Tarjeta AND NOT @pId_Tarjeta IS NULL)
-		OR		(CodBanco = @pCodBanco AND NOT @pCodBanco IS NULL)
-		OR		(CausaRechazo = @pCausaRechazo AND NOT @pCausaRechazo IS NULL)
+		WHERE	Id_Tarjeta = @pId_Tarjeta
+		AND		CodBanco = @pCodBanco
 
 	ELSE IF (@pAccion = 2) --modificacion
 		SELECT	COUNT(*) AS Cantidad
 		FROM	tblTarjetasRechazos
-		WHERE	((Id_Tarjeta = @pId_Tarjeta AND NOT @pId_Tarjeta IS NULL)
-		OR		(CodBanco = @pCodBanco AND NOT @pCodBanco IS NULL)
-		OR		(CausaRechazo = @pCausaRechazo AND NOT @pCausaRechazo IS NULL))
+		WHERE	Id_Tarjeta = @pId_Tarjeta
+		AND		CodBanco = @pCodBanco
 		AND		Id <> @pId
 END
 GO

@@ -10,12 +10,14 @@ CREATE PROCEDURE Tarjetas_Obtener (
 AS
 
 BEGIN
-	SELECT 	t.Id,
+	SELECT 	UPPER(t.Id) AS Id,
 			t.Tarjeta,
 			t.Id_TipoPresentacion,
+			tp.TipoPresentacion,
 			t.NombreArchivo,
 			t.NroComercio
-	FROM 	tblTarjetas t
+	FROM 	tblTarjetas t INNER JOIN
+			tblTiposPresentaciones tp ON t.Id_TipoPresentacion = tp.Id
 	WHERE	t.Id = @pId
 END
 GO
