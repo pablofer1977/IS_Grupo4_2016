@@ -6,6 +6,15 @@ C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD_Vacio\SGD\SGD_Entidades\obj\D
 C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD_Vacio\SGD\SGD_Entidades\obj\Debug\SGD_Entidades.dll
 C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD_Vacio\SGD\SGD_Entidades\obj\Debug\SGD_Entidades.xml
 C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD_Vacio\SGD\SGD_Entidades\obj\Debug\SGD_Entidades.pdb
+E:\Proyecto SGD\SGD\SGD_Entidades\bin\Debug\SGD_Entidades.dll
+E:\Proyecto SGD\SGD\SGD_Entidades\bin\Debug\SGD_Entidades.pdb
+E:\Proyecto SGD\SGD\SGD_Entidades\bin\Debug\SGD_Entidades.xml
+E:\Proyecto SGD\SGD\SGD_Entidades\obj\Debug\SGD_Entidades.Resources.resources
+E:\Proyecto SGD\SGD\SGD_Entidades\obj\Debug\SGD_Entidades.vbproj.GenerateResource.Cache
+E:\Proyecto SGD\SGD\SGD_Entidades\obj\Debug\SGD_Entidades.dll
+E:\Proyecto SGD\SGD\SGD_Entidades\obj\Debug\SGD_Entidades.xml
+E:\Proyecto SGD\SGD\SGD_Entidades\obj\Debug\SGD_Entidades.pdb
+E:\Proyecto SGD\SGD\SGD_Entidades\obj\Debug\SGD_Entidades.vbprojResolveAssemblyReference.cache
 C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD\SGD\SGD_Entidades\bin\Debug\SGD_Entidades.dll
 C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD\SGD\SGD_Entidades\bin\Debug\SGD_Entidades.pdb
 C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD\SGD\SGD_Entidades\bin\Debug\SGD_Entidades.xml
@@ -15,11 +24,3 @@ C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD\SGD\SGD_Entidades\obj\Debug\S
 C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD\SGD\SGD_Entidades\obj\Debug\SGD_Entidades.dll
 C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD\SGD\SGD_Entidades\obj\Debug\SGD_Entidades.xml
 C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD\SGD\SGD_Entidades\obj\Debug\SGD_Entidades.pdb
-E:\Proyecto SGD\SGD\SGD_Entidades\bin\Debug\SGD_Entidades.dll
-E:\Proyecto SGD\SGD\SGD_Entidades\bin\Debug\SGD_Entidades.pdb
-E:\Proyecto SGD\SGD\SGD_Entidades\bin\Debug\SGD_Entidades.xml
-E:\Proyecto SGD\SGD\SGD_Entidades\obj\Debug\SGD_Entidades.Resources.resources
-E:\Proyecto SGD\SGD\SGD_Entidades\obj\Debug\SGD_Entidades.vbproj.GenerateResource.Cache
-E:\Proyecto SGD\SGD\SGD_Entidades\obj\Debug\SGD_Entidades.dll
-E:\Proyecto SGD\SGD\SGD_Entidades\obj\Debug\SGD_Entidades.xml
-E:\Proyecto SGD\SGD\SGD_Entidades\obj\Debug\SGD_Entidades.pdb

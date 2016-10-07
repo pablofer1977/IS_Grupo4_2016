@@ -25,6 +25,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -35,6 +36,7 @@
     <DocumentationFile>SGD.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
     <FilesToIncludeForPublish>AllFilesInProjectFolder</FilesToIncludeForPublish>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -44,6 +46,7 @@
     <OutputPath>bin\</OutputPath>
     <DocumentationFile>SGD.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -52,13 +55,11 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -68,6 +69,7 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SGD_Entidades\SGD_Entidades.vbproj">
@@ -106,7 +108,11 @@
     <Content Include="frmCampaniasAlta.aspx" />
     <Content Include="frmCampaniasListado.aspx" />
     <Content Include="frmCampaniasModificacion.aspx" />
-    <Content Include="frmDonantes.aspx" />
+    <Content Include="frmDonacionesAlta.aspx" />
+    <Content Include="frmDonacionesModificacion.aspx" />
+    <Content Include="frmDonantesAlta.aspx" />
+    <Content Include="frmDonantesListado.aspx" />
+    <Content Include="frmDonantesModificacion.aspx" />
     <Content Include="frmLogin.aspx" />
     <Content Include="frmTarjetasListado.aspx" />
     <Content Include="frmTarjetasModificacion.aspx" />
@@ -122,12 +128,22 @@
     <Content Include="Resources\Eliminar.png" />
     <Content Include="Resources\Estado_Activo.png" />
     <Content Include="Resources\Estado_Inactivo.png" />
+    <Content Include="Resources\Modificar_Deshabilitado.png" />
     <Content Include="Resources\Nuevo.png" />
     <Content Include="Resources\Orden_ASC.png" />
     <Content Include="Resources\Orden_DESC.png" />
+    <Content Include="Resources\Resultado_Advertencia.png" />
+    <Content Include="Resources\Resultado_Error.png" />
+    <Content Include="Resources\Resultado_OK.png" />
     <Content Include="Resources\Ver.png" />
+    <Content Include="Resources\Ver_Deshabilitado.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="frmDonantesImportacion.aspx" />
+    <Content Include="Scripts\jquery-1.12.4.js" />
+    <Content Include="Scripts\jquery-1.12.4.min.js" />
+    <Content Include="Scripts\jquery-2.2.4.js" />
+    <Content Include="Scripts\jquery-2.2.4.min.js" />
     <Content Include="Scripts\jquery-3.1.0.min.js" />
     <Content Include="Scripts\npm.js" />
     <Content Include="Web.config" />
@@ -154,12 +170,40 @@
       <DependentUpon>frmCampaniasModificacion.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="frmDonantes.aspx.designer.vb">
-      <DependentUpon>frmDonantes.aspx</DependentUpon>
+    <Compile Include="frmDonacionesAlta.aspx.designer.vb">
+      <DependentUpon>frmDonacionesAlta.aspx</DependentUpon>
     </Compile>
-    <Compile Include="frmDonantes.aspx.vb">
-      <DependentUpon>frmDonantes.aspx</DependentUpon>
+    <Compile Include="frmDonacionesAlta.aspx.vb">
+      <DependentUpon>frmDonacionesAlta.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="frmDonacionesModificacion.aspx.designer.vb">
+      <DependentUpon>frmDonacionesModificacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmDonacionesModificacion.aspx.vb">
+      <DependentUpon>frmDonacionesModificacion.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="frmDonantesAlta.aspx.designer.vb">
+      <DependentUpon>frmDonantesAlta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmDonantesAlta.aspx.vb">
+      <DependentUpon>frmDonantesAlta.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="frmDonantesListado.aspx.designer.vb">
+      <DependentUpon>frmDonantesListado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmDonantesListado.aspx.vb">
+      <DependentUpon>frmDonantesListado.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmDonantesModificacion.aspx.designer.vb">
+      <DependentUpon>frmDonantesModificacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmDonantesModificacion.aspx.vb">
+      <DependentUpon>frmDonantesModificacion.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="frmLogin.aspx.designer.vb">
       <DependentUpon>frmLogin.aspx</DependentUpon>
@@ -242,6 +286,13 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="frmDonantesImportacion.aspx.designer.vb">
+      <DependentUpon>frmDonantesImportacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmDonantesImportacion.aspx.vb">
+      <DependentUpon>frmDonantesImportacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>

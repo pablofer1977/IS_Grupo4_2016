@@ -66,7 +66,11 @@ Namespace Negocios
             End Try
         End Function
 
-        Public Function Agregar(ByVal pTarjetasRechazos As TarjetasRechazosE) As Boolean
+        Public Function Agregar(ByVal pTarjetasRechazos As TarjetasRechazosE) As DataTable
+            Dim dt As New DataTable
+
+            dt.Columns.Add("Id", Type.GetType("System.Int32"))
+            dt.Columns.Add("Mensaje", Type.GetType("System.String"))
 
             Try
                 Dim TarjetasRechazosD As TarjetasRechazosD
@@ -75,44 +79,51 @@ Namespace Negocios
 
                 'valido los datos segun la causa de rechazo
                 If IsNothing(pTarjetasRechazos.sCodBanco) Then
-                    MsgBox("Debe Ingresar un Código de Banco.", vbInformation, "Robin")
+                    dt.Rows.Add(eMensajes_Tipos.Error_Validacion, "Debe Ingresar un Código de Banco.")
 
-                    Return False
+                    Return dt
                 End If
 
                 If Verificar(eAccion.Agregar, pTarjetasRechazos) > 0 Then
-                    MsgBox("Código de Banco ya Ingresado.", vbInformation, "Robin")
+                    dt.Rows.Add(eMensajes_Tipos.Error_Validacion, "Código de Banco ya Ingresado.")
 
-                    Return False
+                    Return dt
                 End If
 
                 If IsNothing(pTarjetasRechazos.sCausaRechazo) Then
-                    MsgBox("Debe Ingresar un Nombre de Causa de Rechazo.", vbInformation, "Robin")
+                    dt.Rows.Add(eMensajes_Tipos.Error_Validacion, "Debe Ingresar un Nombre de Causa de Rechazo.")
 
-                    Return False
+                    Return dt
                 End If
 
                 If pTarjetasRechazos.bCausaOK Then
                     If CausaOK_Verificar(eAccion.Agregar, pTarjetasRechazos) > 0 Then
-                        If MsgBox("Ya Existe una Causa de Rechazo OK." & vbCr & vbCr & "Desea Reemplazarla?", MsgBoxStyle.Question + MsgBoxStyle.YesNo + MsgBoxStyle.DefaultButton2, "Robin") = MsgBoxResult.No Then Return False
+                        If MsgBox("Ya Existe una Causa de Rechazo OK." & vbCr & vbCr & "Desea Reemplazarla?", MsgBoxStyle.Question + MsgBoxStyle.YesNo + MsgBoxStyle.DefaultButton2, "Robin") = MsgBoxResult.No Then
+                            dt.Rows.Add(eMensajes_Tipos.PreguntaSiNo, "Ya Existe una Causa de Rechazo OK.")
+
+                            Return dt
+                        End If
                     End If
                 End If
 
                 'realizo la actualizacion
                 If TarjetasRechazosD.Agregar(pTarjetasRechazos) Then
-                    MsgBox("Se dió de Alta la Causa de Rechazo.", vbInformation, "Robin")
-
-                    Return True
-                Else
-                    Return False
+                    dt.Rows.Add(eMensajes_Tipos.AccionOK, "Se dió de Alta la Causa de Rechazo.")
                 End If
+
+                Return dt
             Catch ex As Exception
-                MsgBox(ex.Message, MsgBoxStyle.Critical, "Robin")
-                Return False
+                dt.Rows.Add(eMensajes_Tipos.Error_Aplicacion, ex.Message)
+
+                Return dt
             End Try
         End Function
 
-        Public Function Modificar(ByVal pTarjetasRechazos As TarjetasRechazosE) As Boolean
+        Public Function Modificar(ByVal pTarjetasRechazos As TarjetasRechazosE) As DataTable
+            Dim dt As New DataTable
+
+            dt.Columns.Add("Id", Type.GetType("System.Int32"))
+            dt.Columns.Add("Mensaje", Type.GetType("System.String"))
 
             Try
                 Dim TarjetasRechazosD As TarjetasRechazosD
@@ -121,100 +132,65 @@ Namespace Negocios
 
                 'valido los datos segun la causa de rechazo
                 If pTarjetasRechazos.nId = 0 Then
-                    MsgBox("Debe Seleccionar una Causa de Rechazo de la Grilla.", vbInformation, "Robin")
+                    dt.Rows.Add(eMensajes_Tipos.Error_Validacion, "Debe Seleccionar una Causa de Rechazo de la Grilla.")
 
-                    Return False
+                    Return dt
                 End If
 
                 If IsNothing(pTarjetasRechazos.sCodBanco) Then
-                    MsgBox("Debe Ingresar un Código de Banco.", vbInformation, "Robin")
+                    dt.Rows.Add(eMensajes_Tipos.Error_Validacion, "Debe Ingresar un Código de Banco.")
 
-                    Return False
+                    Return dt
                 End If
 
                 If Verificar(eAccion.Modificar, pTarjetasRechazos) > 0 Then
-                    MsgBox("Código de Banco ya Ingresado.", vbInformation, "Robin")
+                    dt.Rows.Add(eMensajes_Tipos.Error_Validacion, "Código de Banco ya Ingresado.")
 
-                    Return False
+                    Return dt
                 End If
 
                 If IsNothing(pTarjetasRechazos.sCausaRechazo) Then
-                    MsgBox("Debe Ingresar un Nombre de Causa de Rechazo.", vbInformation, "Robin")
+                    dt.Rows.Add(eMensajes_Tipos.Error_Validacion, "Debe Ingresar un Nombre de Causa de Rechazo.")
 
-                    Return False
+                    Return dt
                 End If
 
                 If pTarjetasRechazos.bCausaOK Then
                     If CausaOK_Verificar(eAccion.Modificar, pTarjetasRechazos) > 0 Then
-                        If MsgBox("Ya Existe una Causa de Rechazo OK." & vbCr & vbCr & "Desea Reemplazarla?", MsgBoxStyle.Question + MsgBoxStyle.YesNo + MsgBoxStyle.DefaultButton2, "Robin") = MsgBoxResult.No Then Return False
+                        If MsgBox("Ya Existe una Causa de Rechazo OK." & vbCr & vbCr & "Desea Reemplazarla?", MsgBoxStyle.Question + MsgBoxStyle.YesNo + MsgBoxStyle.DefaultButton2, "Robin") = MsgBoxResult.No Then
+                            dt.Rows.Add(eMensajes_Tipos.PreguntaSiNo, "Ya Existe una Causa de Rechazo OK.")
+
+                            Return dt
+                        End If
                     End If
                 End If
 
                 If Not pTarjetasRechazos.bCausaOK Then
                     If CausaOK_Verificar(eAccion.ActualizarEstado, pTarjetasRechazos) > 0 Then
-                        MsgBox("No Puede Dar de Baja una Causa de Rechazo OK.", vbInformation, "Robin")
+                        dt.Rows.Add(eMensajes_Tipos.Error_Validacion, "No Puede Dar de Baja una Causa de Rechazo OK.")
 
-                        Return False
+                        Return dt
                     End If
                 End If
 
                 'realizo la actualizacion
                 If TarjetasRechazosD.Modificar(pTarjetasRechazos) Then
-                    MsgBox("Se Modificaron los Datos de la Causa de Rechazo.", vbInformation, "Robin")
-
-                    Return True
-                Else
-                    Return False
+                    dt.Rows.Add(eMensajes_Tipos.AccionOK, "Se Modificaron los Datos de la Causa de Rechazo.")
                 End If
+
+                Return dt
             Catch ex As Exception
-                MsgBox(ex.Message, MsgBoxStyle.Critical, "Robin")
-                Return False
+                dt.Rows.Add(eMensajes_Tipos.Error_Aplicacion, ex.Message)
+
+                Return dt
             End Try
         End Function
 
-        Public Function Eliminar(ByVal pTarjetasRechazos As TarjetasRechazosE) As Boolean
+        Public Function Estado(ByVal pTarjetasRechazos As TarjetasRechazosE) As DataTable
+            Dim dt As New DataTable
 
-            Try
-                Dim TarjetasRechazosD As TarjetasRechazosD
-
-                TarjetasRechazosD = New TarjetasRechazosD
-
-                'valido los datos segun la causa de rechazo
-                If pTarjetasRechazos.nId = 0 Then
-                    MsgBox("Debe Seleccionar una Causa de Rechazo de la Grilla.", vbInformation, "Robin")
-
-                    Return False
-                End If
-
-                If FK_Verificar(pTarjetasRechazos) > 0 Then
-                    MsgBox("La Causa de Rechazo Existe en Detalles de Presentaciones.", vbInformation, "Robin")
-
-                    Return False
-                End If
-
-                If pTarjetasRechazos.bCausaOK Then
-                    If CausaOK_Verificar(eAccion.Eliminar, pTarjetasRechazos) > 0 Then
-                        MsgBox("No Puede Dar de Baja una Causa de Rechazo OK.", vbInformation, "Robin")
-
-                        Return False
-                    End If
-                End If
-
-                'realizo la actualizacion
-                If TarjetasRechazosD.Eliminar(pTarjetasRechazos) Then
-                    MsgBox("Acción Realizada Correctamente.", vbInformation, "Robin")
-
-                    Return True
-                Else
-                    Return False
-                End If
-            Catch ex As Exception
-                MsgBox(ex.Message, MsgBoxStyle.Critical, "Robin")
-                Return False
-            End Try
-        End Function
-
-        Public Function Estado(ByVal pTarjetasRechazos As TarjetasRechazosE) As Boolean
+            dt.Columns.Add("Id", Type.GetType("System.Int32"))
+            dt.Columns.Add("Mensaje", Type.GetType("System.String"))
 
             Try
                 Dim TarjetasRechazosD As TarjetasRechazosD
@@ -223,30 +199,29 @@ Namespace Negocios
 
                 'valido los datos segun la campaña
                 If pTarjetasRechazos.nId = 0 Then
-                    MsgBox("Debe Seleccionar una Causa de Rechazo de la Grilla.", vbInformation, "Robin")
+                    dt.Rows.Add(eMensajes_Tipos.Error_Validacion, "Debe Seleccionar una Causa de Rechazo de la Grilla.")
 
-                    Return False
+                    Return dt
                 End If
 
                 If pTarjetasRechazos.sEstado = "B" Then
                     If CausaOK_Verificar(eAccion.ActualizarEstado, pTarjetasRechazos) > 0 Then
-                        MsgBox("No Puede Dar de Baja una Causa de Rechazo OK.", vbInformation, "Robin")
+                        dt.Rows.Add(eMensajes_Tipos.Error_Validacion, "No Puede Dar de Baja una Causa de Rechazo OK.")
 
-                        Return False
+                        Return dt
                     End If
                 End If
 
                 'realizo la actualizacion
                 If TarjetasRechazosD.Estado(pTarjetasRechazos) Then
-                    MsgBox("La Causa de Rechazo Fue Dada de Baja.", vbInformation, "Robin")
-
-                    Return True
-                Else
-                    Return False
+                    dt.Rows.Add(eMensajes_Tipos.AccionOK, "La Causa de Rechazo Fue Dada de Baja.")
                 End If
+
+                Return dt
             Catch ex As Exception
-                MsgBox(ex.Message, MsgBoxStyle.Critical, "Robin")
-                Return False
+                dt.Rows.Add(eMensajes_Tipos.Error_Aplicacion, ex.Message)
+
+                Return dt
             End Try
         End Function
 

@@ -20,7 +20,7 @@ BEGIN
 	INSERT INTO #Combo
 	SELECT 	t.Id, 
 			'(' + t.Id + ') ' + t.Tarjeta
-	FROM 	Tarjetas t
+	FROM 	tblTarjetas t
 	WHERE	(Id_TipoPresentacion = @pId_TipoPresentacion OR @pId_TipoPresentacion IS NULL)
 
 	IF (@pTodos = 1)
@@ -34,7 +34,7 @@ BEGIN
 	SELECT	Id,
 			Campo
 	FROM	#Combo
-	ORDER BY Campo
+	ORDER BY Id
 
 	DROP TABLE #Combo
 END

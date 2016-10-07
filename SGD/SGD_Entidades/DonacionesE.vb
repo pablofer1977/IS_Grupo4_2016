@@ -139,5 +139,15 @@
                 _nId_Campania = value
             End Set
         End Property
+
+        Private _sNroTarjeta_CBU As String
+        Public Property sNroTarjeta_CBU() As String
+            Get
+                Return _sNroTarjeta_CBU
+            End Get
+            Set(ByVal value As String)
+                _sNroTarjeta_CBU = value
+            End Set
+        End Property
     End Class
 End Namespace

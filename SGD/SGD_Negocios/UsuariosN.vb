@@ -25,7 +25,7 @@ Namespace Negocios
             End Try
         End Function
 
-        Public Function Estado_CargarCombo(ByVal bTodos As Boolean, ByVal bBlanco As Boolean) As DataTable
+        Public Function Estados_CargarCombo(ByVal bTodos As Boolean, ByVal bBlanco As Boolean) As DataTable
             Dim GeneralD As GeneralD
             Dim dt As DataTable
 
@@ -33,7 +33,7 @@ Namespace Negocios
                 GeneralD = New GeneralD
                 dt = New DataTable
 
-                dt = GeneralD.Estado_CargarCombo(bTodos, bBlanco)
+                dt = GeneralD.Estados_CargarCombo(bTodos, bBlanco)
 
                 GeneralD = Nothing
 
@@ -105,7 +105,11 @@ Namespace Negocios
             End Try
         End Function
 
-        Public Function Agregar(ByVal pUsuarios As UsuariosE) As Boolean
+        Public Function Agregar(ByVal pUsuarios As UsuariosE) As DataTable
+            Dim dt As New DataTable
+
+            dt.Columns.Add("Id", Type.GetType("System.Int32"))
+            dt.Columns.Add("Mensaje", Type.GetType("System.String"))
 
             Try
                 Dim UsuariosD As UsuariosD
@@ -114,62 +118,65 @@ Namespace Negocios
 
                 'valido los datos
                 If IsNothing(pUsuarios.sUsuario) Then
-                    MsgBox("Debe Ingresar un Usuario.", vbInformation, "Robin")
+                    dt.Rows.Add(eMensajes_Tipos.Error_Validacion, "Debe Ingresar un Usuario.")
 
-                    Return False
+                    Return dt
                 End If
 
                 If Verificar(eAccion.Agregar, pUsuarios) > 0 Then
-                    MsgBox("Usuario ya Ingresado.", vbInformation, "Robin")
+                    dt.Rows.Add(eMensajes_Tipos.Error_Validacion, "Usuario ya Ingresado.")
 
-                    Return False
+                    Return dt
                 End If
 
                 If IsNothing(pUsuarios.sPassword) Then
-                    MsgBox("Debe Ingresar una Password.", vbInformation, "Robin")
+                    dt.Rows.Add(eMensajes_Tipos.Error_Validacion, "Debe Ingresar una Password.")
 
-                    Return False
+                    Return dt
                 End If
 
                 If IsNothing(pUsuarios.sPassword2) Then
-                    MsgBox("Debe Confirmar la Password.", vbInformation, "Robin")
+                    dt.Rows.Add(eMensajes_Tipos.Error_Validacion, "Debe Confirmar la Password.")
 
-                    Return False
+                    Return dt
                 End If
 
                 If pUsuarios.sPassword <> pUsuarios.sPassword2 Then
-                    MsgBox("Las Password no Coinciden.", vbInformation, "Robin")
+                    dt.Rows.Add(eMensajes_Tipos.Error_Validacion, "Las Password no Coinciden.")
 
-                    Return False
+                    Return dt
                 End If
 
                 If IsNothing(pUsuarios.sNombre) Then
-                    MsgBox("Debe Ingresar un Nombre y Apellido.", vbInformation, "Robin")
+                    dt.Rows.Add(eMensajes_Tipos.Error_Validacion, "Debe Ingresar un Nombre y Apellido.")
 
-                    Return False
+                    Return dt
                 End If
 
                 If pUsuarios.nId_TipoPerfil = 0 Then
-                    MsgBox("Debe Seleccionar un Perfil.", vbInformation, "Robin")
+                    dt.Rows.Add(eMensajes_Tipos.Error_Validacion, "Debe Seleccionar un Perfil.")
 
-                    Return False
+                    Return dt
                 End If
 
                 'realizo la actualizacion
                 If UsuariosD.Agregar(pUsuarios) Then
-                    MsgBox("Se dió de Alta al Usuario.", vbInformation, "Robin")
-
-                    Return True
-                Else
-                    Return False
+                    dt.Rows.Add(eMensajes_Tipos.AccionOK, "Se dió de Alta al Usuario.")
                 End If
+
+                Return dt
             Catch ex As Exception
-                MsgBox(ex.Message, MsgBoxStyle.Critical, "Robin")
-                Return False
+                dt.Rows.Add(eMensajes_Tipos.Error_Aplicacion, ex.Message)
+
+                Return dt
             End Try
         End Function
 
-        Public Function Modificar(ByVal pUsuarios As UsuariosE) As Boolean
+        Public Function Modificar(ByVal pUsuarios As UsuariosE) As DataTable
+            Dim dt As New DataTable
+
+            dt.Columns.Add("Id", Type.GetType("System.Int32"))
+            dt.Columns.Add("Mensaje", Type.GetType("System.String"))
 
             Try
                 Dim UsuariosD As UsuariosD
@@ -178,38 +185,41 @@ Namespace Negocios
 
                 'valido los datos
                 If IsNothing(pUsuarios.sUsuario) Then
-                    MsgBox("Debe Ingresar un Usuario.", vbInformation, "Robin")
+                    dt.Rows.Add(eMensajes_Tipos.Error_Validacion, "Debe Ingresar un Usuario.")
 
-                    Return False
+                    Return dt
                 End If
 
                 If IsNothing(pUsuarios.sNombre) Then
-                    MsgBox("Debe Ingresar un Nombre y Apellido.", vbInformation, "Robin")
+                    dt.Rows.Add(eMensajes_Tipos.Error_Validacion, "Debe Ingresar un Nombre y Apellido.")
 
-                    Return False
+                    Return dt
                 End If
 
                 If pUsuarios.nId_TipoPerfil = 0 Then
-                    MsgBox("Debe Seleccionar un Perfil.", vbInformation, "Robin")
+                    dt.Rows.Add(eMensajes_Tipos.Error_Validacion, "Debe Seleccionar un Perfil.")
 
-                    Return False
+                    Return dt
                 End If
 
                 'realizo la actualizacion
                 If UsuariosD.Modificar(pUsuarios) Then
-                    MsgBox("Se Modificaron los Datos del Usuario.", vbInformation, "Robin")
-
-                    Return True
-                Else
-                    Return False
+                    dt.Rows.Add(eMensajes_Tipos.AccionOK, "Se Modificaron los Datos del Usuario.")
                 End If
+
+                Return dt
             Catch ex As Exception
-                MsgBox(ex.Message, MsgBoxStyle.Critical, "Robin")
-                Return False
+                dt.Rows.Add(eMensajes_Tipos.Error_Aplicacion, ex.Message)
+
+                Return dt
             End Try
         End Function
 
-        Public Function Eliminar(ByVal pUsuarios As UsuariosE) As Boolean
+        Public Function Estado(ByVal pUsuarios As UsuariosE) As DataTable
+            Dim dt As New DataTable
+
+            dt.Columns.Add("Id", Type.GetType("System.Int32"))
+            dt.Columns.Add("Mensaje", Type.GetType("System.String"))
 
             Try
                 Dim UsuariosD As UsuariosD
@@ -218,50 +228,21 @@ Namespace Negocios
 
                 'valido los datos
                 If IsNothing(pUsuarios.sUsuario) Then
-                    MsgBox("Debe Seleccionar un Usuario de la Grilla", vbInformation, "Robin")
+                    dt.Rows.Add(eMensajes_Tipos.Error_Validacion, "Debe Seleccionar un Usuario de la Grilla")
 
-                    Return False
-                End If
-
-                'realizo la actualizacion
-                If UsuariosD.Eliminar(pUsuarios) Then
-                    MsgBox("Acción Realizada Correctamente", vbInformation, "Robin")
-
-                    Return True
-                Else
-                    Return False
-                End If
-            Catch ex As Exception
-                MsgBox(ex.Message, MsgBoxStyle.Critical, "Robin")
-                Return False
-            End Try
-        End Function
-
-        Public Function Estado(ByVal pUsuarios As UsuariosE) As Boolean
-
-            Try
-                Dim UsuariosD As UsuariosD
-
-                UsuariosD = New UsuariosD
-
-                'valido los datos
-                If IsNothing(pUsuarios.sUsuario) Then
-                    MsgBox("Debe Seleccionar un Usuario de la Grilla", vbInformation, "Robin")
-
-                    Return False
+                    Return dt
                 End If
 
                 'realizo la actualizacion
                 If UsuariosD.Estado(pUsuarios) Then
-                    MsgBox("El Usuario fue Dado de Baja.", vbInformation, "Robin")
-
-                    Return True
-                Else
-                    Return False
+                    dt.Rows.Add(eMensajes_Tipos.AccionOK, "El Usuario fue Dado de Baja.")
                 End If
+
+                Return dt
             Catch ex As Exception
-                MsgBox(ex.Message, MsgBoxStyle.Critical, "Robin")
-                Return False
+                dt.Rows.Add(eMensajes_Tipos.Error_Aplicacion, ex.Message)
+
+                Return dt
             End Try
         End Function
 
@@ -322,7 +303,11 @@ Namespace Negocios
             End Try
         End Function
 
-        Public Function Ingresar(ByVal pUsuarios As UsuariosE) As Boolean
+        Public Function Ingresar(ByVal pUsuarios As UsuariosE) As DataTable
+            Dim dt As New DataTable
+
+            dt.Columns.Add("Id", Type.GetType("System.Int32"))
+            dt.Columns.Add("Mensaje", Type.GetType("System.String"))
 
             Try
                 Dim UsuariosD As UsuariosD
@@ -331,35 +316,64 @@ Namespace Negocios
 
                 'valido los datos
                 If IsNothing(pUsuarios.sUsuario) Then
-                    MsgBox("Debe ingresar un Usuario/Password Válidos.", vbInformation, "Robin")
+                    dt.Rows.Add(eMensajes_Tipos.Error_Validacion, "Debe ingresar un Usuario/Password Válidos.")
 
-                    Return False
+                ElseIf IsNothing(pUsuarios.sPassword) Then
+                    dt.Rows.Add(eMensajes_Tipos.Error_Validacion, "Debe ingresar un Usuario/Password Válidos.")
+
+                ElseIf Estado_Verificar(pUsuarios) <= 0 Then
+                    dt.Rows.Add(eMensajes_Tipos.Error_Validacion, "Debe ingresar un Usuario/Password Válidos.")
+
+                ElseIf Password_Verificar(pUsuarios) <= 0 Then
+                    dt.Rows.Add(eMensajes_Tipos.Error_Validacion, "Debe ingresar un Usuario/Password Válidos.")
+
                 End If
 
-                If IsNothing(pUsuarios.sPassword) Then
-                    MsgBox("Debe ingresar un Usuario/Password Válidos.", vbInformation, "Robin")
-
-                    Return False
-                End If
-
-                If Estado_Verificar(pUsuarios) <= 0 Then
-                    MsgBox("Debe ingresar un Usuario/Password Válidos.", vbInformation, "Robin")
-
-                    Return False
-                End If
-
-                If Password_Verificar(pUsuarios) <= 0 Then
-                    MsgBox("Debe ingresar un Usuario/Password Válidos.", vbInformation, "Robin")
-
-                    Return False
-                End If
-
-                Return True
+                Return dt
             Catch ex As Exception
-                MsgBox(ex.Message, MsgBoxStyle.Critical, "Robin")
-                Return False
+                dt.Rows.Add(eMensajes_Tipos.Error_Aplicacion, ex.Message)
+
+                Return dt
             End Try
         End Function
+
+        'Public Function Ingresar(ByVal pUsuarios As UsuariosE) As Boolean
+        '    Try
+        '        Dim UsuariosD As UsuariosD
+
+        '        UsuariosD = New UsuariosD
+
+        '        'valido los datos
+        '        If IsNothing(pUsuarios.sUsuario) Then
+        '            MsgBox("Debe ingresar un Usuario/Password Válidos.", vbInformation, "Robin")
+
+        '            Return False
+        '        End If
+
+        '        If IsNothing(pUsuarios.sPassword) Then
+        '            MsgBox("Debe ingresar un Usuario/Password Válidos.", vbInformation, "Robin")
+
+        '            Return False
+        '        End If
+
+        '        If Estado_Verificar(pUsuarios) <= 0 Then
+        '            MsgBox("Debe ingresar un Usuario/Password Válidos.", vbInformation, "Robin")
+
+        '            Return False
+        '        End If
+
+        '        If Password_Verificar(pUsuarios) <= 0 Then
+        '            MsgBox("Debe ingresar un Usuario/Password Válidos.", vbInformation, "Robin")
+
+        '            Return False
+        '        End If
+
+        '        Return True
+        '    Catch ex As Exception
+        '        MsgBox(ex.Message, MsgBoxStyle.Critical, "Robin")
+        '        Return False
+        '    End Try
+        'End Function
 
         Public Function Perfil_Obtener(ByVal pUsuarios As UsuariosE) As DataTable
             Dim UsuariosD As UsuariosD

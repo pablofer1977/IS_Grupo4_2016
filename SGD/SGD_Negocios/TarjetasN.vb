@@ -66,7 +66,11 @@ Namespace Negocios
             End Try
         End Function
 
-        Public Function Modificar(ByVal pTarjetas As TarjetasE) As Boolean
+        Public Function Modificar(ByVal pTarjetas As TarjetasE) As DataTable
+            Dim dt As New DataTable
+
+            dt.Columns.Add("Id", Type.GetType("System.Int32"))
+            dt.Columns.Add("Mensaje", Type.GetType("System.String"))
 
             Try
                 Dim TarjetasD As TarjetasD
@@ -75,46 +79,45 @@ Namespace Negocios
 
                 'valido los datos segun la tarjeta
                 If IsNothing(pTarjetas.sId) Then
-                    MsgBox("Debe Seleccionar una Tarjeta o CBU de la Grilla", vbInformation, "Robin")
+                    dt.Rows.Add(eMensajes_Tipos.Error_Validacion, "Debe Seleccionar una Tarjeta o CBU de la Grilla")
 
-                    Return False
+                    Return dt
                 End If
 
                 If IsNothing(pTarjetas.sTarjeta) Then
-                    MsgBox("Debe Ingresar un Nombre de Tarjeta o CBU", vbInformation, "Robin")
+                    dt.Rows.Add(eMensajes_Tipos.Error_Validacion, "Debe Ingresar un Nombre de Tarjeta o CBU")
 
-                    Return False
+                    Return dt
                 End If
 
                 If Verificar(eAccion.Modificar, pTarjetas) > 0 Then
-                    MsgBox("Tarjeta o CBU ya Ingresado", vbInformation, "Robin")
+                    dt.Rows.Add(eMensajes_Tipos.Error_Validacion, "Tarjeta o CBU ya Ingresado", vbInformation)
 
-                    Return False
+                    Return dt
                 End If
 
                 If IsNothing(pTarjetas.sTarjeta) Then
-                    MsgBox("Debe Ingresar un Nombre de Archivo", vbInformation, "Robin")
+                    dt.Rows.Add(eMensajes_Tipos.Error_Validacion, "Debe Ingresar un Nombre de Archivo", vbInformation)
 
-                    Return False
+                    Return dt
                 End If
 
                 If IsNothing(pTarjetas.sTarjeta) Then
-                    MsgBox("Debe Ingresar un Nro. de Comercio", vbInformation, "Robin")
+                    dt.Rows.Add(eMensajes_Tipos.Error_Validacion, "Debe Ingresar un Nro. de Comercio", vbInformation)
 
-                    Return False
+                    Return dt
                 End If
 
                 'realizo la actualizacion
                 If TarjetasD.Modificar(pTarjetas) Then
-                    MsgBox("Se Modificaron los Datos de la Tarjeta o CBU", vbInformation, "Robin")
-
-                    Return True
-                Else
-                    Return False
+                    dt.Rows.Add(eMensajes_Tipos.AccionOK, "Se Modificaron los Datos de la Tarjeta o CBU")
                 End If
+
+                Return dt
             Catch ex As Exception
-                MsgBox(ex.Message, MsgBoxStyle.Critical, "Robin")
-                Return False
+                dt.Rows.Add(eMensajes_Tipos.Error_Aplicacion, ex.Message)
+
+                Return dt
             End Try
         End Function
 

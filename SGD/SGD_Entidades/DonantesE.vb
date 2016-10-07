@@ -169,5 +169,35 @@
                 _sComentarios = value
             End Set
         End Property
+
+        Private _sApellido_Nombre_RazonSocial As String
+        Public Property sApellido_Nombre_RazonSocial() As String
+            Get
+                Return _sApellido_Nombre_RazonSocial
+            End Get
+            Set(ByVal value As String)
+                _sApellido_Nombre_RazonSocial = value
+            End Set
+        End Property
+
+        Private _sDNI_CUIL_CUIT As String
+        Public Property sDNI_CUIL_CUIT() As String
+            Get
+                Return _sDNI_CUIL_CUIT
+            End Get
+            Set(ByVal value As String)
+                _sDNI_CUIL_CUIT = value
+            End Set
+        End Property
+
+        Private _sTE_Linea_Celular_Laboral As String
+        Public Property sTE_Linea_Celular_Laboral() As String
+            Get
+                Return _sTE_Linea_Celular_Laboral
+            End Get
+            Set(ByVal value As String)
+                _sTE_Linea_Celular_Laboral = value
+            End Set
+        End Property
     End Class
 End Namespace

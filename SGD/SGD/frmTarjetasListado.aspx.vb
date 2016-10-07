@@ -92,20 +92,51 @@ Public Class frmTarjetasListado
     Private Function Estado(nId As Integer, sId_Tarjeta As String) As Boolean
         Dim TarjetasRechazosN As TarjetasRechazosN
         Dim TarjetasRechazosE As TarjetasRechazosE
+        Dim dt As DataTable
         Dim bResultado As Boolean = False
 
         Try
             TarjetasRechazosN = New TarjetasRechazosN
             TarjetasRechazosE = New TarjetasRechazosE
+            dt = New DataTable
 
             TarjetasRechazosE.nId = nId
             TarjetasRechazosE.sId_Tarjeta = sId_Tarjeta
             TarjetasRechazosE.sEstado = "B"
 
-            bResultado = TarjetasRechazosN.Estado(TarjetasRechazosE)
+            dt = TarjetasRechazosN.Estado(TarjetasRechazosE)
+
+            If dt.Rows.Count > 0 Then
+                If dt.Select("Id = 0").Count = 1 Then
+                    bResultado = True
+                ElseIf dt.Select("Id = -1").Count = 1 Then
+                    bResultado = False
+                Else
+                    If dt.Select("Id = 0").Count = 1 Then
+                        bResultado = True
+                    ElseIf dt.Select("Id = -1").Count = 1 Then
+                        bResultado = False
+                    Else
+                        'mostrar mensaje de error
+                        lblTituloError.Text = "Baja de Causa de Rechazo - Error"
+                        lblError.Text = ""
+
+                        For i = 0 To dt.Rows.Count - 1
+                            If Trim(lblError.Text) <> "" Then lblError.Text = lblError.Text & "<br>"
+                            lblError.Text = lblError.Text & dt.Rows(i).Item("Mensaje").ToString
+                        Next
+
+                        ScriptManager.RegisterStartupScript(Page, Page.GetType(), "Modal_Error", "$('#Modal_Error').modal();", True)
+                        upModal_Error.Update()
+
+                        bResultado = False
+                    End If
+                End If
+            End If
 
             TarjetasRechazosN = Nothing
             TarjetasRechazosE = Nothing
+            dt = Nothing
 
             Return bResultado
         Catch ex As Exception

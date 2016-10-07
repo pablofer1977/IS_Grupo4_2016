@@ -52,21 +52,52 @@ Public Class frmTarjetasModificacion
     Private Function Aceptar() As Boolean
         Dim TarjetasN As TarjetasN
         Dim TarjetasE As TarjetasE
+        Dim dt As DataTable
         Dim bResultado As Boolean = False
 
         Try
             TarjetasN = New TarjetasN
             TarjetasE = New TarjetasE
+            dt = New DataTable
 
             TarjetasE.sId = UCase(Request.QueryString("id"))
-            TarjetasE.sTarjeta = Trim(txtNombre.Text)
-            TarjetasE.sNombreArchivo = Trim(txtNombreArchivo.Text)
-            TarjetasE.sNroComercio = Trim(txtNroComercio.Text)
+            If Trim(txtNombre.Text) <> "" Then TarjetasE.sTarjeta = Trim(txtNombre.Text)
+            If Trim(txtNombreArchivo.Text) <> "" Then TarjetasE.sNombreArchivo = Trim(txtNombreArchivo.Text)
+            If Trim(txtNroComercio.Text) <> "" Then TarjetasE.sNroComercio = Trim(txtNroComercio.Text)
 
-            bResultado = TarjetasN.Modificar(TarjetasE)
+            dt = TarjetasN.Modificar(TarjetasE)
+
+            If dt.Rows.Count > 0 Then
+                If dt.Select("Id = 0").Count = 1 Then
+                    bResultado = True
+                ElseIf dt.Select("Id = -1").Count = 1 Then
+                    bResultado = False
+                Else
+                    If dt.Select("Id = 0").Count = 1 Then
+                        bResultado = True
+                    ElseIf dt.Select("Id = -1").Count = 1 Then
+                        bResultado = False
+                    Else
+                        'mostrar mensaje de error
+                        lblTituloError.Text = "Modificación de Tarjeta - Error"
+                        lblError.Text = ""
+
+                        For i = 0 To dt.Rows.Count - 1
+                            If Trim(lblError.Text) <> "" Then lblError.Text = lblError.Text & "<br>"
+                            lblError.Text = lblError.Text & dt.Rows(i).Item("Mensaje").ToString
+                        Next
+
+                        ScriptManager.RegisterStartupScript(Page, Page.GetType(), "Modal_Error", "$('#Modal_Error').modal();", True)
+                        upModal_Error.Update()
+
+                        bResultado = False
+                    End If
+                End If
+            End If
 
             TarjetasN = Nothing
             TarjetasE = Nothing
+            dt = Nothing
 
             Return bResultado
         Catch ex As Exception

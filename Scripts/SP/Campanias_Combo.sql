@@ -6,9 +6,9 @@ drop procedure [dbo].[Campanias_Combo]
 GO
 
 CREATE PROCEDURE Campanias_Combo (
-	@pEstado	CHAR(1) = NULL,
 	@pTodos		BIT = NULL,
-	@pBlanco	BIT = NULL)
+	@pBlanco	BIT = NULL,
+	@pEstado	CHAR(1) = NULL)
 AS
 	CREATE TABLE #Combo (
 		[Id] 	[int] NOT NULL ,

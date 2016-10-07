@@ -15,7 +15,7 @@ Namespace Datos
             sCadConn = ConfigurationManager.ConnectionStrings("sCadConn").ConnectionString
         End Sub
 #End Region
-        Public Function CargarCombo(ByVal sEstado As String, ByVal bTodos As Boolean, ByVal bBlanco As Boolean) As DataTable
+        Public Function CargarCombo(ByVal bTodos As Boolean, ByVal bBlanco As Boolean, ByVal sEstado As String) As DataTable
             Dim cn As New SqlConnection(sCadConn)
             Dim da As SqlDataAdapter
             Dim dt As DataTable
@@ -29,9 +29,9 @@ Namespace Datos
 
                 da.SelectCommand.CommandType = CommandType.StoredProcedure
 
-                da.SelectCommand.Parameters.Add("@pEstado", SqlDbType.Char, 1).Value = IIf(Trim(sEstado) <> "", sEstado, DBNull.Value)
                 da.SelectCommand.Parameters.Add("@pTodos", SqlDbType.Bit).Value = IIf(bTodos, 1, DBNull.Value)
                 da.SelectCommand.Parameters.Add("@pBlanco", SqlDbType.Bit).Value = IIf(bBlanco, 1, DBNull.Value)
+                da.SelectCommand.Parameters.Add("@pEstado", SqlDbType.Char, 1).Value = IIf(Trim(sEstado) <> "", sEstado, DBNull.Value)
 
                 da.Fill(dt)
 
@@ -68,17 +68,6 @@ Namespace Datos
 
                 cn.Close()
                 da = Nothing
-
-                'dt.Columns.Add("Nro.", Type.GetType("System.Int32"))
-                'dt.Columns.Add("Campaña", Type.GetType("System.String"))
-                'dt.Columns.Add("Descripción", Type.GetType("System.String"))
-                'dt.Columns.Add("Estado", Type.GetType("System.String"))
-                'dt.Columns.Add("Fecha Alta", Type.GetType("System.DateTime"))
-                'dt.Columns.Add("Fecha Baja", Type.GetType("System.DateTime"))
-
-                'dt.Rows.Add(1, "Campaña 1", "Descripción de la Campaña 1", "Activo", "01/06/2015", DBNull.Value)
-                'dt.Rows.Add(2, "Campaña 2", "Descripción de la Campaña 2", "Activo", "01/03/2015", DBNull.Value)
-                'dt.Rows.Add(3, "Campaña 3", "Descripción de la Campaña 3", "Activo", "01/01/2015", DBNull.Value)
 
                 Return dt
 
@@ -160,34 +149,6 @@ Namespace Datos
                 com.Parameters.Add("@pId", SqlDbType.Int).Value = CampaniasE.nId
 				com.Parameters.Add("@pCampania", SqlDbType.VarChar, 50).Value = IIf(Not IsNothing(CampaniasE.sCampania), CampaniasE.sCampania, DBNull.Value)
 				com.Parameters.Add("@pDescripcion", SqlDbType.VarChar, 250).Value = IIf(Not IsNothing(CampaniasE.sDescripcion), CampaniasE.sDescripcion, DBNull.Value)
-
-                com.ExecuteNonQuery()
-                com.Parameters.Clear()
-
-                com.Dispose()
-                cn.Close()
-
-                Return True
-
-            Catch ex As Exception
-                MsgBox(ex.Message, MsgBoxStyle.Critical, "Robin")
-                Return False
-            End Try
-        End Function
-
-        Public Function Eliminar(ByVal CampaniasE As CampaniasE) As Boolean
-            Dim cn As New SqlConnection(sCadConn)
-            Dim com As New SqlCommand
-
-            Try
-                cn.Open()
-
-                com.Connection = cn
-                com.CommandType = CommandType.StoredProcedure
-
-                com.CommandText = "Campanias_Eliminar"
-
-                com.Parameters.Add("@pId", SqlDbType.Int).Value = CampaniasE.nId
 
                 com.ExecuteNonQuery()
                 com.Parameters.Clear()

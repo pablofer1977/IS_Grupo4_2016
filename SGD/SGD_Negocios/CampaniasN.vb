@@ -6,7 +6,7 @@ Imports SGD_Entidades.Entidades.Variables
 Namespace Negocios
     Public Class CampaniasN
 
-        Public Function CargarCombo(ByVal sEstado As String, ByVal bTodos As Boolean, ByVal bBlanco As Boolean) As DataTable
+        Public Function CargarCombo(ByVal bTodos As Boolean, ByVal bBlanco As Boolean, ByVal sEstado As String) As DataTable
             Dim CampaniasD As CampaniasD
             Dim dt As DataTable
 
@@ -14,7 +14,7 @@ Namespace Negocios
                 CampaniasD = New CampaniasD
                 dt = New DataTable
 
-                dt = CampaniasD.CargarCombo(sEstado, bTodos, bBlanco)
+                dt = CampaniasD.CargarCombo(bTodos, bBlanco, sEstado)
 
                 CampaniasD = Nothing
 
@@ -26,7 +26,7 @@ Namespace Negocios
             End Try
         End Function
 
-        Public Function Estado_CargarCombo(ByVal bTodos As Boolean, ByVal bBlanco As Boolean) As DataTable
+        Public Function Estados_CargarCombo(ByVal bTodos As Boolean, ByVal bBlanco As Boolean) As DataTable
             Dim GeneralD As GeneralD
             Dim dt As DataTable
 
@@ -34,7 +34,7 @@ Namespace Negocios
                 GeneralD = New GeneralD
                 dt = New DataTable
 
-                dt = GeneralD.Estado_CargarCombo(bTodos, bBlanco)
+                dt = GeneralD.Estados_CargarCombo(bTodos, bBlanco)
 
                 GeneralD = Nothing
 
@@ -86,7 +86,11 @@ Namespace Negocios
             End Try
         End Function
 
-        Public Function Agregar(ByVal pCampanias As CampaniasE) As Boolean
+        Public Function Agregar(ByVal pCampanias As CampaniasE) As DataTable
+            Dim dt As New DataTable
+
+            dt.Columns.Add("Id", Type.GetType("System.Int32"))
+            dt.Columns.Add("Mensaje", Type.GetType("System.String"))
 
             Try
                 Dim CampaniasD As CampaniasD
@@ -95,32 +99,35 @@ Namespace Negocios
 
                 'valido los datos segun la campaña
                 If IsNothing(pCampanias.sCampania) Then
-                    MsgBox("Debe Ingresar una Campaña.", vbInformation, "Robin")
+                    dt.Rows.Add(eMensajes_Tipos.Error_Validacion, "Debe Ingresar una Campaña.")
 
-                    Return False
+                    Return dt
                 End If
 
                 If Verificar(eAccion.Agregar, pCampanias) > 0 Then
-                    MsgBox("Campaña ya ingresada.", vbInformation, "Robin")
+                    dt.Rows.Add(eMensajes_Tipos.Error_Validacion, "Campaña ya ingresada.")
 
-                    Return False
+                    Return dt
                 End If
 
                 'realizo la actualizacion
                 If CampaniasD.Agregar(pCampanias) Then
-                    MsgBox("Se dió de Alta la Campaña.", vbInformation, "Robin")
-
-                    Return True
-                Else
-                    Return False
+                    dt.Rows.Add(eMensajes_Tipos.AccionOK, "Se dió de Alta la Campaña.")
                 End If
+
+                Return dt
             Catch ex As Exception
-                MsgBox(ex.Message, MsgBoxStyle.Critical, "Robin")
-                Return False
+                dt.Rows.Add(eMensajes_Tipos.Error_Aplicacion, ex.Message)
+
+                Return dt
             End Try
         End Function
 
-        Public Function Modificar(ByVal pCampanias As CampaniasE) As Boolean
+        Public Function Modificar(ByVal pCampanias As CampaniasE) As DataTable
+            Dim dt As New DataTable
+
+            dt.Columns.Add("Id", Type.GetType("System.Int32"))
+            dt.Columns.Add("Mensaje", Type.GetType("System.String"))
 
             Try
                 Dim CampaniasD As CampaniasD
@@ -129,38 +136,41 @@ Namespace Negocios
 
                 'valido los datos segun la campaña
                 If pCampanias.nId = 0 Then
-                    MsgBox("Debe Seleccionar una Campaña de la Grilla.", vbInformation, "Robin")
+                    dt.Rows.Add(eMensajes_Tipos.Error_Validacion, "Debe Seleccionar una Campaña de la Grilla.")
 
-                    Return False
+                    Return dt
                 End If
 
                 If IsNothing(pCampanias.sCampania) Then
-                    MsgBox("Debe Ingresar una Campaña.", vbInformation, "Robin")
+                    dt.Rows.Add(eMensajes_Tipos.Error_Validacion, "Debe Ingresar una Campaña.")
 
-                    Return False
+                    Return dt
                 End If
 
                 If Verificar(eAccion.Modificar, pCampanias) > 0 Then
-                    MsgBox("Campaña ya ingresada.", vbInformation, "Robin")
+                    dt.Rows.Add(eMensajes_Tipos.Error_Validacion, "Campaña ya ingresada.")
 
-                    Return False
+                    Return dt
                 End If
 
                 'realizo la actualizacion
                 If CampaniasD.Modificar(pCampanias) Then
-                    MsgBox("Se modificaron los datos de la Campaña.", vbInformation, "Robin")
-
-                    Return True
-                Else
-                    Return False
+                    dt.Rows.Add(eMensajes_Tipos.AccionOK, "Se modificaron los datos de la Campaña.")
                 End If
+
+                Return dt
             Catch ex As Exception
-                MsgBox(ex.Message, MsgBoxStyle.Critical, "Robin")
-                Return False
+                dt.Rows.Add(eMensajes_Tipos.Error_Aplicacion, ex.Message)
+
+                Return dt
             End Try
         End Function
 
-        Public Function Eliminar(ByVal pCampanias As CampaniasE) As Boolean
+        Public Function Estado(ByVal pCampanias As CampaniasE) As DataTable
+            Dim dt As New DataTable
+
+            dt.Columns.Add("Id", Type.GetType("System.Int32"))
+            dt.Columns.Add("Mensaje", Type.GetType("System.String"))
 
             Try
                 Dim CampaniasD As CampaniasD
@@ -169,56 +179,21 @@ Namespace Negocios
 
                 'valido los datos segun la campaña
                 If pCampanias.nId = 0 Then
-                    MsgBox("Debe Seleccionar una Campaña de la Grilla.", vbInformation, "Robin")
+                    dt.Rows.Add(eMensajes_Tipos.Error_Validacion, "Debe Seleccionar una Campaña de la Grilla.")
 
-                    Return False
-                End If
-
-                If FK_Verificar(pCampanias) > 0 Then
-                    MsgBox("La Campaña Existe en Donaciones.", vbInformation, "Robin")
-
-                    Return False
-                End If
-
-                'realizo la actualizacion
-                If CampaniasD.Eliminar(pCampanias) Then
-                    MsgBox("Acción Realizada Correctamente.", vbInformation, "Robin")
-
-                    Return True
-                Else
-                    Return False
-                End If
-            Catch ex As Exception
-                MsgBox(ex.Message, MsgBoxStyle.Critical, "Robin")
-                Return False
-            End Try
-        End Function
-
-        Public Function Estado(ByVal pCampanias As CampaniasE) As Boolean
-
-            Try
-                Dim CampaniasD As CampaniasD
-
-                CampaniasD = New CampaniasD
-
-                'valido los datos segun la campaña
-                If pCampanias.nId = 0 Then
-                    MsgBox("Debe Seleccionar una Campaña de la Grilla.", vbInformation, "Robin")
-
-                    Return False
+                    Return dt
                 End If
 
                 'realizo la actualizacion
                 If CampaniasD.Estado(pCampanias) Then
-                    MsgBox("La Campaña Fue Dada de Baja.", vbInformation, "Robin")
-
-                    Return True
-                Else
-                    Return False
+                    dt.Rows.Add(eMensajes_Tipos.AccionOK, "La Campaña Fue Dada de Baja.")
                 End If
+
+                Return dt
             Catch ex As Exception
-                MsgBox(ex.Message, MsgBoxStyle.Critical, "Robin")
-                Return False
+                dt.Rows.Add(eMensajes_Tipos.Error_Aplicacion, ex.Message)
+
+                Return dt
             End Try
         End Function
 

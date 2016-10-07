@@ -10,18 +10,6 @@ C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD_Vacio\SGD\SGD_Datos\obj\Debug
 C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD_Vacio\SGD\SGD_Datos\obj\Debug\SGD_Datos.dll
 C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD_Vacio\SGD\SGD_Datos\obj\Debug\SGD_Datos.xml
 C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD_Vacio\SGD\SGD_Datos\obj\Debug\SGD_Datos.pdb
-C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD\SGD\SGD_Datos\bin\Debug\SGD_Datos.dll
-C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD\SGD\SGD_Datos\bin\Debug\SGD_Datos.pdb
-C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD\SGD\SGD_Datos\bin\Debug\SGD_Datos.xml
-C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD\SGD\SGD_Datos\bin\Debug\SGD_Entidades.dll
-C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD\SGD\SGD_Datos\bin\Debug\SGD_Entidades.pdb
-C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD\SGD\SGD_Datos\bin\Debug\SGD_Entidades.xml
-C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD\SGD\SGD_Datos\obj\Debug\SGD_Datos.vbprojResolveAssemblyReference.cache
-C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD\SGD\SGD_Datos\obj\Debug\SGD_Datos.Resources.resources
-C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD\SGD\SGD_Datos\obj\Debug\SGD_Datos.vbproj.GenerateResource.Cache
-C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD\SGD\SGD_Datos\obj\Debug\SGD_Datos.dll
-C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD\SGD\SGD_Datos\obj\Debug\SGD_Datos.xml
-C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD\SGD\SGD_Datos\obj\Debug\SGD_Datos.pdb
 E:\Proyecto SGD\SGD\SGD_Datos\bin\Debug\SGD_Datos.dll
 E:\Proyecto SGD\SGD\SGD_Datos\bin\Debug\SGD_Datos.pdb
 E:\Proyecto SGD\SGD\SGD_Datos\bin\Debug\SGD_Datos.xml
@@ -34,3 +22,15 @@ E:\Proyecto SGD\SGD\SGD_Datos\obj\Debug\SGD_Datos.vbproj.GenerateResource.Cache
 E:\Proyecto SGD\SGD\SGD_Datos\obj\Debug\SGD_Datos.dll
 E:\Proyecto SGD\SGD\SGD_Datos\obj\Debug\SGD_Datos.xml
 E:\Proyecto SGD\SGD\SGD_Datos\obj\Debug\SGD_Datos.pdb
+C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD\SGD\SGD_Datos\bin\Debug\SGD_Datos.dll
+C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD\SGD\SGD_Datos\bin\Debug\SGD_Datos.pdb
+C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD\SGD\SGD_Datos\bin\Debug\SGD_Datos.xml
+C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD\SGD\SGD_Datos\bin\Debug\SGD_Entidades.dll
+C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD\SGD\SGD_Datos\bin\Debug\SGD_Entidades.pdb
+C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD\SGD\SGD_Datos\bin\Debug\SGD_Entidades.xml
+C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD\SGD\SGD_Datos\obj\Debug\SGD_Datos.vbprojResolveAssemblyReference.cache
+C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD\SGD\SGD_Datos\obj\Debug\SGD_Datos.Resources.resources
+C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD\SGD\SGD_Datos\obj\Debug\SGD_Datos.vbproj.GenerateResource.Cache
+C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD\SGD\SGD_Datos\obj\Debug\SGD_Datos.dll
+C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD\SGD\SGD_Datos\obj\Debug\SGD_Datos.xml
+C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD\SGD\SGD_Datos\obj\Debug\SGD_Datos.pdb
