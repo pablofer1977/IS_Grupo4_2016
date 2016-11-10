@@ -57,7 +57,8 @@ BEGIN
 			CASE WHEN NOT d.TE_Linea IS NULL THEN d.TE_Linea ELSE '' END + ' ' +
 			CASE WHEN NOT d.TE_Celular IS NULL THEN d.TE_Celular ELSE '' END + ' ' +
 			CASE WHEN NOT d.TE_Laboral IS NULL THEN d.TE_Laboral ELSE '' END + ' ' AS TE,
-			d.EMail
+			d.EMail,
+			d.Comentarios
 	FROM	tblDonantes d INNER JOIN
 			tblTiposDonantes td ON d.Id_TipoDonante = td.Id LEFT JOIN
 			tblProvincias p ON d.Id_Provincia = p.Id
@@ -72,10 +73,10 @@ BEGIN
 	AND		(d.TE_Linea LIKE @pTE  + '%' OR d.TE_Celular LIKE @pTE  + '%' OR d.TE_Laboral LIKE @pTE  + '%' OR @pTE IS NULL)
 	AND		(d.EMail LIKE @pEMail  + '%' OR @pEMail IS NULL)
 	AND		d.Id IN (SELECT do.Id_Donante FROM DONACIONES do)
-	ORDER BY d.Id
+	ORDER BY d.Id DESC
 END
 GO
 GRANT EXECUTE
   ON dbo.Donantes_Listado
-TO Usuario_SGD
+TO Rol_SGD
 GO

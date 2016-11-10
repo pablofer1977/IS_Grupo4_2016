@@ -83,8 +83,8 @@ END
 GO
 GRANT EXECUTE
   ON dbo.DonantesImportacion_Excel_Agregar
-TO Usuario_SGD
+TO Rol_SGD
 GO
 
-GRANT CONTROL ON TYPE::[dbo].[lExcel_Agregar] TO [Usuario_SGD]
+GRANT CONTROL ON TYPE::[dbo].[lExcel_Agregar] TO [Rol_SGD]
 GO

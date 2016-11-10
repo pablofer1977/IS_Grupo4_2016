@@ -39,5 +39,5 @@ END
 GO
 GRANT EXECUTE
   ON dbo.Provincias_Combo
-TO Usuario_SGD
+TO Rol_SGD
 GO

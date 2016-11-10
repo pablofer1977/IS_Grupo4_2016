@@ -126,7 +126,7 @@ Public Class frmDonantesListado
         Dim DonacionesE As DonacionesE
         Dim dt As DataTable
 
-        Dim nId_Donante As Integer = Request.QueryString("nrodonante")
+        Dim nId_Donante As Integer = Request.QueryString("id_donante")
 
         Try
             DonacionesN = New DonacionesN
@@ -294,6 +294,56 @@ Public Class frmDonantesListado
             Return False
         End Try
     End Function
+
+    Private Sub Detalle(nId_Donacion As Integer)
+        Dim DonantesN As DonantesN
+        Dim DonantesE As DonantesE
+        Dim DonacionesE As DonacionesE
+        Dim dt As DataTable
+
+        Try
+            DonantesN = New DonantesN
+            DonantesE = New DonantesE
+            DonacionesE = New DonacionesE
+            dt = New DataTable
+
+            DonantesE.nId = nId_Donacion
+
+            dt = DonantesN.Listado(DonantesE, DonacionesE)
+
+            If dt.Rows.Count > 0 Then
+                'mostrar detalle
+                lblTituloDetalle.Text = "Donante - Detalle"
+
+                lblNroDonante.Text = dt.Rows(0).Item("Id")
+                If Not IsDBNull(dt.Rows(0).Item("FechaIng")) Then lblFechaIng.Text = dt.Rows(0).Item("FechaIng")
+                If Not IsDBNull(dt.Rows(0).Item("TipoDonante")) Then lblTipoDonante.Text = dt.Rows(0).Item("TipoDonante")
+
+                If Not IsDBNull(dt.Rows(0).Item("Nombre")) Then lblNombre.Text = dt.Rows(0).Item("Nombre")
+                If Not IsDBNull(dt.Rows(0).Item("Direccion")) Then lblDireccion.Text = dt.Rows(0).Item("Direccion")
+                If Not IsDBNull(dt.Rows(0).Item("Localidad")) Then lblLocalidad.Text = dt.Rows(0).Item("Localidad")
+                If Not IsDBNull(dt.Rows(0).Item("CP")) Then lblCodigoPostal.Text = dt.Rows(0).Item("CP")
+                If Not IsDBNull(dt.Rows(0).Item("Provincia")) Then lblProvincia.Text = dt.Rows(0).Item("Provincia")
+
+                If Not IsDBNull(dt.Rows(0).Item("DNI")) Then lblNroDocumento.Text = dt.Rows(0).Item("DNI")
+                If Not IsDBNull(dt.Rows(0).Item("CUIL_CUIT")) Then lblCUIT.Text = dt.Rows(0).Item("CUIL_CUIT")
+                If Not IsDBNull(dt.Rows(0).Item("TE")) Then lblTE.Text = dt.Rows(0).Item("TE")
+                If Not IsDBNull(dt.Rows(0).Item("EMail")) Then lblEMail.Text = dt.Rows(0).Item("EMail")
+                If Not IsDBNull(dt.Rows(0).Item("Comentarios")) Then lblComentarios.Text = dt.Rows(0).Item("Comentarios")
+
+                ScriptManager.RegisterStartupScript(Page, Page.GetType(), "Modal_Detalle", "$('#Modal_Detalle').modal();", True)
+
+                upModal_Detalle.Update()
+            End If
+
+            DonantesN = Nothing
+            DonantesE = Nothing
+            DonacionesE = Nothing
+            dt = Nothing
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Critical, "Robin")
+        End Try
+    End Sub
 #End Region
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
@@ -347,7 +397,7 @@ Public Class frmDonantesListado
     End Sub
 
     Protected Sub btnNuevoD_Click(sender As Object, e As EventArgs) Handles btnNuevoD.Click
-        Dim nId_Donante As Integer = Val(Request.QueryString("nrodonante"))
+        Dim nId_Donante As Integer = Val(Request.QueryString("id_donante"))
 
         If nId_Donante <> 0 Then Response.Redirect("/frmDonacionesAlta.aspx?id_donante=" & nId_Donante.ToString, True)
     End Sub
@@ -407,9 +457,13 @@ Public Class frmDonantesListado
             nId = Convert.ToInt32(e.CommandArgument)
             Response.Redirect("/frmDonantesModificacion.aspx?id=" & nId.ToString, True)
 
+        ElseIf e.CommandName = "Detalle" Then
+            nId = Convert.ToInt32(e.CommandArgument)
+            Detalle(nId)
+
         ElseIf e.CommandName = "VerDonaciones" Then
             nId = Convert.ToInt32(e.CommandArgument)
-            Response.Redirect("/frmDonantesListado.aspx?nrodonante=" & nId.ToString, True)
+            Response.Redirect("/frmDonantesListado.aspx?id_donante=" & nId.ToString, True)
         End If
     End Sub
 

@@ -33,5 +33,5 @@ END
 GO
 GRANT EXECUTE
   ON dbo.Donantes_Obtener
-TO Usuario_SGD
+TO Rol_SGD
 GO

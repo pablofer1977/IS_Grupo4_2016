@@ -31,6 +31,8 @@
                                 <asp:MenuItem Text="Archivo" Value="mnuArchivo">
                                     <asp:MenuItem Text="Donantes" Value="mnuDonantes" NavigateUrl="~/frmDonantesListado.aspx"></asp:MenuItem>
                                     <asp:MenuItem Text="Importación Donantes/Donaciones" Value="mnuImportacion" NavigateUrl="~/frmDonantesImportacion.aspx"></asp:MenuItem>
+                                    <asp:MenuItem Text="Generar Presentaciones" Value="mnuPresentacion" NavigateUrl="~/frmPresentacionesAlta.aspx"></asp:MenuItem>
+                                    <asp:MenuItem Text="Procesar Presentaciones" Value="mnuRetornos" NavigateUrl="~/frmPresentacionesListado.aspx"></asp:MenuItem>
                                 </asp:MenuItem>
                         
                                 <asp:MenuItem Text="Consultas" Value="mnuConsultas">

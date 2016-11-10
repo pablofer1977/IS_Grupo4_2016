@@ -20,5 +20,5 @@ END
 GO
 GRANT EXECUTE
   ON dbo.Usuarios_Modificar
-TO Usuario_SGD
+TO Rol_SGD
 GO

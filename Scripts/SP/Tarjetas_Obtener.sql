@@ -23,5 +23,5 @@ END
 GO
 GRANT EXECUTE
   ON dbo.Tarjetas_Obtener
-TO Usuario_SGD
+TO Rol_SGD
 GO

@@ -271,7 +271,7 @@ Namespace Negocios
 
                 'realizo la actualizacion
                 If DonacionesD.Modificar(pDonaciones) Then
-                    dt.Rows.Add(eMensajes_Tipos.AccionOK, "Se Modificaron los Datos del Donante.")
+                    dt.Rows.Add(eMensajes_Tipos.AccionOK, "Se Modificaron los Datos de la Donación.")
                 End If
 
                 Return dt

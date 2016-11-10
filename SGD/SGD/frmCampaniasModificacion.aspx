@@ -12,6 +12,7 @@
                     <div class="row">
                         <label class="control-label col-sm-2" for="nombre">Nombre:</label>
                         <asp:TextBox ID="txtNombre" runat="server" MaxLength="50"></asp:TextBox>
+                        <label style="font-size: xx-small; font-style: italic"> [Obligatorio]</label>
                     </div>
 
                     <div class="row">

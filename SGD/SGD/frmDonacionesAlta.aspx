@@ -17,16 +17,19 @@
                     <div class="row">
                         <label class="control-label col-sm-2" for="tipodonacion">Tipo de Donación:</label>
                         <asp:DropDownList ID="cmbTipoDonacion" runat="server" AutoPostBack="True"></asp:DropDownList>
+                        <label style="font-size: xx-small; font-style: italic"> [Obligatorio]</label>
                     </div>
                   
                     <div class="row">
                         <label class="control-label col-sm-2" for="tarjeta">Nombre de Tarjeta:</label>
                         <asp:DropDownList ID="cmbTarjeta" runat="server"></asp:DropDownList>
+                        <label style="font-size: xx-small; font-style: italic"> [Obligatorio en caso de Tipo de Donación 'Tarjeta']</label>
                     </div>
                   
                     <div class="row">
                         <label class="control-label col-sm-2" for="nrotarjeta">Número de Tarjeta:</label>
                         <asp:TextBox ID="txtNroTarjeta" runat="server" MaxLength="16"></asp:TextBox>
+                        <label style="font-size: xx-small; font-style: italic"> [Obligatorio en caso de Tipo de Donación 'Tarjeta']</label>
                     </div>
                   
                     <div class="row">
@@ -42,21 +45,25 @@
                     <div class="row">
                         <label class="control-label col-sm-2" for="nrocbu">Número de CBU:</label>
                         <asp:TextBox ID="txtNroCBU" runat="server" MaxLength="22"></asp:TextBox>
+                        <label style="font-size: xx-small; font-style: italic"> [Obligatorio en caso de Tipo de Donación 'CBU']</label>
                     </div>
 
                     <div class="row">
                         <label class="control-label col-sm-2" for="monto">Monto:</label>
                         <asp:TextBox ID="txtMonto" runat="server" MaxLength="8"></asp:TextBox>
+                        <label style="font-size: xx-small; font-style: italic"> [Obligatorio]</label>
                     </div>
 
                     <div class="row">
                         <label class="control-label col-sm-2" for="tiempo">Tiempo:</label>
                         <asp:TextBox ID="txtTiempo" runat="server" MaxLength="4"></asp:TextBox>
+                        <label style="font-size: xx-small; font-style: italic"> [Obligatorio]</label>
                     </div>
 
                     <div class="row">
                         <label class="control-label col-sm-2" for="campania">Campaña:</label>
                         <asp:DropDownList ID="cmbCampania" runat="server"></asp:DropDownList>
+                        <label style="font-size: xx-small; font-style: italic"> [Obligatorio]</label>
                     </div>
 
                 </div>

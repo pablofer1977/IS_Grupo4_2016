@@ -19,5 +19,5 @@ END
 GO
 GRANT EXECUTE
   ON dbo.Usuarios_Agregar
-TO Usuario_SGD
+TO Rol_SGD
 GO

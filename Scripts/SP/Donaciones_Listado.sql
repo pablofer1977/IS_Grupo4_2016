@@ -37,5 +37,5 @@ END
 GO
 GRANT EXECUTE
   ON dbo.Donaciones_Listado
-TO Usuario_SGD
+TO Rol_SGD
 GO

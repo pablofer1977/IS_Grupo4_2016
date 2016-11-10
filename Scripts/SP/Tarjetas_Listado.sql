@@ -31,5 +31,5 @@ END
 GO
 GRANT EXECUTE
   ON dbo.Tarjetas_Listado
-TO Usuario_SGD
+TO Rol_SGD
 GO

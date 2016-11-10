@@ -43,5 +43,5 @@ END
 GO
 GRANT EXECUTE
   ON dbo.DonantesImportacion_Excel_Obtener
-TO Usuario_SGD
+TO Rol_SGD
 GO

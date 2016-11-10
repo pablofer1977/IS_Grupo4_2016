@@ -91,7 +91,7 @@ BEGIN
 				p.TE_Celular,
 				p.TE_Laboral,
 				p.EMail)
-		OUTPUT	p.Id, inserted.$identity
+		OUTPUT	p.Id, inserted.Id
 		INTO	@Donantes(Id, Id_Donante);
 
 	INSERT INTO tblDonaciones
@@ -118,8 +118,8 @@ END
 GO
 GRANT EXECUTE
   ON dbo.DonantesImportacion_Excel_Validaciones_Grabar
-TO Usuario_SGD
+TO Rol_SGD
 GO
 
-GRANT CONTROL ON TYPE::[dbo].[lExcel_Validaciones_Grabar] TO [Usuario_SGD]
+GRANT CONTROL ON TYPE::[dbo].[lExcel_Validaciones_Grabar] TO [Rol_SGD]
 GO

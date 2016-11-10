@@ -17,5 +17,5 @@ END
 GO
 GRANT EXECUTE
   ON dbo.Usuarios_Eliminar
-TO Usuario_SGD
+TO Rol_SGD
 GO

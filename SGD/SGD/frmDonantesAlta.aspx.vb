@@ -149,7 +149,7 @@ Public Class frmDonantesAlta
 
         nId_Donante = Aceptar()
 
-        If nId_Donante <> 0 Then
+        If nId_Donante > 0 Then
             If MsgBox("Se Dió de Alta al Donante Nro. " & nId_Donante.ToString & "." & vbCr & vbCr & "Desea Dar de Alta su Donación?", MsgBoxStyle.Question + MsgBoxStyle.YesNo + MsgBoxStyle.DefaultButton2, "Robin") = MsgBoxResult.Yes Then
                 Response.Redirect("/frmDonacionesAlta.aspx?id_donante=" & nId_Donante.ToString, True)
             Else

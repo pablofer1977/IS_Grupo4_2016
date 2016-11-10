@@ -97,6 +97,34 @@ Namespace Datos
             End Try
         End Function
 
+        Public Function Excel_Eliminar() As Boolean
+            Dim cn As New SqlConnection(sCadConn)
+            Dim com As New SqlCommand
+
+            Try
+                cn.Open()
+
+                com.Connection = cn
+                com.CommandType = CommandType.StoredProcedure
+                com.CommandTimeout = 300
+
+                com.CommandText = "DonantesImportacion_Excel_Eliminar"
+
+                com.ExecuteNonQuery()
+                com.Parameters.Clear()
+
+                com.Dispose()
+                cn.Close()
+
+                Return True
+
+            Catch ex As Exception
+                MsgBox(ex.Message, MsgBoxStyle.Critical, "Robin")
+
+                Return False
+            End Try
+        End Function
+
         Public Function Excel_Obtener() As DataTable
             Dim cn As New SqlConnection(sCadConn)
             Dim da As SqlDataAdapter

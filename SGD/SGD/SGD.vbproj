@@ -37,6 +37,9 @@
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
     <FilesToIncludeForPublish>AllFilesInProjectFolder</FilesToIncludeForPublish>
     <Prefer32Bit>false</Prefer32Bit>
+    <CodeAnalysisRuleSet>
+    </CodeAnalysisRuleSet>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -47,6 +50,8 @@
     <DocumentationFile>SGD.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
     <Prefer32Bit>false</Prefer32Bit>
+    <CodeAnalysisRuleSet>
+    </CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -114,6 +119,9 @@
     <Content Include="frmDonantesListado.aspx" />
     <Content Include="frmDonantesModificacion.aspx" />
     <Content Include="frmLogin.aspx" />
+    <Content Include="frmPresentacionesAlta.aspx" />
+    <Content Include="frmPresentacionesListado.aspx" />
+    <Content Include="frmPresentacionesRetornos.aspx" />
     <Content Include="frmTarjetasListado.aspx" />
     <Content Include="frmTarjetasModificacion.aspx" />
     <Content Include="frmTarjetasRechazosAlta.aspx" />
@@ -125,6 +133,7 @@
     <Content Include="frmUsuariosModificacion.aspx" />
     <Content Include="Resources\Baja.png" />
     <Content Include="Resources\Baja_Deshabilitado.png" />
+    <Content Include="Resources\Detalles.png" />
     <Content Include="Resources\Eliminar.png" />
     <Content Include="Resources\Estado_Activo.png" />
     <Content Include="Resources\Estado_Inactivo.png" />
@@ -218,6 +227,27 @@
     <Compile Include="frmMenu.Master.vb">
       <DependentUpon>frmMenu.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmPresentacionesAlta.aspx.designer.vb">
+      <DependentUpon>frmPresentacionesAlta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmPresentacionesAlta.aspx.vb">
+      <DependentUpon>frmPresentacionesAlta.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="frmPresentacionesListado.aspx.designer.vb">
+      <DependentUpon>frmPresentacionesListado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmPresentacionesListado.aspx.vb">
+      <DependentUpon>frmPresentacionesListado.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="frmPresentacionesRetornos.aspx.designer.vb">
+      <DependentUpon>frmPresentacionesRetornos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmPresentacionesRetornos.aspx.vb">
+      <DependentUpon>frmPresentacionesRetornos.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="frmTarjetasListado.aspx.designer.vb">
       <DependentUpon>frmTarjetasListado.aspx</DependentUpon>

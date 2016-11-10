@@ -27,11 +27,13 @@
                     <div class="row">
                         <label class="control-label col-sm-2" for="nombre">Código Banco:</label>
                         <asp:TextBox ID="txtCodBanco" runat="server" MaxLength="5"></asp:TextBox>
+                        <label style="font-size: xx-small; font-style: italic"> [Obligatorio]</label>
                     </div>
 
                     <div class="row">
                         <label class="control-label col-sm-2" for="descripcion">Causa Rechazo:</label>
                         <asp:TextBox ID="txtCausaRechazo" runat="server" MaxLength="150"></asp:TextBox>
+                        <label style="font-size: xx-small; font-style: italic"> [Obligatorio]</label>
                     </div>
 
                     <div class="row">

@@ -280,6 +280,25 @@ Namespace Negocios
             End Try
         End Function
 
+        Public Function Excel_Eliminar() As Boolean
+            Dim DonantesImportacionD As DonantesImportacionD
+
+            Try
+                DonantesImportacionD = New DonantesImportacionD
+
+                'borro la tabla
+                DonantesImportacionD.Excel_Eliminar()
+
+                DonantesImportacionD = Nothing
+
+                Return True
+            Catch ex As Exception
+                MsgBox(ex.Message, MsgBoxStyle.Critical, "Robin")
+
+                Return False
+            End Try
+        End Function
+
         Public Function Excel_Validar() As Boolean
             Dim DonantesImportacionD As DonantesImportacionD
             Dim DonantesD As DonantesD
@@ -418,7 +437,7 @@ Namespace Negocios
                             dtV.Rows.Add(nId, eValidaciones_Tipos.Error_, "Debe Ingresar un Nro. de CBU Válido")
                         ElseIf Not CBU_Formato_Verificar(DonacionesE) Then
                             dtV.Rows.Add(nId, eValidaciones_Tipos.Error_, "Debe Ingresar un Nro. de CBU Válido")
-                        ElseIf Not DonacionesD.CBU_Verificar(eAccion.Agregar, DonacionesE) Then
+                        ElseIf DonacionesD.CBU_Verificar(eAccion.Agregar, DonacionesE) > 0 Then
                             dtV.Rows.Add(nId, eValidaciones_Tipos.Advertencia, "Existen Donaciones con el Mismo Nro. de CBU")
                         End If
                     End If
@@ -429,11 +448,13 @@ Namespace Negocios
                     ElseIf Not IsNumeric(dt.Rows(i).Item("Monto")) Then
                         dtV.Rows.Add(nId, eValidaciones_Tipos.Error_, "Debe Ingresar un Monto Válido")
                     Else
+                        Dim nMonto As Decimal = 0
                         Dim nEntero As Decimal = 0
                         Dim nDecimal As Decimal = 0
 
-                        nEntero = Math.Truncate(dt.Rows(i).Item("Monto"))
-                        nDecimal = Math.Truncate((dt.Rows(i).Item("Monto") - Math.Truncate(dt.Rows(i).Item("Monto"))) * 100)
+                        nMonto = CDec(dt.Rows(i).Item("Monto"))
+                        nEntero = Math.Truncate(nMonto)
+                        nDecimal = Math.Truncate((nMonto - Math.Truncate(nMonto)) * 100)
 
                         If Len(nEntero.ToString) > 5 Or Len(nDecimal.ToString) > 2 Then
                             dtV.Rows.Add(nId, eValidaciones_Tipos.Error_, "Debe Ingresar un Monto Válido")

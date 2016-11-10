@@ -39,5 +39,5 @@ END
 GO
 GRANT EXECUTE
   ON dbo.Usuarios_TiposPerfiles_Combo
-TO Usuario_SGD
+TO Rol_SGD
 GO

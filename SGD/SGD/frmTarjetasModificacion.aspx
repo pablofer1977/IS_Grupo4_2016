@@ -17,6 +17,7 @@
                     <div class="row">
                         <label class="control-label col-sm-2" for="nombre">Nombre de Tarjeta o CBU:</label>
                         <asp:TextBox ID="txtNombre" runat="server" MaxLength="30"></asp:TextBox>
+                        <label style="font-size: xx-small; font-style: italic"> [Obligatorio]</label>
                     </div>
 
                     <div class="row">
@@ -27,11 +28,13 @@
                     <div class="row">
                         <label class="control-label col-sm-2" for="descripcion">Nombre del Archivo:</label>
                         <asp:TextBox ID="txtNombreArchivo" runat="server" MaxLength="100"></asp:TextBox>
+                        <label style="font-size: xx-small; font-style: italic"> [Obligatorio]</label>
                     </div>
 
                     <div class="row">
                         <label class="control-label col-sm-2" for="descripcion">Nro. de Comercio:</label>
                         <asp:TextBox ID="txtNroComercio" runat="server" MaxLength="15"></asp:TextBox>
+                        <label style="font-size: xx-small; font-style: italic"> [Obligatorio]</label>
                     </div>
                 </div>
 

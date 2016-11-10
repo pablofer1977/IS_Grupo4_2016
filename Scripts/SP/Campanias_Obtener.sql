@@ -23,5 +23,5 @@ END
 GO
 GRANT EXECUTE
   ON dbo.Campanias_Obtener
-TO Usuario_SGD
+TO Rol_SGD
 GO

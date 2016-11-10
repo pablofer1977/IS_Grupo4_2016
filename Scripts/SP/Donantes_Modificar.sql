@@ -46,5 +46,5 @@ END
 GO
 GRANT EXECUTE
   ON dbo.Donantes_Modificar
-TO Usuario_SGD
+TO Rol_SGD
 GO

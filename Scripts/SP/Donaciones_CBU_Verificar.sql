@@ -25,5 +25,5 @@ END
 GO
 GRANT EXECUTE
   ON dbo.Donaciones_CBU_Verificar
-TO Usuario_SGD
+TO Rol_SGD
 GO

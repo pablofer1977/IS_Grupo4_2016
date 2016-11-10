@@ -1,0 +1,70 @@
+C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD\SGD\SGD_Test\bin\Debug\SGD_Test.dll
+C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD\SGD\SGD_Test\bin\Debug\SGD_Test.pdb
+C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD\SGD\SGD_Test\bin\Debug\SGD_Test.xml
+C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD\SGD\SGD_Test\bin\Debug\nunit.framework.dll
+C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD\SGD\SGD_Test\bin\Debug\SGD_Entidades.dll
+C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD\SGD\SGD_Test\bin\Debug\SGD_Datos.dll
+C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD\SGD\SGD_Test\bin\Debug\SGD_Entidades.pdb
+C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD\SGD\SGD_Test\bin\Debug\SGD_Entidades.xml
+C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD\SGD\SGD_Test\bin\Debug\nunit.framework.xml
+C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD\SGD\SGD_Test\bin\Debug\SGD_Datos.pdb
+C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD\SGD\SGD_Test\bin\Debug\SGD_Datos.xml
+C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD\SGD\SGD_Test\obj\Debug\SGD_Test.vbprojResolveAssemblyReference.cache
+C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD\SGD\SGD_Test\obj\Debug\SGD_Test.Resources.resources
+C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD\SGD\SGD_Test\obj\Debug\SGD_Test.vbproj.GenerateResource.Cache
+C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD\SGD\SGD_Test\obj\Debug\SGD_Test.dll
+C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD\SGD\SGD_Test\obj\Debug\SGD_Test.xml
+C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD\SGD\SGD_Test\obj\Debug\SGD_Test.pdb
+E:\Proyecto SGD\SGD\SGD_Test\bin\Debug\SGD_Test.dll
+E:\Proyecto SGD\SGD\SGD_Test\bin\Debug\SGD_Test.pdb
+E:\Proyecto SGD\SGD\SGD_Test\bin\Debug\SGD_Test.xml
+E:\Proyecto SGD\SGD\SGD_Test\bin\Debug\nunit.framework.dll
+E:\Proyecto SGD\SGD\SGD_Test\bin\Debug\SGD_Datos.dll
+E:\Proyecto SGD\SGD\SGD_Test\bin\Debug\SGD_Entidades.dll
+E:\Proyecto SGD\SGD\SGD_Test\bin\Debug\SGD_Datos.pdb
+E:\Proyecto SGD\SGD\SGD_Test\bin\Debug\SGD_Datos.xml
+E:\Proyecto SGD\SGD\SGD_Test\bin\Debug\SGD_Entidades.pdb
+E:\Proyecto SGD\SGD\SGD_Test\bin\Debug\SGD_Entidades.xml
+E:\Proyecto SGD\SGD\SGD_Test\bin\Debug\nunit.framework.xml
+E:\Proyecto SGD\SGD\SGD_Test\obj\Debug\SGD_Test.vbprojResolveAssemblyReference.cache
+E:\Proyecto SGD\SGD\SGD_Test\obj\Debug\SGD_Test.Resources.resources
+E:\Proyecto SGD\SGD\SGD_Test\obj\Debug\SGD_Test.vbproj.GenerateResource.Cache
+E:\Proyecto SGD\SGD\SGD_Test\obj\Debug\SGD_Test.dll
+E:\Proyecto SGD\SGD\SGD_Test\obj\Debug\SGD_Test.xml
+E:\Proyecto SGD\SGD\SGD_Test\obj\Debug\SGD_Test.pdb
+E:\Proyecto SGD\SGD\SGD_Test\bin\Debug\roslyn\csc.exe
+E:\Proyecto SGD\SGD\SGD_Test\bin\Debug\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Proyecto SGD\SGD\SGD_Test\bin\Debug\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Proyecto SGD\SGD\SGD_Test\bin\Debug\roslyn\Microsoft.CodeAnalysis.dll
+E:\Proyecto SGD\SGD\SGD_Test\bin\Debug\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Proyecto SGD\SGD\SGD_Test\bin\Debug\roslyn\Microsoft.CSharp.Core.targets
+E:\Proyecto SGD\SGD\SGD_Test\bin\Debug\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Proyecto SGD\SGD\SGD_Test\bin\Debug\roslyn\System.Collections.Immutable.dll
+E:\Proyecto SGD\SGD\SGD_Test\bin\Debug\roslyn\System.Reflection.Metadata.dll
+E:\Proyecto SGD\SGD\SGD_Test\bin\Debug\roslyn\vbc.exe
+E:\Proyecto SGD\SGD\SGD_Test\bin\Debug\roslyn\VBCSCompiler.exe
+E:\Proyecto SGD\SGD\SGD_Test\bin\Debug\roslyn\VBCSCompiler.exe.config
+E:\Proyecto SGD\SGD\SGD_Test\bin\Debug\SGD.dll
+E:\Proyecto SGD\SGD\SGD_Test\bin\Debug\SGD_Negocios.dll
+E:\Proyecto SGD\SGD\SGD_Test\bin\Debug\SGD.pdb
+E:\Proyecto SGD\SGD\SGD_Test\bin\Debug\SGD.xml
+E:\Proyecto SGD\SGD\SGD_Test\bin\Debug\SGD_Negocios.pdb
+E:\Proyecto SGD\SGD\SGD_Test\bin\Debug\SGD_Negocios.xml
+C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD\SGD\SGD_Test\bin\Debug\roslyn\csc.exe
+C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD\SGD\SGD_Test\bin\Debug\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD\SGD\SGD_Test\bin\Debug\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD\SGD\SGD_Test\bin\Debug\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD\SGD\SGD_Test\bin\Debug\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD\SGD\SGD_Test\bin\Debug\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD\SGD\SGD_Test\bin\Debug\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD\SGD\SGD_Test\bin\Debug\roslyn\System.Collections.Immutable.dll
+C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD\SGD\SGD_Test\bin\Debug\roslyn\System.Reflection.Metadata.dll
+C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD\SGD\SGD_Test\bin\Debug\roslyn\vbc.exe
+C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD\SGD\SGD_Test\bin\Debug\roslyn\VBCSCompiler.exe
+C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD\SGD\SGD_Test\bin\Debug\roslyn\VBCSCompiler.exe.config
+C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD\SGD\SGD_Test\bin\Debug\SGD.dll
+C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD\SGD\SGD_Test\bin\Debug\SGD_Negocios.dll
+C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD\SGD\SGD_Test\bin\Debug\SGD.pdb
+C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD\SGD\SGD_Test\bin\Debug\SGD.xml
+C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD\SGD\SGD_Test\bin\Debug\SGD_Negocios.pdb
+C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD\SGD\SGD_Test\bin\Debug\SGD_Negocios.xml

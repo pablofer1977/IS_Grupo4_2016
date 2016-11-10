@@ -17,11 +17,13 @@
                     <div class="row">
                         <label class="control-label col-sm-2" for="nombre">Nombre:</label>
                         <asp:TextBox ID="txtNombre" runat="server" MaxLength="100"></asp:TextBox>
+                        <label style="font-size: xx-small; font-style: italic"> [Obligatorio]</label>
                     </div>
 
                     <div class="row">
                         <label class="control-label col-sm-2" for="perfil">Perfil:</label>
                         <asp:DropDownList ID="cmdPerfil" runat="server"></asp:DropDownList>
+                        <label style="font-size: xx-small; font-style: italic"> [Obligatorio]</label>
                     </div>
 
                     <div class="row">

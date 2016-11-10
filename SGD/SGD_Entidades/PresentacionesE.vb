@@ -60,5 +60,15 @@
                 _sId_Tarjeta = value
             End Set
         End Property
+
+        Private _sCarpetaTXT As String
+        Public Property sCarpetaTXT() As String
+            Get
+                Return _sCarpetaTXT
+            End Get
+            Set(ByVal value As String)
+                _sCarpetaTXT = value
+            End Set
+        End Property
     End Class
 End Namespace

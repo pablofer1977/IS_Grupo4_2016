@@ -18,5 +18,5 @@ END
 GO
 GRANT EXECUTE
   ON dbo.Donantes_EMail_Validar
-TO Usuario_SGD
+TO Rol_SGD
 GO

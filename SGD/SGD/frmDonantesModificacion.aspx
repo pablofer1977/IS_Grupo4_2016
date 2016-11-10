@@ -22,21 +22,25 @@
                     <div class="row">
                         <label class="control-label col-sm-2" for="tipodonante">Tipo de Donante:</label>
                         <asp:DropDownList ID="cmbTipoDonante" runat="server" AutoPostBack="True"></asp:DropDownList>
+                        <label style="font-size: xx-small; font-style: italic"> [Obligatorio]</label>
                     </div>
                   
                     <div class="row">
                         <label class="control-label col-sm-2" for="apellido">Apellido/s:</label>
                         <asp:TextBox ID="txtApellido" runat="server" MaxLength="50"></asp:TextBox>
+                        <label style="font-size: xx-small; font-style: italic"> [Obligatorio en caso de Donante Físico]</label>
                     </div>
                   
                     <div class="row">
                         <label class="control-label col-sm-2" for="nombre">Nombre/s:</label>
                         <asp:TextBox ID="txtNombre" runat="server" MaxLength="50"></asp:TextBox>
+                        <label style="font-size: xx-small; font-style: italic"> [Obligatorio en caso de Donante Físico]</label>
                     </div>
 
                     <div class="row">
                         <label class="control-label col-sm-2" for="razonsocial">Razón Social:</label>
                         <asp:TextBox ID="txtRazonSocial" runat="server" MaxLength="100"></asp:TextBox>
+                        <label style="font-size: xx-small; font-style: italic"> [Obligatorio en caso de Donante Jurídico]</label>
                     </div>
 
                     <div class="row">

@@ -29,5 +29,5 @@ END
 GO
 GRANT EXECUTE
   ON dbo.TarjetasRechazos_Verificar
-TO Usuario_SGD
+TO Rol_SGD
 GO

@@ -39,5 +39,5 @@ END
 GO
 GRANT EXECUTE
   ON dbo.TiposDonantes_Combo
-TO Usuario_SGD
+TO Rol_SGD
 GO
