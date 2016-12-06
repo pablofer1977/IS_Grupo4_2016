@@ -1,6 +1,7 @@
 ﻿Imports SGD_Negocios.Negocios
 Imports SGD_Entidades.Entidades
 Imports SGD_Entidades.Entidades.Variables
+Imports System.IO
 
 Public Class frmLogin
     Inherits System.Web.UI.Page

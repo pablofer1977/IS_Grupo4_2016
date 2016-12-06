@@ -11,7 +11,7 @@ AS
 
 BEGIN
 	SELECT	d.Id,
-			d.FechaIng,
+			CONVERT(CHAR(10), d.FechaIng, 103) AS FechaIng,
 			d.Id_TipoDonante,
 			d.Apellido,
 			d.Nombre,

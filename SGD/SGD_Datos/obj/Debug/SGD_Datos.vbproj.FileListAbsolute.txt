@@ -34,3 +34,15 @@ C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD\SGD\SGD_Datos\obj\Debug\SGD_D
 C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD\SGD\SGD_Datos\obj\Debug\SGD_Datos.dll
 C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD\SGD\SGD_Datos\obj\Debug\SGD_Datos.xml
 C:\Users\pab183\Desktop\Nueva carpeta\Proyecto SGD\SGD\SGD_Datos\obj\Debug\SGD_Datos.pdb
+C:\Users\Pablo\Google Drive\Proyecto SGD\SGD\SGD_Datos\bin\Debug\SGD_Datos.dll
+C:\Users\Pablo\Google Drive\Proyecto SGD\SGD\SGD_Datos\bin\Debug\SGD_Datos.pdb
+C:\Users\Pablo\Google Drive\Proyecto SGD\SGD\SGD_Datos\bin\Debug\SGD_Datos.xml
+C:\Users\Pablo\Google Drive\Proyecto SGD\SGD\SGD_Datos\bin\Debug\SGD_Entidades.dll
+C:\Users\Pablo\Google Drive\Proyecto SGD\SGD\SGD_Datos\bin\Debug\SGD_Entidades.pdb
+C:\Users\Pablo\Google Drive\Proyecto SGD\SGD\SGD_Datos\bin\Debug\SGD_Entidades.xml
+C:\Users\Pablo\Google Drive\Proyecto SGD\SGD\SGD_Datos\obj\Debug\SGD_Datos.vbprojResolveAssemblyReference.cache
+C:\Users\Pablo\Google Drive\Proyecto SGD\SGD\SGD_Datos\obj\Debug\SGD_Datos.Resources.resources
+C:\Users\Pablo\Google Drive\Proyecto SGD\SGD\SGD_Datos\obj\Debug\SGD_Datos.vbproj.GenerateResource.Cache
+C:\Users\Pablo\Google Drive\Proyecto SGD\SGD\SGD_Datos\obj\Debug\SGD_Datos.dll
+C:\Users\Pablo\Google Drive\Proyecto SGD\SGD\SGD_Datos\obj\Debug\SGD_Datos.xml
+C:\Users\Pablo\Google Drive\Proyecto SGD\SGD\SGD_Datos\obj\Debug\SGD_Datos.pdb

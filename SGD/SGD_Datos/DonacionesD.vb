@@ -74,6 +74,40 @@ Namespace Datos
             End Try
         End Function
 
+        Public Function Consulta_Listado(DonacionesE As DonacionesE) As DataTable
+            Dim cn As New SqlConnection(sCadConn)
+            Dim da As SqlDataAdapter
+            Dim dt As DataTable
+
+            Try
+                dt = New DataTable
+
+                cn.Open()
+
+                da = New SqlDataAdapter("Donaciones_Consulta_Listado", cn)
+                da.SelectCommand.CommandType = CommandType.StoredProcedure
+
+                da.SelectCommand.Parameters.Add("@pId_Donacion", SqlDbType.Int).Value = IIf(DonacionesE.nId <> 0, DonacionesE.nId, DBNull.Value)
+                da.SelectCommand.Parameters.Add("@pId_Donante", SqlDbType.Int).Value = IIf(DonacionesE.nId_Donante <> 0, DonacionesE.nId_Donante, DBNull.Value)
+                da.SelectCommand.Parameters.Add("@pEstado", SqlDbType.Char, 1).Value = IIf(Not IsNothing(DonacionesE.sEstado), DonacionesE.sEstado, DBNull.Value)
+                da.SelectCommand.Parameters.Add("@pId_TipoDonacion", SqlDbType.Int).Value = IIf(DonacionesE.nId_TipoDonacion <> 0, DonacionesE.nId_TipoDonacion, DBNull.Value)
+                da.SelectCommand.Parameters.Add("@pId_Tarjeta", SqlDbType.Char, 3).Value = IIf(Not IsNothing(DonacionesE.sId_Tarjeta), DonacionesE.sId_Tarjeta, DBNull.Value)
+                da.SelectCommand.Parameters.Add("@pNroTarjeta_CBU", SqlDbType.VarChar, 22).Value = IIf(Not IsNothing(DonacionesE.sNroTarjeta_CBU), DonacionesE.sNroTarjeta_CBU, DBNull.Value)
+                da.SelectCommand.Parameters.Add("@pId_Campania", SqlDbType.Int).Value = IIf(DonacionesE.nId_Campania <> 0, DonacionesE.nId_Campania, DBNull.Value)
+
+                da.Fill(dt)
+
+                cn.Close()
+                da = Nothing
+
+                Return dt
+
+            Catch ex As Exception
+                MsgBox(ex.Message, MsgBoxStyle.Critical, "Robin")
+                Return Nothing
+            End Try
+        End Function
+
         Public Function Obtener(ByVal DonacionesE As DonacionesE) As DataTable
             Dim cn As New SqlConnection(sCadConn)
             Dim da As SqlDataAdapter

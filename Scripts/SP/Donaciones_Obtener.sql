@@ -23,8 +23,8 @@ BEGIN
 			d.Id_Campania,
 			d.Estado AS Id_Estado,
 			CASE WHEN d.Estado = 'A' THEN 'Activo' WHEN d.Estado = 'B' THEN 'Baja' ELSE '' END AS Estado,
-			d.FechaDon,
-			d.FechaBaja
+			CONVERT(CHAR(10), d.FechaDon, 103) AS FechaDon,
+			CONVERT(CHAR(10), d.FechaBaja, 103) AS FechaBaja
 	FROM 	tblDonaciones d
 	WHERE	d.Id = @pId
 END

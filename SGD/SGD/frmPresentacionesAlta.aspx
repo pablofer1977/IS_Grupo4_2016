@@ -32,11 +32,21 @@
                         <asp:TextBox ID="txtAnio" runat="server" MaxLength="4"></asp:TextBox>
                         <label style="font-size: xx-small; font-style: italic"> [Obligatorio]</label>
                     </div>
+
+                    <div class="row">
+                        <label class="control-label col-sm-2" for="anio">Nombre Archivo Generado:</label>
+                        <asp:Label ID="lblNombreArchivo" runat="server"></asp:Label>
+                    </div>
+
+                    <div class="row">
+                        <label class="control-label col-sm-2" for="anio">Fecha:</label>
+                        <asp:Label ID="lblFechaArchivo" runat="server"></asp:Label>
+                    </div>
                 </div>
 
                 <div class="panel-footer">
-                    <asp:Button ID="btnDescargar" runat="server" Text="Descargar Archivo" CssClass ="btn btn-primary"/>
                     <asp:Button ID="btnGenerar" runat="server" Text="Generar Archivo" CssClass="btn btn-primary"/>
+                    <asp:Button ID="btnDescargar" runat="server" Text="Descargar Archivo" CssClass ="btn btn-primary"/>
                     <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" CssClass="btn btn-primary"/>
                 </div>
             </div>

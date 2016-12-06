@@ -89,6 +89,43 @@ Namespace Datos
             End Try
         End Function
 
+        Public Function Consulta_Listado(ByVal DonantesE As DonantesE) As DataTable
+            Dim cn As New SqlConnection(sCadConn)
+            Dim da As SqlDataAdapter
+            Dim dt As DataTable
+
+            Try
+                dt = New DataTable
+
+                cn.Open()
+
+                da = New SqlDataAdapter("Donantes_Consulta_Listado", cn)
+                da.SelectCommand.CommandType = CommandType.StoredProcedure
+
+                da.SelectCommand.Parameters.Add("@pId_Donante", SqlDbType.Int).Value = IIf(DonantesE.nId <> 0, DonantesE.nId, DBNull.Value)
+                da.SelectCommand.Parameters.Add("@pId_TipoDonante", SqlDbType.Int).Value = IIf(DonantesE.nId_TipoDonante <> 0, DonantesE.nId_TipoDonante, DBNull.Value)
+                da.SelectCommand.Parameters.Add("@pNombre", SqlDbType.VarChar, 100).Value = IIf(Not IsNothing(DonantesE.sApellido_Nombre_RazonSocial), DonantesE.sNombre, DBNull.Value)
+                da.SelectCommand.Parameters.Add("@pDireccion", SqlDbType.VarChar, 100).Value = IIf(Not IsNothing(DonantesE.sDireccion), DonantesE.sDireccion, DBNull.Value)
+                da.SelectCommand.Parameters.Add("@pLocalidad", SqlDbType.VarChar, 50).Value = IIf(Not IsNothing(DonantesE.sLocalidad), DonantesE.sLocalidad, DBNull.Value)
+                da.SelectCommand.Parameters.Add("@pCP", SqlDbType.VarChar, 10).Value = IIf(Not IsNothing(DonantesE.sCP), DonantesE.sCP, DBNull.Value)
+                da.SelectCommand.Parameters.Add("@pId_Provincia", SqlDbType.Int).Value = IIf(DonantesE.nId_Provincia <> 0, DonantesE.nId_Provincia, DBNull.Value)
+                da.SelectCommand.Parameters.Add("@pDNI_CUIL_CUIT", SqlDbType.VarChar, 11).Value = IIf(Not IsNothing(DonantesE.sDNI_CUIL_CUIT), DonantesE.sDNI_CUIL_CUIT, DBNull.Value)
+                da.SelectCommand.Parameters.Add("@pTE", SqlDbType.VarChar, 15).Value = IIf(Not IsNothing(DonantesE.sTE_Linea), DonantesE.sTE_Linea_Celular_Laboral, DBNull.Value)
+                da.SelectCommand.Parameters.Add("@pEMail", SqlDbType.VarChar, 100).Value = IIf(Not IsNothing(DonantesE.sEMail), DonantesE.sEMail, DBNull.Value)
+
+                da.Fill(dt)
+
+                cn.Close()
+                da = Nothing
+
+                Return dt
+
+            Catch ex As Exception
+                MsgBox(ex.Message, MsgBoxStyle.Critical, "Robin")
+                Return Nothing
+            End Try
+        End Function
+
         Public Function Obtener(ByVal DonantesE As DonantesE) As DataTable
             Dim cn As New SqlConnection(sCadConn)
             Dim da As SqlDataAdapter

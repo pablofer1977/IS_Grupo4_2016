@@ -402,6 +402,276 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
+<member name="F:SGD.frmDonacionesConsulta._txtNroDonante">
+<summary>
+Control txtNroDonante.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SGD.frmDonacionesConsulta._txtNroDonacion">
+<summary>
+Control txtNroDonacion.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SGD.frmDonacionesConsulta._cmbEstado">
+<summary>
+Control cmbEstado.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SGD.frmDonacionesConsulta._cmbTipoDonacion">
+<summary>
+Control cmbTipoDonacion.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SGD.frmDonacionesConsulta._cmbTarjeta">
+<summary>
+Control cmbTarjeta.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SGD.frmDonacionesConsulta._txtNroTarjetaCBU">
+<summary>
+Control txtNroTarjetaCBU.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SGD.frmDonacionesConsulta._cmbCampania">
+<summary>
+Control cmbCampania.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SGD.frmDonacionesConsulta._btnBuscar">
+<summary>
+Control btnBuscar.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SGD.frmDonacionesConsulta._grd">
+<summary>
+Control grd.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SGD.frmDonacionesConsulta._lblDonante">
+<summary>
+Control lblDonante.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SGD.frmDonacionesConsulta._grdD">
+<summary>
+Control grdD.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SGD.frmDonacionesConsulta._sManager">
+<summary>
+Control sManager.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SGD.frmDonacionesConsulta._upModal_Error">
+<summary>
+Control upModal_Error.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SGD.frmDonacionesConsulta._lblTituloError">
+<summary>
+Control lblTituloError.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SGD.frmDonacionesConsulta._lblError">
+<summary>
+Control lblError.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SGD.frmDonacionesConsulta._upModal_Detalle">
+<summary>
+Control upModal_Detalle.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SGD.frmDonacionesConsulta._lblTituloDetalle">
+<summary>
+Control lblTituloDetalle.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SGD.frmDonacionesConsulta._lblNroDonante">
+<summary>
+Control lblNroDonante.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SGD.frmDonacionesConsulta._lblFechaIng">
+<summary>
+Control lblFechaIng.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SGD.frmDonacionesConsulta._lblTipoDonante">
+<summary>
+Control lblTipoDonante.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SGD.frmDonacionesConsulta._lblNombre">
+<summary>
+Control lblNombre.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SGD.frmDonacionesConsulta._lblDireccion">
+<summary>
+Control lblDireccion.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SGD.frmDonacionesConsulta._lblLocalidad">
+<summary>
+Control lblLocalidad.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SGD.frmDonacionesConsulta._lblCodigoPostal">
+<summary>
+Control lblCodigoPostal.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SGD.frmDonacionesConsulta._lblProvincia">
+<summary>
+Control lblProvincia.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SGD.frmDonacionesConsulta._lblNroDocumento">
+<summary>
+Control lblNroDocumento.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SGD.frmDonacionesConsulta._lblCUIT">
+<summary>
+Control lblCUIT.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SGD.frmDonacionesConsulta._lblTE">
+<summary>
+Control lblTE.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SGD.frmDonacionesConsulta._lblEMail">
+<summary>
+Control lblEMail.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SGD.frmDonacionesConsulta._lblComentarios">
+<summary>
+Control lblComentarios.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:SGD.frmDonacionesModificacion._lblNroDonante">
 <summary>
 Control lblNroDonante.
@@ -771,7 +1041,7 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:SGD.frmDonantesListado._txtNroDonante">
+<member name="F:SGD.frmDonantesConsulta._txtNroDonante">
 <summary>
 Control txtNroDonante.
 </summary>
@@ -780,7 +1050,7 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:SGD.frmDonantesListado._cmbTipoDonante">
+<member name="F:SGD.frmDonantesConsulta._cmbTipoDonante">
 <summary>
 Control cmbTipoDonante.
 </summary>
@@ -789,7 +1059,7 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:SGD.frmDonantesListado._txtNombre">
+<member name="F:SGD.frmDonantesConsulta._txtNombre">
 <summary>
 Control txtNombre.
 </summary>
@@ -798,9 +1068,279 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:SGD.frmDonantesListado._txtDireccion">
+<member name="F:SGD.frmDonantesConsulta._txtDireccion">
 <summary>
 Control txtDireccion.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SGD.frmDonantesConsulta._txtLocalidad">
+<summary>
+Control txtLocalidad.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SGD.frmDonantesConsulta._txtCodigoPostal">
+<summary>
+Control txtCodigoPostal.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SGD.frmDonantesConsulta._cmbProvincia">
+<summary>
+Control cmbProvincia.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SGD.frmDonantesConsulta._txtNroDocumento">
+<summary>
+Control txtNroDocumento.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SGD.frmDonantesConsulta._txtTE">
+<summary>
+Control txtTE.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SGD.frmDonantesConsulta._txtEMail">
+<summary>
+Control txtEMail.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SGD.frmDonantesConsulta._btnBuscar">
+<summary>
+Control btnBuscar.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SGD.frmDonantesConsulta._grd">
+<summary>
+Control grd.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SGD.frmDonantesConsulta._lblDonante">
+<summary>
+Control lblDonante.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SGD.frmDonantesConsulta._grdD">
+<summary>
+Control grdD.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SGD.frmDonantesConsulta._sManager">
+<summary>
+Control sManager.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SGD.frmDonantesConsulta._upModal_Error">
+<summary>
+Control upModal_Error.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SGD.frmDonantesConsulta._lblTituloError">
+<summary>
+Control lblTituloError.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SGD.frmDonantesConsulta._lblError">
+<summary>
+Control lblError.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SGD.frmDonantesConsulta._upModal_Detalle">
+<summary>
+Control upModal_Detalle.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SGD.frmDonantesConsulta._lblTituloDetalle">
+<summary>
+Control lblTituloDetalle.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SGD.frmDonantesConsulta._lblNroDonante">
+<summary>
+Control lblNroDonante.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SGD.frmDonantesConsulta._lblFechaIng">
+<summary>
+Control lblFechaIng.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SGD.frmDonantesConsulta._lblTipoDonante">
+<summary>
+Control lblTipoDonante.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SGD.frmDonantesConsulta._lblNombre">
+<summary>
+Control lblNombre.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SGD.frmDonantesConsulta._lblDireccion">
+<summary>
+Control lblDireccion.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SGD.frmDonantesConsulta._lblLocalidad">
+<summary>
+Control lblLocalidad.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SGD.frmDonantesConsulta._lblCodigoPostal">
+<summary>
+Control lblCodigoPostal.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SGD.frmDonantesConsulta._lblProvincia">
+<summary>
+Control lblProvincia.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SGD.frmDonantesConsulta._lblNroDocumento">
+<summary>
+Control lblNroDocumento.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SGD.frmDonantesConsulta._lblCUIT">
+<summary>
+Control lblCUIT.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SGD.frmDonantesConsulta._lblTE">
+<summary>
+Control lblTE.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SGD.frmDonantesConsulta._lblEMail">
+<summary>
+Control lblEMail.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SGD.frmDonantesConsulta._lblComentarios">
+<summary>
+Control lblComentarios.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SGD.frmDonantesListado._txtNroDonante">
+<summary>
+Control txtNroDonante.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -816,54 +1356,27 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:SGD.frmDonantesListado._txtCodigoPostal">
-<summary>
-Control txtCodigoPostal.
-</summary>
-<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member>
-<member name="F:SGD.frmDonantesListado._cmbProvincia">
-<summary>
-Control cmbProvincia.
-</summary>
-<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member>
-<member name="F:SGD.frmDonantesListado._txtNroDocumento">
-<summary>
-Control txtNroDocumento.
-</summary>
-<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member>
-<member name="F:SGD.frmDonantesListado._txtTE">
-<summary>
-Control txtTE.
-</summary>
-<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member>
-<member name="F:SGD.frmDonantesListado._txtEMail">
-<summary>
-Control txtEMail.
-</summary>
-<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member>
 <member name="F:SGD.frmDonantesListado._txtNroDonacion">
 <summary>
 Control txtNroDonacion.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SGD.frmDonantesListado._txtNombre">
+<summary>
+Control txtNombre.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SGD.frmDonantesListado._txtCodigoPostal">
+<summary>
+Control txtCodigoPostal.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -879,27 +1392,18 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:SGD.frmDonantesListado._cmbTipoDonacion">
+<member name="F:SGD.frmDonantesListado._txtDireccion">
 <summary>
-Control cmbTipoDonacion.
+Control txtDireccion.
 </summary>
 <remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:SGD.frmDonantesListado._cmbTarjeta">
+<member name="F:SGD.frmDonantesListado._cmbProvincia">
 <summary>
-Control cmbTarjeta.
-</summary>
-<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member>
-<member name="F:SGD.frmDonantesListado._txtNroTarjetaCBU">
-<summary>
-Control txtNroTarjetaCBU.
+Control cmbProvincia.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -924,18 +1428,18 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:SGD.frmDonantesListado._grd">
+<member name="F:SGD.frmDonantesListado._btnNuevo">
 <summary>
-Control grd.
+Control btnNuevo.
 </summary>
 <remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:SGD.frmDonantesListado._btnNuevo">
+<member name="F:SGD.frmDonantesListado._grd">
 <summary>
-Control btnNuevo.
+Control grd.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -951,18 +1455,18 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:SGD.frmDonantesListado._grdD">
+<member name="F:SGD.frmDonantesListado._btnNuevoD">
 <summary>
-Control grdD.
+Control btnNuevoD.
 </summary>
 <remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:SGD.frmDonantesListado._btnNuevoD">
+<member name="F:SGD.frmDonantesListado._grdD">
 <summary>
-Control btnNuevoD.
+Control grdD.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -1032,9 +1536,27 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
+<member name="F:SGD.frmDonantesListado._lblNroDocumento">
+<summary>
+Control lblNroDocumento.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:SGD.frmDonantesListado._lblFechaIng">
 <summary>
 Control lblFechaIng.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SGD.frmDonantesListado._lblCUIT">
+<summary>
+Control lblCUIT.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -1050,6 +1572,15 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
+<member name="F:SGD.frmDonantesListado._lblTE">
+<summary>
+Control lblTE.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:SGD.frmDonantesListado._lblNombre">
 <summary>
 Control lblNombre.
@@ -1059,9 +1590,27 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
+<member name="F:SGD.frmDonantesListado._lblEMail">
+<summary>
+Control lblEMail.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:SGD.frmDonantesListado._lblDireccion">
 <summary>
 Control lblDireccion.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SGD.frmDonantesListado._lblComentarios">
+<summary>
+Control lblComentarios.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -1089,51 +1638,6 @@ Para modificarlo, mueva la declaración del campo del archivo del diseñador al 
 <member name="F:SGD.frmDonantesListado._lblProvincia">
 <summary>
 Control lblProvincia.
-</summary>
-<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member>
-<member name="F:SGD.frmDonantesListado._lblNroDocumento">
-<summary>
-Control lblNroDocumento.
-</summary>
-<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member>
-<member name="F:SGD.frmDonantesListado._lblCUIT">
-<summary>
-Control lblCUIT.
-</summary>
-<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member>
-<member name="F:SGD.frmDonantesListado._lblTE">
-<summary>
-Control lblTE.
-</summary>
-<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member>
-<member name="F:SGD.frmDonantesListado._lblEMail">
-<summary>
-Control lblEMail.
-</summary>
-<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member>
-<member name="F:SGD.frmDonantesListado._lblComentarios">
-<summary>
-Control lblComentarios.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -1500,9 +2004,18 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:SGD.frmPresentacionesAlta._btnDescargar">
+<member name="F:SGD.frmPresentacionesAlta._lblNombreArchivo">
 <summary>
-Control btnDescargar.
+Control lblNombreArchivo.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SGD.frmPresentacionesAlta._lblFechaArchivo">
+<summary>
+Control lblFechaArchivo.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -1512,6 +2025,15 @@ Para modificarlo, mueva la declaración del campo del archivo del diseñador al 
 <member name="F:SGD.frmPresentacionesAlta._btnGenerar">
 <summary>
 Control btnGenerar.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SGD.frmPresentacionesAlta._btnDescargar">
+<summary>
+Control btnDescargar.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -1555,6 +2077,123 @@ Para modificarlo, mueva la declaración del campo del archivo del diseñador al 
 </remarks>
 </member>
 <member name="F:SGD.frmPresentacionesAlta._lblError">
+<summary>
+Control lblError.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SGD.frmPresentacionesConsulta._txtNroPresentacion">
+<summary>
+Control txtNroPresentacion.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SGD.frmPresentacionesConsulta._cmbTipoPresentacion">
+<summary>
+Control cmbTipoPresentacion.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SGD.frmPresentacionesConsulta._cmbTarjeta">
+<summary>
+Control cmbTarjeta.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SGD.frmPresentacionesConsulta._cmbMes">
+<summary>
+Control cmbMes.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SGD.frmPresentacionesConsulta._txtAnio">
+<summary>
+Control txtAnio.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SGD.frmPresentacionesConsulta._btnBuscar">
+<summary>
+Control btnBuscar.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SGD.frmPresentacionesConsulta._grd">
+<summary>
+Control grd.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SGD.frmPresentacionesConsulta._lblPresentacion">
+<summary>
+Control lblPresentacion.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SGD.frmPresentacionesConsulta._grdD">
+<summary>
+Control grdD.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SGD.frmPresentacionesConsulta._sManager">
+<summary>
+Control sManager.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SGD.frmPresentacionesConsulta._upModal_Error">
+<summary>
+Control upModal_Error.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SGD.frmPresentacionesConsulta._lblTituloError">
+<summary>
+Control lblTituloError.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SGD.frmPresentacionesConsulta._lblError">
 <summary>
 Control lblError.
 </summary>

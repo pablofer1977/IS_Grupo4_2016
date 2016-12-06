@@ -114,12 +114,15 @@
     <Content Include="frmCampaniasListado.aspx" />
     <Content Include="frmCampaniasModificacion.aspx" />
     <Content Include="frmDonacionesAlta.aspx" />
+    <Content Include="frmDonacionesConsulta.aspx" />
     <Content Include="frmDonacionesModificacion.aspx" />
     <Content Include="frmDonantesAlta.aspx" />
+    <Content Include="frmDonantesConsulta.aspx" />
     <Content Include="frmDonantesListado.aspx" />
     <Content Include="frmDonantesModificacion.aspx" />
     <Content Include="frmLogin.aspx" />
     <Content Include="frmPresentacionesAlta.aspx" />
+    <Content Include="frmPresentacionesConsulta.aspx" />
     <Content Include="frmPresentacionesListado.aspx" />
     <Content Include="frmPresentacionesRetornos.aspx" />
     <Content Include="frmTarjetasListado.aspx" />
@@ -186,6 +189,13 @@
       <DependentUpon>frmDonacionesAlta.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="frmDonacionesConsulta.aspx.designer.vb">
+      <DependentUpon>frmDonacionesConsulta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmDonacionesConsulta.aspx.vb">
+      <DependentUpon>frmDonacionesConsulta.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="frmDonacionesModificacion.aspx.designer.vb">
       <DependentUpon>frmDonacionesModificacion.aspx</DependentUpon>
     </Compile>
@@ -198,6 +208,13 @@
     </Compile>
     <Compile Include="frmDonantesAlta.aspx.vb">
       <DependentUpon>frmDonantesAlta.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="frmDonantesConsulta.aspx.designer.vb">
+      <DependentUpon>frmDonantesConsulta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmDonantesConsulta.aspx.vb">
+      <DependentUpon>frmDonantesConsulta.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="frmDonantesListado.aspx.designer.vb">
@@ -233,6 +250,13 @@
     </Compile>
     <Compile Include="frmPresentacionesAlta.aspx.vb">
       <DependentUpon>frmPresentacionesAlta.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="frmPresentacionesConsulta.aspx.designer.vb">
+      <DependentUpon>frmPresentacionesConsulta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmPresentacionesConsulta.aspx.vb">
+      <DependentUpon>frmPresentacionesConsulta.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="frmPresentacionesListado.aspx.designer.vb">

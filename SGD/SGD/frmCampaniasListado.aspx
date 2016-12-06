@@ -5,18 +5,24 @@
         <div class="panel-group">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h4>Filtros de Búsqueda</h4>
+                    <h5 style="padding: 1px; margin: 1px"><strong>Filtros de Búsqueda</strong></h5>
                 </div>
 
                 <div class="panel-body">
-                    <div class="col-sm-10">
-                        <label class="control-label col-sm-2" for="campania">Campaña:</label>
-                        <asp:TextBox ID="txtCampania" runat="server" MaxLength="50"></asp:TextBox>
-                    </div>
+                    <div style="clear:both;">
+                        <div style="width: 10%; float:left; text-align:right; padding:2px; font-size: small;">
+                            <label style="font-size: small; font-style: normal;" for="campania">Campaña:</label>
+                        </div>
+                        <div style="width: 20%; float:left; padding:2px; font-size: small;">
+                            <asp:TextBox ID="txtCampania" runat="server" MaxLength="50"></asp:TextBox>
+                        </div>
 
-                    <div class="col-sm-10">
-                        <label class="control-label col-sm-2" for="estado">Estado:</label>
-                        <asp:DropDownList ID="cmdEstado" runat="server"></asp:DropDownList>
+                        <div style="width: 10%; float:left; text-align:right; padding:2px; font-size: small;">
+                            <label style="font-size: small" for="estado">Estado:</label>
+                        </div>
+                        <div style="width: 20%; float:left; padding:2px; font-size: small;">
+                            <asp:DropDownList ID="cmdEstado" runat="server"></asp:DropDownList>
+                        </div>
                     </div>
                 </div>
 
@@ -29,22 +35,24 @@
 
         <div class="panel-group">
             <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4>Listado de Campañas</h4>
+                <div style="clear:both;">
+                    <div style="float:left; text-align:left; padding:2px; font-size: small;">
+                        <h5 style="padding: 1px; margin: 1px"><strong>Campañas</strong></h5>
+                    </div>
                 </div>
 
                 <div class="panel-body">
-                    <div class="row">
+                    <div style="clear:both;">
                         <asp:GridView ID="grd" 
                             runat="server" 
                             AutoGenerateColumns="False" 
                             AllowPaging="True" 
                             PageSize="10"
-                            CssClass="table table-striped table-bordered table-hover table-condensed"
+                            CssClass="table table-striped table-bordered table-hover table-condensed pagination-ys"
                             EmptyDataText="No Hay Campañas para Mostrar.">
 
                             <Columns>
-                                <asp:TemplateField HeaderText="Modificar" ItemStyle-HorizontalAlign="Center" >
+                                <asp:TemplateField HeaderText="" ItemStyle-HorizontalAlign="Center" >
                                     <ItemTemplate>
                                         <asp:ImageButton Id="Modificar" runat="server" 
                                             CommandName="Modificar" 
@@ -55,7 +63,7 @@
                                     <ItemStyle HorizontalAlign="Center"></ItemStyle>
                                 </asp:TemplateField>
 
-                                <asp:TemplateField HeaderText="Dar de Baja" ItemStyle-HorizontalAlign="Center" >
+                                <asp:TemplateField HeaderText="" ItemStyle-HorizontalAlign="Center" >
                                     <ItemTemplate>
                                         <asp:ImageButton Id="Estado" runat="server" 
                                             Enabled='<%# HabilitarEstado_Obtener(Eval("Id_Estado").ToString())%>'

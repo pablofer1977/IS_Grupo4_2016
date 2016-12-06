@@ -24,8 +24,8 @@ BEGIN
 			c.Campania,
 			d.Estado AS Id_Estado,
 			CASE WHEN d.Estado = 'A' THEN 'Activo' WHEN d.Estado = 'B' THEN 'Baja' ELSE '' END AS Estado,
-			d.FechaDon,
-			d.FechaBaja
+			CONVERT(CHAR(10), d.FechaDon, 103) AS FechaDon,
+			CONVERT(CHAR(10), d.FechaBaja, 103) AS FechaBaja
 	FROM 	tblDonaciones d INNER JOIN
 			tblTiposDonaciones td ON d.Id_TipoDonacion = td.Id LEFT JOIN
 			tblTarjetas t ON d.Id_Tarjeta = t.Id LEFT JOIN

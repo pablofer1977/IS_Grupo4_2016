@@ -1,11 +1,11 @@
 USE [dbsSGD]
 GO
 
-if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[Donantes_Listado]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
-drop procedure [dbo].[Donantes_Listado]
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[Donantes_Consulta_Listado]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure [dbo].[Donantes_Consulta_Listado]
 GO
 
-CREATE PROCEDURE Donantes_Listado (
+CREATE PROCEDURE Donantes_Consulta_Listado (
 	@pId_Donante		INT = NULL,
 	@pId_TipoDonante	INT = NULL,
 	@pNombre			VARCHAR(100) = NULL,
@@ -15,31 +15,12 @@ CREATE PROCEDURE Donantes_Listado (
 	@pId_Provincia		INT = NULL,
 	@pDNI_CUIL_CUIT		VARCHAR(11) = NULL,
 	@pTE				VARCHAR(15) = NULL,
-	@pEMail				VARCHAR(100) = NULL,
-	@pId_Donacion		INT = NULL,
-	@pEstado			CHAR(1) = NULL,
-	@pId_TipoDonacion	INT = NULL,
-	@pId_Tarjeta		CHAR(3) = NULL,
-	@pNroTarjeta_CBU	VARCHAR(22) = NULL,
-	@pId_Campania		INT = NULL)
+	@pEMail				VARCHAR(100) = NULL)
 AS
 
 BEGIN
-	;WITH DONACIONES AS
-		(
-		SELECT	d2.Id AS Id_Donante
-		FROM	tblDonantes d2 LEFT JOIN
-				tblDonaciones d ON d2.Id = d.Id_Donante
-		WHERE	(d.Id = @pId_Donacion OR @pId_Donacion IS NULL)
-		AND		(d2.Id = @pId_Donante OR @pId_Donante IS NULL)
-		AND		(d.Estado = @pEstado OR @pEstado IS NULL)
-		AND		(d.Id_TipoDonacion = @pId_TipoDonacion OR @pId_TipoDonacion IS NULL)
-		AND		(d.Id_Tarjeta = @pId_Tarjeta OR @pId_Tarjeta IS NULL)
-		AND		(d.NroTarjeta LIKE @pNroTarjeta_CBU  + '%' OR d.CBU LIKE @pNroTarjeta_CBU  + '%' OR @pNroTarjeta_CBU IS NULL)
-		AND		(d.Id_Campania = @pId_Campania OR @pId_Campania IS NULL)
-		)
 	SELECT	d.Id,
-			CONVERT(CHAR(10), d.FechaIng, 103) AS FechaIng,
+			d.FechaIng,
 			d.Id_TipoDonante,
 			td.TipoDonante,
 			CASE
@@ -72,11 +53,10 @@ BEGIN
 	AND		(d.DNI LIKE @pDNI_CUIL_CUIT  + '%' OR d.CUIL_CUIT LIKE @pDNI_CUIL_CUIT  + '%' OR @pDNI_CUIL_CUIT IS NULL)
 	AND		(d.TE_Linea LIKE @pTE  + '%' OR d.TE_Celular LIKE @pTE  + '%' OR d.TE_Laboral LIKE @pTE  + '%' OR @pTE IS NULL)
 	AND		(d.EMail LIKE @pEMail  + '%' OR @pEMail IS NULL)
-	AND		d.Id IN (SELECT do.Id_Donante FROM DONACIONES do)
 	ORDER BY d.Id DESC
 END
 GO
 GRANT EXECUTE
-  ON dbo.Donantes_Listado
+  ON dbo.Donantes_Consulta_Listado
 TO Rol_SGD
 GO

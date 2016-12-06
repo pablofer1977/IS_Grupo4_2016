@@ -11,7 +11,16 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class frmPresentacionesAlta
+Partial Public Class frmPresentacionesConsulta
+    
+    '''<summary>
+    '''Control txtNroPresentacion.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txtNroPresentacion As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
     '''Control cmbTipoPresentacion.
@@ -50,49 +59,40 @@ Partial Public Class frmPresentacionesAlta
     Protected WithEvents txtAnio As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
-    '''Control lblNombreArchivo.
+    '''Control btnBuscar.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents lblNombreArchivo As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents btnBuscar As Global.System.Web.UI.WebControls.Button
     
     '''<summary>
-    '''Control lblFechaArchivo.
+    '''Control grd.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents lblFechaArchivo As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents grd As Global.System.Web.UI.WebControls.GridView
     
     '''<summary>
-    '''Control btnGenerar.
+    '''Control lblPresentacion.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents btnGenerar As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents lblPresentacion As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
-    '''Control btnDescargar.
+    '''Control grdD.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents btnDescargar As Global.System.Web.UI.WebControls.Button
-    
-    '''<summary>
-    '''Control btnCancelar.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents btnCancelar As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents grdD As Global.System.Web.UI.WebControls.GridView
     
     '''<summary>
     '''Control sManager.

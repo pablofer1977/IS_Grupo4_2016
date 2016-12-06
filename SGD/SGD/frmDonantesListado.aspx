@@ -6,92 +6,81 @@
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h4>Filtros de Búsqueda</h4>
+                        <h5 style="padding: 1px; margin: 1px"><strong>Filtros de Búsqueda</strong></h5>
                     </div>
 
                     <div class="panel-body">
-                        <div class="row">
-                            <label class="control-label col-sm-2" for="apellido">Nro. de Donante:</label>
-                            <asp:TextBox ID="txtNroDonante" runat="server" MaxLength="8" TextMode="Number"></asp:TextBox>
+                        <div style="clear:both;">
+                            <div style="width: 10%; float:left; text-align:right; padding:2px; font-size: small;">
+                                <label style="font-size: small; font-style: normal;" for="nrodonante">Nro. de Donante:</label>
+                            </div>
+                            <div style="width: 20%; float:left; padding:2px; font-size: small;">
+                                <asp:TextBox ID="txtNroDonante" runat="server" MaxLength="8" TextMode="Number" Width="40%"></asp:TextBox>
+                            </div>
+
+                            <div style="width: 10%; float:left; text-align:right; padding:2px; font-size: small;">
+                                <label style="font-size: small" for="localidad">Localidad:</label>
+                            </div>
+                            <div style="width: 20%; float:left; padding:2px; font-size: small;">
+                                <asp:TextBox ID="txtLocalidad" runat="server" MaxLength="50" Width="100%"></asp:TextBox>
+                            </div>
+
+                            <div style="width: 10%; float:left; text-align:right; padding:2px; font-size: small;">
+                                <label style="font-size: small" for="nrodonacion">Nro. de Donación:</label>
+                            </div>
+                            <div style="width: 20%; float:left; padding:2px; font-size: small;">
+                                <asp:TextBox ID="txtNroDonacion" runat="server" MaxLength="8" TextMode="Number" Width="40%"></asp:TextBox>
+                            </div>
                         </div>
                   
-                        <div class="row">
-                            <label class="control-label col-sm-2" for="tipodonante">Tipo de Donante:</label>
-                            <asp:DropDownList ID="cmbTipoDonante" runat="server"></asp:DropDownList>
-                        </div>
-                  
-                        <div class="row">
-                            <label class="control-label col-sm-2" for="apellido">Nombre, Apellido o Razón Social:</label>
-                            <asp:TextBox ID="txtNombre" runat="server" MaxLength="100"></asp:TextBox>
+                        <div style="clear:both;">
+                            <div style="width: 10%; float:left; text-align:right; padding:2px; font-size: small;">
+                                <label style="font-size: small" for="apellido">Nombre:</label>
+                            </div>
+                            <div style="width: 20%; float:left; padding:2px; font-size: small;">
+                                <asp:TextBox ID="txtNombre" runat="server" MaxLength="100" Width="100%"></asp:TextBox>
+                            </div>
+
+                            <div style="width: 10%; float:left; text-align:right; padding:2px; font-size: small;">
+                                <label style="font-size: small" for="codigopostal">Código Postal:</label>
+                            </div>
+                            <div style="width: 20%; float:left; padding:2px; font-size: small;">
+                                <asp:TextBox ID="txtCodigoPostal" runat="server" MaxLength="10" Width="50%"></asp:TextBox>
+                            </div>
+
+                            <div style="width: 10%; float:left; text-align:right; padding:2px; font-size: small;">
+                                <label style="font-size: small" for="tipodonacion">Estado:</label>
+                            </div>
+                            <div style="width: 20%; float:left; padding:2px; font-size: small;">
+                                <asp:DropDownList ID="cmbEstado" runat="server" Width="100%"></asp:DropDownList>
+                            </div>
                         </div>
 
-                        <div class="row">
-                            <label class="control-label col-sm-2" for="direccion">Dirección:</label>
-                            <asp:TextBox ID="txtDireccion" runat="server" MaxLength="100"></asp:TextBox>
-                        </div>
+                        <div style="clear:both;">
+                            <div style="width: 10%; float:left; text-align:right; padding:2px; font-size: small;">
+                                <label style="font-size: small" for="direccion">Dirección:</label>
+                            </div>
+                            <div style="width: 20%; float:left; padding:2px; font-size: small;">
+                                <asp:TextBox ID="txtDireccion" runat="server" MaxLength="100" Width="100%"></asp:TextBox>
+                            </div>
 
-                        <div class="row">
-                            <label class="control-label col-sm-2" for="localidad">Localidad:</label>
-                            <asp:TextBox ID="txtLocalidad" runat="server" MaxLength="50"></asp:TextBox>
-                        </div>
+                            <div style="width: 10%; float:left; text-align:right; padding:2px; font-size: small;">
+                                <label style="font-size: small" for="provincia">Provincia:</label>
+                            </div>
+                            <div style="width: 20%; float:left; padding:2px; font-size: small;">
+                                <asp:DropDownList ID="cmbProvincia" runat="server" Width="100%"></asp:DropDownList>
+                            </div>
 
-                        <div class="row">
-                            <label class="control-label col-sm-2" for="codigopostal">Código Postal:</label>
-                            <asp:TextBox ID="txtCodigoPostal" runat="server" MaxLength="10"></asp:TextBox>
-                        </div>
-
-                        <div class="row">
-                            <label class="control-label col-sm-2" for="provincia">Provincia:</label>
-                            <asp:DropDownList ID="cmbProvincia" runat="server"></asp:DropDownList>
-                        </div>
-
-                        <div class="row">
-                            <label class="control-label col-sm-2" for="nrodocumento">Nro. de Documento o CUIL/CUIT:</label>
-                            <asp:TextBox ID="txtNroDocumento" runat="server" MaxLength="11"></asp:TextBox>
-                        </div>
-
-                        <div class="row">
-                            <label class="control-label col-sm-2" for="telinea">Teléfono:</label>
-                            <asp:TextBox ID="txtTE" runat="server" MaxLength="15"></asp:TextBox>
-                        </div>
-
-                        <div class="row">
-                            <label class="control-label col-sm-2" for="email">Correo Electrónico:</label>
-                            <asp:TextBox ID="txtEMail" runat="server" MaxLength="50"></asp:TextBox>
-                        </div>
-
-                        <div class="row">
-                            <label class="control-label col-sm-2" for="apellido">Nro. de Donación:</label>
-                            <asp:TextBox ID="txtNroDonacion" runat="server" MaxLength="8" TextMode="Number"></asp:TextBox>
-                        </div>
-                  
-                        <div class="row">
-                            <label class="control-label col-sm-2" for="tipodonacion">Estado:</label>
-                            <asp:DropDownList ID="cmbEstado" runat="server"></asp:DropDownList>
-                        </div>
-                  
-                        <div class="row">
-                            <label class="control-label col-sm-2" for="tipodonacion">Tipo de Donación:</label>
-                            <asp:DropDownList ID="cmbTipoDonacion" runat="server"></asp:DropDownList>
-                        </div>
-                  
-                        <div class="row">
-                            <label class="control-label col-sm-2" for="tarjeta">Nombre de Tarjeta:</label>
-                            <asp:DropDownList ID="cmbTarjeta" runat="server"></asp:DropDownList>
-                        </div>
-                  
-                        <div class="row">
-                            <label class="control-label col-sm-2" for="nrotarjeta">Número de Tarjeta o CBU:</label>
-                            <asp:TextBox ID="txtNroTarjetaCBU" runat="server" MaxLength="22"></asp:TextBox>
-                        </div>
-
-                        <div class="row">
-                            <label class="control-label col-sm-2" for="campania">Campaña:</label>
-                            <asp:DropDownList ID="cmbCampania" runat="server"></asp:DropDownList>
+                            <div style="width: 10%; float:left; text-align:right; padding:2px; font-size: small;">
+                                <label style="font-size: small" for="campania">Campaña:</label>
+                            </div>
+                            <div style="width: 20%; float:left; padding:2px; font-size: small;">
+                                <asp:DropDownList ID="cmbCampania" runat="server" Width="100%"></asp:DropDownList>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="panel-footer">
+                    <div class="panel-footer" style="padding: 4px; margin: 1px">
                         <asp:Button ID="btnBuscar" runat="server" Text="Buscar" CommandName="Buscar" CssClass="btn btn-primary"/>  
                     </div>
             
@@ -100,21 +89,28 @@
 
            <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h4>Listado de Donantes</h4>
+                    <div style="clear:both;">
+                        <div style="float:left; text-align:left; padding:2px; font-size: small;">
+                            <h5 style="padding: 1px; margin: 1px"><strong>Donantes</strong></h5>
+                        </div>
+                        <div style="float:right; padding:2px; font-size: small;">
+                            <asp:Button ID="btnNuevo" runat="server" Text="Nuevo Donante" CssClass="btn btn-primary"/>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="panel-body">
-                    <div class="row">
+                    <div style="clear:both;">
                         <asp:GridView ID="grd" 
                             runat="server" 
                             AutoGenerateColumns="False" 
                             AllowPaging="True" 
-                            PageSize="10"
-                            CssClass="table table-striped table-bordered table-hover table-condensed"
+                            PageSize="5"
+                            CssClass="table table-striped table-bordered table-hover table-condensed pagination-ys"
                             EmptyDataText="No Hay Donantes para Mostrar.">
 
                             <Columns>
-                                <asp:TemplateField HeaderText="Modificar" ItemStyle-HorizontalAlign="Center" >
+                                <asp:TemplateField ItemStyle-HorizontalAlign="Center" >
                                     <ItemTemplate>
                                         <asp:ImageButton Id="Modificar" runat="server" 
                                             CommandName="Modificar" 
@@ -125,7 +121,7 @@
                                     <ItemStyle HorizontalAlign="Center"></ItemStyle>
                                 </asp:TemplateField>
 
-                                <asp:TemplateField HeaderText="Detalle" ItemStyle-HorizontalAlign="Center" >
+                                <asp:TemplateField ItemStyle-HorizontalAlign="Center" >
                                     <ItemTemplate>
                                         <asp:ImageButton Id="Detalle" runat="server" 
                                             CommandName="Detalle" 
@@ -136,7 +132,7 @@
                                     <ItemStyle HorizontalAlign="Center"></ItemStyle>
                                 </asp:TemplateField>
 
-                                <asp:TemplateField HeaderText="Ver Donaciones" ItemStyle-HorizontalAlign="Center" >
+                                <asp:TemplateField ItemStyle-HorizontalAlign="Center" >
                                     <ItemTemplate>
                                         <asp:ImageButton Id="Estado" runat="server" 
                                             CommandName="VerDonaciones" 
@@ -148,10 +144,10 @@
                                 </asp:TemplateField>
 
                                 <asp:BoundField DataField="Id" HeaderText="Nro. de Donante"/>
-                                <asp:BoundField DataField="FechaIng" HeaderText="Fecha de Alta"/>
+                                <asp:BoundField DataField="FechaIng" HeaderText="Fecha de Alta" />
                                 <asp:BoundField DataField="Id_TipoDonante" Visible="False" />
                                 <asp:BoundField DataField="TipoDonante" Visible="False" />
-                                <asp:BoundField DataField="Nombre" HeaderText="Apellido/s y Nombre/s o Razón Social"/>
+                                <asp:BoundField DataField="Nombre" HeaderText="Nombre"/>
                                 <asp:BoundField DataField="Direccion" Visible="False" />
                                 <asp:BoundField DataField="Localidad" Visible="False" />
                                 <asp:BoundField DataField="CP" Visible="False" />
@@ -166,21 +162,24 @@
                         </asp:GridView>   
                     </div>  
                 </div>
-                
-                <div class="panel-footer">
-                    <asp:Button ID="btnNuevo" runat="server" Text="Nuevo Donante" CssClass="btn btn-primary"/>
-                </div>
             </div>
         </div>
 
         <div class="panel-group">
             <div class="panel panel-default">
-                <div class="panel-heading">   
-                    <h4><asp:Label ID="lblDonante" runat="server">Listado de Donaciones</asp:Label></h4>
+                <div class="panel-heading">
+                    <div style="clear:both;">
+                        <div style="float:left; text-align:left; padding:2px; font-size: small;">
+                            <h5 style="padding: 1px; margin: 1px"><strong><asp:Label ID="lblDonante" runat="server">Donaciones</asp:Label></strong></h5>
+                        </div>
+                        <div style="float:right; padding:2px; font-size: small;">
+                            <asp:Button ID="btnNuevoD" runat="server" Text="Nueva Donación" CssClass="btn btn-primary"/>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="panel-body">
-                    <div class="row">
+                    <div>
                         <asp:GridView ID="grdD" 
                             runat="server" 
                             AutoGenerateColumns="False" 
@@ -190,7 +189,7 @@
                             EmptyDataText="No Hay Donaciones para Mostrar.">
 
                             <Columns>
-                                <asp:TemplateField HeaderText="Modificar" ItemStyle-HorizontalAlign="Center" >
+                                <asp:TemplateField ItemStyle-HorizontalAlign="Center" >
                                     <ItemTemplate>
                                         <asp:ImageButton Id="Modificar" runat="server" 
                                             Enabled='<%# HabilitarEstado_Obtener(Eval("Id_Estado").ToString())%>'
@@ -202,7 +201,7 @@
                                     <ItemStyle HorizontalAlign="Center"></ItemStyle>
                                 </asp:TemplateField>
 
-                                <asp:TemplateField HeaderText="Dar de Baja" ItemStyle-HorizontalAlign="Center" >
+                                <asp:TemplateField ItemStyle-HorizontalAlign="Center" >
                                     <ItemTemplate>
                                         <asp:ImageButton Id="Estado" runat="server" 
                                             Enabled='<%# HabilitarEstado_Obtener(Eval("Id_Estado").ToString())%>'
@@ -233,10 +232,6 @@
                         </asp:GridView>   
                     </div>  
                 </div>
-
-                <div class="panel-footer">
-                    <asp:Button ID="btnNuevoD" runat="server" Text="Nueva Donación" CssClass="btn btn-primary"/>
-                </div>
             </div>
         </div>
     </div>
@@ -250,7 +245,6 @@
                 <ContentTemplate>
                     <div class="modal-content">
                         <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                             <h4 class="modal-title"><asp:Label ID="lblTituloError" runat="server" Text=""></asp:Label></h4>
                         </div>
                         <div class="modal-body">
@@ -271,78 +265,118 @@
             <asp:UpdatePanel ID="upModal_Detalle" runat="server" ChildrenAsTriggers="false" UpdateMode="Conditional">
                 <ContentTemplate>
                     <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                            <h4 class="modal-title"><asp:Label ID="lblTituloDetalle" runat="server" Text=""></asp:Label></h4>
+                        <div class="modal-header-detalle">
+                            <h5 style="padding: 10px; margin: 1px"><strong><asp:Label ID="lblTituloDetalle" runat="server" Text=""></asp:Label></strong></h5>
                         </div>
                         
                         <div class="modal-body">
-                            <label for="nrodonante">Nro. de Donante:</label>
-                            <asp:Label ID="lblNroDonante" runat="server"></asp:Label>
-                        </div>
-                    
-                        <div class="modal-body">
-                            <label for="nrodonante">Fecha de Alta:</label>
-                            <asp:Label ID="lblFechaIng" runat="server"></asp:Label>
-                        </div>
-                    
-                        <div class="modal-body">
-                            <label for="tipodonante">Tipo de Donante:</label>
-                            <asp:Label ID="lblTipoDonante" runat="server"></asp:Label>
-                        </div>
-                  
-                        <div class="modal-body">
-                            <label for="nombre">Apellido/s y Nombre/s o Razón Social:</label>
-                            <asp:Label ID="lblNombre" runat="server"></asp:Label>
-                        </div>
+							<div style="clear:both;">
+								<div style="width: 20%; float:left; text-align:right; padding:2px; font-size: small;">
+									<label style="font-size: small; font-style: normal; font-weight: normal;" for="nrodonante">Nro. de Donante:</label>
+								</div>
+								<div style="width: 30%; float:left; padding:2px; font-size: small; font-weight: bold;">
+									<asp:Label ID="lblNroDonante" runat="server"></asp:Label>
+								</div>
+								<div style="width: 20%; float:left; text-align:right; padding:2px; font-size: small;">
+									<label style="font-size: small; font-style: normal; font-weight: normal;" for="nrodocumento">Nro. de Documento:</label>
+								</div>
+								<div style="width: 30%; float:left; padding:2px; font-size: small; font-weight: bold;">
+									<asp:Label ID="lblNroDocumento" runat="server"></asp:Label>
+								</div>
+							</div>  
 
-                        <div class="modal-body">
-                            <label for="direccion">Dirección:</label>
-                            <asp:Label ID="lblDireccion" runat="server"></asp:Label>
-                        </div>
+							<div style="clear:both;">
+								<div style="width: 20%; float:left; text-align:right; padding:2px; font-size: small;">
+									<label style="font-size: small; font-style: normal; font-weight: normal;" for="fechaalta">Fecha de Alta:</label>
+								</div>
+								<div style="width: 30%; float:left; padding:2px; font-size: small; font-weight: bold;">
+									<asp:Label ID="lblFechaIng" runat="server"></asp:Label>
+								</div>
+								<div style="width: 20%; float:left; text-align:right; padding:2px; font-size: small;">
+									<label style="font-size: small; font-style: normal; font-weight: normal;" for="cuit">Nro. de CUIL/CUIT:</label>
+								</div>
+								<div style="width: 30%; float:left; padding:2px; font-size: small; font-weight: bold;">
+									<asp:Label ID="lblCUIT" runat="server"></asp:Label>
+								</div>
+							</div> 							
 
-                        <div class="modal-body">
-                            <label for="localidad">Localidad:</label>
-                            <asp:Label ID="lblLocalidad" runat="server"></asp:Label>
-                        </div>
+							<div style="clear:both;">
+								<div style="width: 20%; float:left; text-align:right; padding:2px; font-size: small;">
+									<label style="font-size: small; font-style: normal; font-weight: normal;" for="tipodonante">Tipo de Donante:</label>
+								</div>
+								<div style="width: 30%; float:left; padding:2px; font-size: small; font-weight: bold;">
+									<asp:Label ID="lblTipoDonante" runat="server"></asp:Label>
+								</div>
+								<div style="width: 20%; float:left; text-align:right; padding:2px; font-size: small;">
+									<label style="font-size: small; font-style: normal; font-weight: normal;" for="telinea">Teléfono/s:</label>
+								</div>
+								<div style="width: 30%; float:left; padding:2px; font-size: small; font-weight: bold;">
+									<asp:Label ID="lblTE" runat="server"></asp:Label>
+								</div>
+							</div> 
+				
+							<div style="clear:both;">
+								<div style="width: 20%; float:left; text-align:right; padding:2px; font-size: small;">
+									<label style="font-size: small; font-style: normal; font-weight: normal;" for="nombre">Nombre:</label>
+								</div>
+								<div style="width: 30%; float:left; padding:2px; font-size: small; font-weight: bold;">
+									<asp:Label ID="lblNombre" runat="server"></asp:Label>
+								</div>
+								<div style="width: 20%; float:left; text-align:right; padding:2px; font-size: small;">
+									<label style="font-size: small; font-style: normal; font-weight: normal;" for="email">Correo Electrónico:</label>
+								</div>
+								<div style="width: 30%; float:left; padding:2px; font-size: small; font-weight: bold;">
+									<asp:Label ID="lblEMail" runat="server"></asp:Label>
+								</div>
+							</div> 	
+      
+							<div style="clear:both;">
+								<div style="width: 20%; float:left; text-align:right; padding:2px; font-size: small;">
+									<label style="font-size: small; font-style: normal; font-weight: normal;" for="direccion">Dirección:</label>
+								</div>
+								<div style="width: 30%; float:left; padding:2px; font-size: small; font-weight: bold;">
+									<asp:Label ID="lblDireccion" runat="server"></asp:Label>
+								</div>
+								<div style="width: 20%; float:left; text-align:right; padding:2px; font-size: small;">
+									<label style="font-size: small; font-style: normal; font-weight: normal;" for="email">Comentarios:</label>
+								</div>
+								<div style="width: 30%; float:left; padding:2px; font-size: small; font-weight: bold;">
+									<asp:Label ID="lblComentarios" runat="server"></asp:Label>
+								</div>
+							</div> 	
 
-                        <div class="modal-body">
-                            <label for="codigopostal">Código Postal:</label>
-                            <asp:Label ID="lblCodigoPostal" runat="server"></asp:Label>
-                        </div>
+							<div style="clear:both;">
+								<div style="width: 20%; float:left; text-align:right; padding:2px; font-size: small;">
+									<label style="font-size: small; font-style: normal; font-weight: normal;" for="localidad">Localidad:</label>
+								</div>
+								<div style="width: 30%; float:left; padding:2px; font-size: small; font-weight: bold;">
+									<asp:Label ID="lblLocalidad" runat="server"></asp:Label>
+								</div>
+							</div> 	
 
-                        <div class="modal-body">
-                            <label for="provincia">Provincia:</label>
-                            <asp:Label ID="lblProvincia" runat="server"></asp:Label>
-                        </div>
+							<div style="clear:both;">
+								<div style="width: 20%; float:left; text-align:right; padding:2px; font-size: small;">
+									<label style="font-size: small; font-style: normal; font-weight: normal;" for="codigopostal">Código Postal:</label>
+								</div>
+								<div style="width: 30%; float:left; padding:2px; font-size: small; font-weight: bold;">
+									<asp:Label ID="lblCodigoPostal" runat="server"></asp:Label>
+								</div>
+							</div> 	
 
-                        <div class="modal-body">
-                            <label for="nrodocumento">Nro. de Documento:</label>
-                            <asp:Label ID="lblNroDocumento" runat="server"></asp:Label>
+							<div style="clear:both;">
+								<div style="width: 20%; float:left; text-align:right; padding:2px; font-size: small;">
+									<label style="font-size: small; font-style: normal; font-weight: normal;" for="provincia">Provincia:</label>
+								</div>
+								<div style="width: 30%; float:left; padding:2px; font-size: small; font-weight: bold;">
+									<asp:Label ID="lblProvincia" runat="server"></asp:Label>
+								</div>
+							</div> 	
                         </div>
-
-                        <div class="modal-body">
-                            <label for="cuit">Nro. de CUIL/CUIT:</label>
-                            <asp:Label ID="lblCUIT" runat="server"></asp:Label>
-                        </div>
-
-                        <div class="modal-body">
-                            <label for="telinea">Teléfono/s:</label>
-                            <asp:Label ID="lblTE" runat="server"></asp:Label>
-                        </div>
-
-                        <div class="modal-body">
-                            <label for="email">Correo Electrónico:</label>
-                            <asp:Label ID="lblEMail" runat="server"></asp:Label>
-                        </div>
-
-                        <div class="modal-body">
-                            <label for="comentarios">Comentarios:</label>
-                            <asp:Label ID="lblComentarios" runat="server"></asp:Label>
-                        </div>
-                        
-                        <div class="modal-footer">
-                            <button class="btn btn-info" data-dismiss="modal" aria-hidden="true">Cerrar</button>
+                        <br />
+                        <div class="modal-footer-detalle" style="padding: 4px; margin: 1px">
+							<div style="clear:both;">
+								<button class="btn btn-info-detalle" data-dismiss="modal" aria-hidden="true">Cerrar</button>
+							</div>
                         </div>
                     </div>
                 </ContentTemplate>

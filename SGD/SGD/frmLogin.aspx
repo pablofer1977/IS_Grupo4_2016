@@ -12,41 +12,50 @@
 </head>
 <body>
     <form id="frmLogin" runat="server" class="form-horizontal" role="form">
-        <div class="container-login">
-            <div class="panel-group">
-                <div class="panel panel-primary">
-                    <div class="panel-heading">
-                        <h4>Login</h4>
-                    </div>
 
-                    <div class="panel-body">
-                        <div class="row">
-                            <label class="control-label col-sm-2" for="usuario">Usuario:</label>
+        <div class="panel-group" style="width: 25%; margin: 0 auto;" >
 
-                            <div class="col-sm-10">
-                                <asp:TextBox ID="txtUserName" runat="server" MaxLength="15" CssClass="form-control"></asp:TextBox>
-                            </div>
+            <br />
+            <br />
+            <br />
+
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 style="padding-left: 10px">Login</h3>
+                </div>
+
+                <div class="panel-body">
+                    <div>
+                        <div style="padding-left: 10px">
+                            <label for="usuario">Usuario:</label>
                         </div>
-
-                        <div class="row">
-                            <label class="control-label col-sm-2" for="pwd">Password:</label>
-
-                            <div class="col-sm-10"> 
-                                <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" CssClass="form-control"></asp:TextBox>
-                            </div>
+                        <div style="padding-left: 10px">
+                            <asp:TextBox ID="txtUserName" runat="server" MaxLength="15" Width="200px"></asp:TextBox>
                         </div>
                     </div>
 
-                    <div class="panel-footer">
-                        <div class="row">
-                            <div class="col-sm-offset-2 col-sm-10">
-                                <asp:Button ID="btnAceptar" runat="server" Text="Entrar" CssClass="btn btn-primary" OnClick="btnAceptar_Click"></asp:Button>
-                            </div>
+                    <br />
+
+                    <div>
+                        <div style="padding-left: 10px">
+                            <label for="pwd">Password:</label>
+                        </div>
+                        <div style="padding-left: 10px">
+                            <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" Width="200px"></asp:TextBox>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel-footer">
+                    <div>
+                        <div>
+                            <asp:Button ID="btnAceptar" runat="server" Text="Entrar" CssClass="btn btn-primary" style="padding: 10px; margin: 10px" OnClick="btnAceptar_Click"></asp:Button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
 
         <!-- Bootstrap Modal Dialog -->
         <div class="modal fade" id="Modal_Error" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">

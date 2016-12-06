@@ -63,30 +63,58 @@ Public Class frmPresentacionesAlta
     End Sub
 
     Private Sub Archivo_Bajar(PresentacionesE As PresentacionesE)
-        Dim PresentacionesN As PresentacionesN
+        Try
+            Dim PresentacionesN As PresentacionesN
 
-        PresentacionesN = New PresentacionesN
+            PresentacionesN = New PresentacionesN
 
+            Dim sCarpetaTXT As String = Trim(ConfigurationManager.AppSettings.Get("sArchivosPresentacionesTXT"))
+            Dim sNombreTXT As String = PresentacionesN.NombreTXT(PresentacionesE)
+
+            Dim sRutaTXT = sCarpetaTXT & "\" & sNombreTXT
+
+            Dim toDownload As New FileInfo(sRutaTXT)
+
+            If (toDownload.Exists) Then
+                Response.Clear()
+                Response.ContentType = "text/plain"
+                Response.AddHeader("Content-Disposition", "attachment; filename=" & toDownload.Name)
+                Response.AddHeader("Content-Length", toDownload.Length.ToString())
+                Response.WriteFile(sRutaTXT)
+                Response.End()
+                'HttpContext.Current.ApplicationInstance.CompleteRequest()
+            Else
+                MsgBox("Primero Debe Generar una Nueva Presentación", MsgBoxStyle.Information, "Robin")
+            End If
+
+            PresentacionesN = Nothing
+        Catch ex As Exception
+
+        Finally
+
+        End Try
+    End Sub
+
+    Private Sub UltimoArchivoGenerado()
         Dim sCarpetaTXT As String = Trim(ConfigurationManager.AppSettings.Get("sArchivosPresentacionesTXT"))
-        Dim sNombreTXT As String = PresentacionesN.NombreTXT(PresentacionesE)
+        Dim oCarpeta As New DirectoryInfo(sCarpetaTXT)
 
-        Dim sRutaTXT = sCarpetaTXT & "\" & sNombreTXT
+        lblNombreArchivo.Text = ""
+        lblFechaArchivo.Text = ""
 
-        Dim toDownload As New FileInfo(sRutaTXT)
+        Dim oArchivos = oCarpeta.GetFiles("*.*", SearchOption.TopDirectoryOnly)
 
-        If (toDownload.Exists) Then
-            Response.Clear()
-            Response.ContentType = "text/plain"
-            Response.AddHeader("Content-Disposition", "attachment; filename=" & toDownload.Name)
-            Response.AddHeader("Content-Length", toDownload.Length.ToString())
-            Response.WriteFile(sRutaTXT)
-            'Response.End()
-            HttpContext.Current.ApplicationInstance.CompleteRequest()
-        Else
-            MsgBox("Primero Debe Generar una Nueva Presentación", MsgBoxStyle.Information, "Robin")
-        End If
+        Dim oArchivosCons = From Archivo In oArchivos
+                            Where Archivo.Extension = ".txt"
+                            Order By Archivo.CreationTime
+                            Select Archivo.Name, Archivo.CreationTime
 
-        PresentacionesN = Nothing
+        If oArchivosCons.Count = 0 Then Exit Sub
+
+        Dim oUltimoArchivo = oArchivosCons.Last
+
+        lblNombreArchivo.Text = oUltimoArchivo.Name
+        lblFechaArchivo.Text = oUltimoArchivo.CreationTime
     End Sub
 
     Private Function Aceptar() As Boolean
@@ -95,12 +123,12 @@ Public Class frmPresentacionesAlta
         Dim dt As DataTable
         Dim dtD As DataTable
 
-        Try
-            PresentacionesN = New PresentacionesN
-            PresentacionesE = New PresentacionesE
-            dt = New DataTable
-            dtD = New DataTable
+        PresentacionesN = New PresentacionesN
+        PresentacionesE = New PresentacionesE
+        dt = New DataTable
+        dtD = New DataTable
 
+        Try
             PresentacionesE.nId_TipoPresentacion = cmbTipoPresentacion.SelectedValue
 
             If PresentacionesE.nId_TipoPresentacion = eDonaciones_Tipos.Tarjeta Then
@@ -194,20 +222,25 @@ Public Class frmPresentacionesAlta
                 End If
             End If
 
-            'abro un cuadro de dialogo para bajar el txt generado
-            Archivo_Bajar(PresentacionesE)
-
-            PresentacionesN = Nothing
-            PresentacionesE = Nothing
-            dt = Nothing
-            dtD = Nothing
-
-            Return True
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical, "Robin")
 
             Return False
         End Try
+
+        Try
+            'abro un cuadro de dialogo para bajar el txt generado
+            Archivo_Bajar(PresentacionesE)
+        Catch ex As Exception
+
+        End Try
+
+        PresentacionesN = Nothing
+        PresentacionesE = Nothing
+        dt = Nothing
+        dtD = Nothing
+
+        Return True
     End Function
 
     Private Sub Cancelar()
@@ -223,6 +256,8 @@ Public Class frmPresentacionesAlta
 
             cmbMes.SelectedValue = Month(Now)
             txtAnio.Text = Year(Now)
+
+            UltimoArchivoGenerado()
         End If
     End Sub
 
@@ -232,6 +267,8 @@ Public Class frmPresentacionesAlta
 
     Protected Sub btnGenerar_Click(sender As Object, e As EventArgs) Handles btnGenerar.Click
         If Aceptar() Then
+            UltimoArchivoGenerado()
+
             MsgBox("Se generó una Nueva Presentación", MsgBoxStyle.Information, "Robin")
         End If
     End Sub

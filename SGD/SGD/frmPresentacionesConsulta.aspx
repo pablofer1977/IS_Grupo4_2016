@@ -1,6 +1,6 @@
-﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="frmPresentacionesListado.aspx.vb" Inherits="SGD.frmPresentacionesListado" MasterPageFile="~/frmMenu.Master" %>
+﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="frmPresentacionesConsulta.aspx.vb" Inherits="SGD.frmPresentacionesConsulta" MasterPageFile="~/frmMenu.Master" %>
 
-<asp:Content ID="PresentacionesListado" ContentPlaceHolderID="body" runat="server">
+<asp:Content ID="PresentacionesConsulta" ContentPlaceHolderID="body" runat="server">
     <div class="container"> 
         <div class="panel-group">
             <div class="panel-group">
@@ -85,10 +85,6 @@
                             </Columns>  
                         </asp:GridView>   
                     </div>  
-                </div>
-                
-                <div class="panel-footer">
-                    <asp:Button ID="btnRetorno" runat="server" Text="Procesar Archivo" CssClass="btn btn-primary"/>
                 </div>
             </div>
         </div>

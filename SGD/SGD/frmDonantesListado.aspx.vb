@@ -21,14 +21,14 @@ Public Class frmDonantesListado
         TarjetasN = New TarjetasN
         CampaniasN = New CampaniasN
 
-        With cmbTipoDonante
-            .DataSource = DonantesN.TiposDonantes_CargarCombo(True, False)
-            .DataValueField = "Id"
-            .DataTextField = "Campo"
-            .DataBind()
+        'With cmbTipoDonante
+        '    .DataSource = DonantesN.TiposDonantes_CargarCombo(True, False)
+        '    .DataValueField = "Id"
+        '    .DataTextField = "Campo"
+        '    .DataBind()
 
-            .SelectedIndex = -1
-        End With
+        '    .SelectedIndex = -1
+        'End With
 
         With cmbProvincia
             .DataSource = DonantesN.Provincias_CargarCombo(True, False)
@@ -48,23 +48,23 @@ Public Class frmDonantesListado
             .SelectedIndex = -1
         End With
 
-        With cmbTipoDonacion
-            .DataSource = DonacionesN.TiposDonaciones_CargarCombo(True, False)
-            .DataValueField = "Id"
-            .DataTextField = "Campo"
-            .DataBind()
+        'With cmbTipoDonacion
+        '    .DataSource = DonacionesN.TiposDonaciones_CargarCombo(True, False)
+        '    .DataValueField = "Id"
+        '    .DataTextField = "Campo"
+        '    .DataBind()
 
-            .SelectedIndex = -1
-        End With
+        '    .SelectedIndex = -1
+        'End With
 
-        With cmbTarjeta
-            .DataSource = TarjetasN.CargarCombo(True, False, 0)
-            .DataValueField = "Id"
-            .DataTextField = "Campo"
-            .DataBind()
+        'With cmbTarjeta
+        '    .DataSource = TarjetasN.CargarCombo(True, False, 0)
+        '    .DataValueField = "Id"
+        '    .DataTextField = "Campo"
+        '    .DataBind()
 
-            .SelectedIndex = -1
-        End With
+        '    .SelectedIndex = -1
+        'End With
 
         With cmbCampania
             .DataSource = CampaniasN.CargarCombo(True, False, "")
@@ -92,21 +92,21 @@ Public Class frmDonantesListado
             DonacionesE = New DonacionesE
 
             If Val(txtNroDonante.Text) <> 0 Then DonantesE.nId = Val(txtNroDonante.Text)
-            If cmbTipoDonante.SelectedValue > 0 Then DonantesE.nId_TipoDonante = cmbTipoDonante.SelectedValue
+            'If cmbTipoDonante.SelectedValue > 0 Then DonantesE.nId_TipoDonante = cmbTipoDonante.SelectedValue
             If Trim(txtNombre.Text) <> "" Then DonantesE.sApellido_Nombre_RazonSocial = Trim(txtNombre.Text)
             If Trim(txtDireccion.Text) <> "" Then DonantesE.sDireccion = Trim(txtDireccion.Text)
             If Trim(txtLocalidad.Text) <> "" Then DonantesE.sLocalidad = Trim(txtLocalidad.Text)
             If Trim(txtCodigoPostal.Text) <> "" Then DonantesE.sCP = Trim(txtCodigoPostal.Text)
             If cmbProvincia.SelectedValue > 0 Then DonantesE.nId_Provincia = cmbProvincia.SelectedValue
-            If Val(txtNroDocumento.Text) <> 0 Then DonantesE.sDNI_CUIL_CUIT = Trim(txtNroDocumento.Text)
-            If Trim(txtTE.Text) <> "" Then DonantesE.sTE_Linea_Celular_Laboral = Trim(txtTE.Text)
-            If Trim(txtEMail.Text) <> "" Then DonantesE.sEMail = Trim(txtEMail.Text)
+            'If Val(txtNroDocumento.Text) <> 0 Then DonantesE.sDNI_CUIL_CUIT = Trim(txtNroDocumento.Text)
+            'If Trim(txtTE.Text) <> "" Then DonantesE.sTE_Linea_Celular_Laboral = Trim(txtTE.Text)
+            'If Trim(txtEMail.Text) <> "" Then DonantesE.sEMail = Trim(txtEMail.Text)
 
             If Trim(txtNroDonacion.Text) <> "" Then DonacionesE.nId = Trim(txtNroDonacion.Text)
             If Trim(cmbEstado.SelectedValue) <> "-1" Then DonacionesE.sEstado = cmbEstado.SelectedValue
-            If cmbTipoDonacion.SelectedValue > 0 Then DonacionesE.nId_TipoDonacion = cmbTipoDonante.SelectedValue
-            If Trim(cmbTarjeta.SelectedValue) <> "-1" Then DonacionesE.sId_Tarjeta = cmbTarjeta.SelectedValue
-            If Trim(txtNroTarjetaCBU.Text) <> "" Then DonacionesE.sNroTarjeta_CBU = Trim(txtNroTarjetaCBU.Text)
+            'If cmbTipoDonacion.SelectedValue > 0 Then DonacionesE.nId_TipoDonacion = cmbTipoDonacion.SelectedValue
+            'If Trim(cmbTarjeta.SelectedValue) <> "-1" Then DonacionesE.sId_Tarjeta = cmbTarjeta.SelectedValue
+            'If Trim(txtNroTarjetaCBU.Text) <> "" Then DonacionesE.sNroTarjeta_CBU = Trim(txtNroTarjetaCBU.Text)
             If cmbCampania.SelectedValue > 0 Then DonacionesE.nId_Campania = cmbCampania.SelectedValue
 
             grd.DataSource = DonantesN.Listado(DonantesE, DonacionesE)
@@ -138,9 +138,9 @@ Public Class frmDonantesListado
             dt = DonacionesN.Listado(DonacionesE)
 
             If dt.Rows.Count > 0 Then
-                lblDonante.Text = "Listado de Donaciones [Donante Nro.: " & DonacionesE.nId_Donante.ToString & "]"
+                lblDonante.Text = "Donaciones - Nro. de Donante " & DonacionesE.nId_Donante.ToString
             Else
-                lblDonante.Text = "Listado de Donaciones"
+                lblDonante.Text = "Donaciones"
             End If
 
             grdD.DataSource = dt
@@ -316,20 +316,20 @@ Public Class frmDonantesListado
                 lblTituloDetalle.Text = "Donante - Detalle"
 
                 lblNroDonante.Text = dt.Rows(0).Item("Id")
-                If Not IsDBNull(dt.Rows(0).Item("FechaIng")) Then lblFechaIng.Text = dt.Rows(0).Item("FechaIng")
-                If Not IsDBNull(dt.Rows(0).Item("TipoDonante")) Then lblTipoDonante.Text = dt.Rows(0).Item("TipoDonante")
+                If Not IsDBNull(dt.Rows(0).Item("FechaIng")) Then lblFechaIng.Text = dt.Rows(0).Item("FechaIng") Else lblFechaIng.Text = ""
+                If Not IsDBNull(dt.Rows(0).Item("TipoDonante")) Then lblTipoDonante.Text = dt.Rows(0).Item("TipoDonante") Else lblTipoDonante.Text = ""
 
-                If Not IsDBNull(dt.Rows(0).Item("Nombre")) Then lblNombre.Text = dt.Rows(0).Item("Nombre")
-                If Not IsDBNull(dt.Rows(0).Item("Direccion")) Then lblDireccion.Text = dt.Rows(0).Item("Direccion")
-                If Not IsDBNull(dt.Rows(0).Item("Localidad")) Then lblLocalidad.Text = dt.Rows(0).Item("Localidad")
-                If Not IsDBNull(dt.Rows(0).Item("CP")) Then lblCodigoPostal.Text = dt.Rows(0).Item("CP")
-                If Not IsDBNull(dt.Rows(0).Item("Provincia")) Then lblProvincia.Text = dt.Rows(0).Item("Provincia")
+                If Not IsDBNull(dt.Rows(0).Item("Nombre")) Then lblNombre.Text = dt.Rows(0).Item("Nombre") Else lblNombre.Text = ""
+                If Not IsDBNull(dt.Rows(0).Item("Direccion")) Then lblDireccion.Text = dt.Rows(0).Item("Direccion") Else lblDireccion.Text = ""
+                If Not IsDBNull(dt.Rows(0).Item("Localidad")) Then lblLocalidad.Text = dt.Rows(0).Item("Localidad") Else lblLocalidad.Text = ""
+                If Not IsDBNull(dt.Rows(0).Item("CP")) Then lblCodigoPostal.Text = dt.Rows(0).Item("CP") Else lblCodigoPostal.Text = ""
+                If Not IsDBNull(dt.Rows(0).Item("Provincia")) Then lblProvincia.Text = dt.Rows(0).Item("Provincia") Else lblProvincia.Text = ""
 
-                If Not IsDBNull(dt.Rows(0).Item("DNI")) Then lblNroDocumento.Text = dt.Rows(0).Item("DNI")
-                If Not IsDBNull(dt.Rows(0).Item("CUIL_CUIT")) Then lblCUIT.Text = dt.Rows(0).Item("CUIL_CUIT")
-                If Not IsDBNull(dt.Rows(0).Item("TE")) Then lblTE.Text = dt.Rows(0).Item("TE")
-                If Not IsDBNull(dt.Rows(0).Item("EMail")) Then lblEMail.Text = dt.Rows(0).Item("EMail")
-                If Not IsDBNull(dt.Rows(0).Item("Comentarios")) Then lblComentarios.Text = dt.Rows(0).Item("Comentarios")
+                If Not IsDBNull(dt.Rows(0).Item("DNI")) Then lblNroDocumento.Text = dt.Rows(0).Item("DNI") Else lblNroDocumento.Text = ""
+                If Not IsDBNull(dt.Rows(0).Item("CUIL_CUIT")) Then lblCUIT.Text = dt.Rows(0).Item("CUIL_CUIT") Else lblCUIT.Text = ""
+                If Not IsDBNull(dt.Rows(0).Item("TE")) Then lblTE.Text = dt.Rows(0).Item("TE") Else lblTE.Text = ""
+                If Not IsDBNull(dt.Rows(0).Item("EMail")) Then lblEMail.Text = dt.Rows(0).Item("EMail") Else lblEMail.Text = ""
+                If Not IsDBNull(dt.Rows(0).Item("Comentarios")) Then lblComentarios.Text = dt.Rows(0).Item("Comentarios") Else lblComentarios.Text = ""
 
                 ScriptManager.RegisterStartupScript(Page, Page.GetType(), "Modal_Detalle", "$('#Modal_Detalle').modal();", True)
 
@@ -369,21 +369,21 @@ Public Class frmDonantesListado
             Dim nCampania As Integer = Request.QueryString("id_campania")
 
             If nNroDonante <> 0 Then txtNroDonante.Text = nNroDonante
-            If nTipoDonante <> 0 Then cmbTipoDonante.SelectedValue = Trim(nTipoDonante)
+            'If nTipoDonante <> 0 Then cmbTipoDonante.SelectedValue = Trim(nTipoDonante)
             If Not IsNothing(sNombre) Then txtNombre.Text = Trim(sNombre)
             If Not IsNothing(sDireccion) Then txtDireccion.Text = Trim(sDireccion)
             If Not IsNothing(sLocalidad) Then txtLocalidad.Text = Trim(sLocalidad)
             If Not IsNothing(sCodigoPostal) Then txtCodigoPostal.Text = Trim(sCodigoPostal)
             If nProvincia <> 0 Then cmbProvincia.SelectedValue = nProvincia
-            If nNroDocumento <> 0 Then txtNroDocumento.Text = nNroDocumento
-            If Not IsNothing(sTE) Then txtTE.Text = Trim(sTE)
-            If Not IsNothing(sEMail) Then txtEMail.Text = Trim(sEMail)
+            'If nNroDocumento <> 0 Then txtNroDocumento.Text = nNroDocumento
+            'If Not IsNothing(sTE) Then txtTE.Text = Trim(sTE)
+            'If Not IsNothing(sEMail) Then txtEMail.Text = Trim(sEMail)
 
             If nNroDonacion <> 0 Then txtNroDonacion.Text = nNroDonacion
             If Not IsNothing(sEstado) Then cmbEstado.SelectedValue = Trim(sEstado)
-            If nTipoDonacion <> 0 Then cmbTipoDonacion.SelectedValue = nTipoDonacion
-            If Not IsNothing(sTarjeta) Then cmbTarjeta.SelectedValue = Trim(sTarjeta)
-            If Not IsNothing(sNroTarjetaCBU) Then txtNroTarjetaCBU.Text = Trim(sNroTarjetaCBU)
+            'If nTipoDonacion <> 0 Then cmbTipoDonacion.SelectedValue = nTipoDonacion
+            'If Not IsNothing(sTarjeta) Then cmbTarjeta.SelectedValue = Trim(sTarjeta)
+            'If Not IsNothing(sNroTarjetaCBU) Then txtNroTarjetaCBU.Text = Trim(sNroTarjetaCBU)
             If nCampania <> 0 Then cmbCampania.SelectedValue = nCampania
 
             CargarGrilla()
@@ -404,39 +404,49 @@ Public Class frmDonantesListado
 
     Protected Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
         Dim nNroDonante As Integer = Val(txtNroDonante.Text)
-        Dim nTipoDonante As Integer = cmbTipoDonante.SelectedValue
+        'Dim nTipoDonante As Integer = cmbTipoDonante.SelectedValue
         Dim sNombre As String = Trim(txtNombre.Text)
         Dim sDireccion As String = Trim(txtDireccion.Text)
         Dim sLocalidad As String = Trim(txtLocalidad.Text)
         Dim sCodigoPostal As String = Trim(txtCodigoPostal.Text)
         Dim nProvincia As Integer = cmbProvincia.SelectedValue
-        Dim nNroDocumento As Integer = Val(txtNroDocumento.Text)
-        Dim sTE As String = Trim(txtTE.Text)
-        Dim sEMail As String = Trim(txtEMail.Text)
+        'Dim nNroDocumento As Integer = Val(txtNroDocumento.Text)
+        'Dim sTE As String = Trim(txtTE.Text)
+        'Dim sEMail As String = Trim(txtEMail.Text)
 
         Dim nNroDonacion As Integer = Val(txtNroDonacion.Text)
         Dim sEstado As String = cmbEstado.SelectedValue
-        Dim nTipoDonacion As Integer = cmbTipoDonacion.SelectedValue
-        Dim sTarjeta As String = cmbTarjeta.SelectedValue
-        Dim sNroTarjetaCBU As String = Trim(txtNroTarjetaCBU.Text)
+        'Dim nTipoDonacion As Integer = cmbTipoDonacion.SelectedValue
+        'Dim sTarjeta As String = cmbTarjeta.SelectedValue
+        'Dim sNroTarjetaCBU As String = Trim(txtNroTarjetaCBU.Text)
         Dim nCampania As Integer = cmbCampania.SelectedValue
 
+        'Response.Redirect("/frmDonantesListado.aspx?nrodonante=" & nNroDonante.ToString &
+        '                                            "&id_tipodonante=" & nTipoDonante.ToString &
+        '                                            "&nombre=" & sNombre &
+        '                                            "&direccion=" & sDireccion &
+        '                                            "&localidad=" & sLocalidad &
+        '                                            "&codigopostal=" & sCodigoPostal &
+        '                                            "&id_provincia=" & nProvincia.ToString &
+        '                                            "&nrodocumento=" & nNroDocumento.ToString &
+        '                                            "&telefono=" & sTE &
+        '                                            "&email=" & sEMail &
+        '                                            "&nrodonacion=" & nNroDonacion.ToString &
+        '                                            "&id_estado=" & sEstado &
+        '                                            "&id_tipodonacion=" & nTipoDonacion.ToString &
+        '                                            "&id_tarjeta=" & sTarjeta &
+        '                                            "&nrotarjeta=" & sNroTarjetaCBU &
+        '                                            "&id_campania=" & nCampania.ToString, True)
+
         Response.Redirect("/frmDonantesListado.aspx?nrodonante=" & nNroDonante.ToString &
-                                                    "&id_tipodonante=" & nTipoDonante.ToString &
-                                                    "&nombre=" & sNombre &
-                                                    "&direccion=" & sDireccion &
-                                                    "&localidad=" & sLocalidad &
-                                                    "&codigopostal=" & sCodigoPostal &
-                                                    "&id_provincia=" & nProvincia.ToString &
-                                                    "&nrodocumento=" & nNroDocumento.ToString &
-                                                    "&telefono=" & sTE &
-                                                    "&email=" & sEMail &
-                                                    "&nrodonacion=" & nNroDonacion.ToString &
-                                                    "&id_estado=" & sEstado &
-                                                    "&id_tipodonacion=" & nTipoDonacion.ToString &
-                                                    "&id_tarjeta=" & sTarjeta &
-                                                    "&nrotarjeta=" & sNroTarjetaCBU &
-                                                    "&id_campania=" & nCampania.ToString, True)
+                                                "&nombre=" & sNombre &
+                                                "&direccion=" & sDireccion &
+                                                "&localidad=" & sLocalidad &
+                                                "&codigopostal=" & sCodigoPostal &
+                                                "&id_provincia=" & nProvincia.ToString &
+                                                "&nrodonacion=" & nNroDonacion.ToString &
+                                                "&id_estado=" & sEstado &
+                                                "&id_campania=" & nCampania.ToString, True)
     End Sub
 
     Protected Sub grd_PageIndexChanging(sender As Object, e As GridViewPageEventArgs) Handles grd.PageIndexChanging

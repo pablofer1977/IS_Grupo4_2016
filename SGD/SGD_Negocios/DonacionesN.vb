@@ -66,6 +66,26 @@ Namespace Negocios
             End Try
         End Function
 
+        Public Function Consulta_Listado(ByVal pDonaciones As DonacionesE) As DataTable
+            Dim DonacionesD As DonacionesD
+            Dim dt As DataTable
+
+            Try
+                DonacionesD = New DonacionesD
+                dt = New DataTable
+
+                dt = DonacionesD.Consulta_Listado(pDonaciones)
+
+                DonacionesD = Nothing
+
+                Return dt
+
+            Catch ex As Exception
+                MsgBox(ex.Message, MsgBoxStyle.Critical, "Robin")
+                Return Nothing
+            End Try
+        End Function
+
         Public Function Obtener(ByVal pDonaciones As DonacionesE) As DataTable
             Dim DonacionesD As DonacionesD
             Dim dt As DataTable

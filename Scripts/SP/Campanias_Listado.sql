@@ -18,8 +18,8 @@ BEGIN
 			c.Descripcion,
 			c.Estado AS Id_Estado,
 			CASE WHEN c.Estado = 'A' THEN 'Activo' WHEN c.Estado = 'B' THEN 'Baja' ELSE '' END AS Estado,
-			c.FechaAlta,
-			c.FechaBaja
+			CONVERT(CHAR(10), c.FechaAlta, 103) AS FechaAlta,
+			CONVERT(CHAR(10), c.FechaBaja, 103) AS FechaBaja
 	FROM 	tblCampanias c
 	WHERE	(c.Id = @pId OR @pId IS NULL)
 	AND		(c.Campania LIKE @pCampania  + '%' OR @pCampania IS NULL)

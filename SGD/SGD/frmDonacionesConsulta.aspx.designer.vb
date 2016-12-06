@@ -11,7 +11,7 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class frmDonantesListado
+Partial Public Class frmDonacionesConsulta
     
     '''<summary>
     '''Control txtNroDonante.
@@ -23,15 +23,6 @@ Partial Public Class frmDonantesListado
     Protected WithEvents txtNroDonante As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
-    '''Control txtLocalidad.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents txtLocalidad As Global.System.Web.UI.WebControls.TextBox
-    
-    '''<summary>
     '''Control txtNroDonacion.
     '''</summary>
     '''<remarks>
@@ -39,24 +30,6 @@ Partial Public Class frmDonantesListado
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents txtNroDonacion As Global.System.Web.UI.WebControls.TextBox
-    
-    '''<summary>
-    '''Control txtNombre.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents txtNombre As Global.System.Web.UI.WebControls.TextBox
-    
-    '''<summary>
-    '''Control txtCodigoPostal.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents txtCodigoPostal As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
     '''Control cmbEstado.
@@ -68,22 +41,31 @@ Partial Public Class frmDonantesListado
     Protected WithEvents cmbEstado As Global.System.Web.UI.WebControls.DropDownList
     
     '''<summary>
-    '''Control txtDireccion.
+    '''Control cmbTipoDonacion.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents txtDireccion As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents cmbTipoDonacion As Global.System.Web.UI.WebControls.DropDownList
     
     '''<summary>
-    '''Control cmbProvincia.
+    '''Control cmbTarjeta.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents cmbProvincia As Global.System.Web.UI.WebControls.DropDownList
+    Protected WithEvents cmbTarjeta As Global.System.Web.UI.WebControls.DropDownList
+    
+    '''<summary>
+    '''Control txtNroTarjetaCBU.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txtNroTarjetaCBU As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
     '''Control cmbCampania.
@@ -104,15 +86,6 @@ Partial Public Class frmDonantesListado
     Protected WithEvents btnBuscar As Global.System.Web.UI.WebControls.Button
     
     '''<summary>
-    '''Control btnNuevo.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents btnNuevo As Global.System.Web.UI.WebControls.Button
-    
-    '''<summary>
     '''Control grd.
     '''</summary>
     '''<remarks>
@@ -129,15 +102,6 @@ Partial Public Class frmDonantesListado
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents lblDonante As Global.System.Web.UI.WebControls.Label
-    
-    '''<summary>
-    '''Control btnNuevoD.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents btnNuevoD As Global.System.Web.UI.WebControls.Button
     
     '''<summary>
     '''Control grdD.
@@ -212,15 +176,6 @@ Partial Public Class frmDonantesListado
     Protected WithEvents lblNroDonante As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
-    '''Control lblNroDocumento.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents lblNroDocumento As Global.System.Web.UI.WebControls.Label
-    
-    '''<summary>
     '''Control lblFechaIng.
     '''</summary>
     '''<remarks>
@@ -228,15 +183,6 @@ Partial Public Class frmDonantesListado
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents lblFechaIng As Global.System.Web.UI.WebControls.Label
-    
-    '''<summary>
-    '''Control lblCUIT.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents lblCUIT As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
     '''Control lblTipoDonante.
@@ -248,15 +194,6 @@ Partial Public Class frmDonantesListado
     Protected WithEvents lblTipoDonante As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
-    '''Control lblTE.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents lblTE As Global.System.Web.UI.WebControls.Label
-    
-    '''<summary>
     '''Control lblNombre.
     '''</summary>
     '''<remarks>
@@ -266,15 +203,6 @@ Partial Public Class frmDonantesListado
     Protected WithEvents lblNombre As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
-    '''Control lblEMail.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents lblEMail As Global.System.Web.UI.WebControls.Label
-    
-    '''<summary>
     '''Control lblDireccion.
     '''</summary>
     '''<remarks>
@@ -282,15 +210,6 @@ Partial Public Class frmDonantesListado
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents lblDireccion As Global.System.Web.UI.WebControls.Label
-    
-    '''<summary>
-    '''Control lblComentarios.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents lblComentarios As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
     '''Control lblLocalidad.
@@ -318,4 +237,49 @@ Partial Public Class frmDonantesListado
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents lblProvincia As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
+    '''Control lblNroDocumento.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lblNroDocumento As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
+    '''Control lblCUIT.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lblCUIT As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
+    '''Control lblTE.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lblTE As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
+    '''Control lblEMail.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lblEMail As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
+    '''Control lblComentarios.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lblComentarios As Global.System.Web.UI.WebControls.Label
 End Class
